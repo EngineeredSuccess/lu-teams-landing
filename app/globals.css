@@ -71,6 +71,22 @@
   .text-glow-purple {
     text-shadow: 0 0 20px hsla(260, 100%, 65%, 0.5);
   }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
 }
 
 /* Logo glow animation */
