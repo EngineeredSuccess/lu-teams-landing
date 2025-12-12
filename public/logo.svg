@@ -1,0 +1,29 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda"/>
+      <stop offset="100%" style="stop-color:hsl(260, 100%, 65%)"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" stroke="url(#gradient)" stroke-width="2" fill="none" filter="url(#glow)"/>
+  
+  <!-- LU Text -->
+  <text x="60" y="72" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="40" fill="#64ffda" filter="url(#glow)">
+    LU
+  </text>
+  
+  <!-- Teams indicator dots -->
+  <circle cx="35" cy="90" r="4" fill="#64ffda" opacity="0.8"/>
+  <circle cx="50" cy="90" r="4" fill="hsl(260, 100%, 65%)" opacity="0.8"/>
+  <circle cx="65" cy="90" r="4" fill="#64ffda" opacity="0.8"/>
+  <circle cx="80" cy="90" r="4" fill="hsl(260, 100%, 65%)" opacity="0.8"/>
+</svg>
