@@ -2,10 +2,10 @@ const features = [
   {
     title: "Personality Analysis",
     description:
-      "Deep insights into team members' working styles, communication preferences, and behavioral patterns using proven psychological frameworks.",
+      "LU Teams analyzes DiSC and Gallup profiles to understand each team member's working style, strengths, and potential blind spots.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -13,8 +13,8 @@ const features = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+          strokeWidth={2}
+          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
         />
       </svg>
     ),
@@ -22,10 +22,10 @@ const features = [
   {
     title: "Conflict Prediction",
     description:
-      "Identify potential friction points before they become problems. Our AI spots personality clashes and communication mismatches early.",
+      "Identifies potential clashes before they happen. See which personality combinations create friction and which create flow.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -33,8 +33,8 @@ const features = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
     ),
@@ -42,10 +42,10 @@ const features = [
   {
     title: "Smart Recommendations",
     description:
-      "Get data-driven suggestions for optimal team compositions. Know exactly who to pair together for maximum synergy and productivity.",
+      "Get actionable insights on team composition, role assignments, and communication strategies tailored to your project.",
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -53,8 +53,8 @@ const features = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M13 10V3L4 14h7v7l9-11h-7z"
+          strokeWidth={2}
+          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
         />
       </svg>
     ),
@@ -63,37 +63,37 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24 relative" id="features">
+    <section className="py-20" id="features">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="section-title">
-            Powerful <span className="gradient-text">Features</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Introducing <span className="gradient-text">LU Teams</span>
           </h2>
-          <p className="section-subtitle">
-            Everything you need to build high-performing teams
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            The Synergy Prediction Engine that reads your team better than you do. Make decisions with intelligence, not intuition.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="glass-card group cursor-default"
+              className="p-8 rounded-lg bg-navy-light/50 border border-cyan/20 hover:border-cyan/50 transition-all"
             >
               {/* Icon */}
-              <div className="mb-4 text-cyan group-hover:text-glow-cyan transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-6 text-cyan">
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400">
                 {feature.description}
               </p>
             </div>

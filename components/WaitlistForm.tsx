@@ -2,16 +2,6 @@
 
 import { useState } from "react";
 
-const industries = [
-  "Aerospace & Defense",
-  "Tech & SaaS",
-  "Advanced Manufacturing",
-  "Healthcare",
-  "Financial Services",
-  "Consulting",
-  "Other",
-];
-
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function WaitlistForm() {
@@ -19,14 +9,13 @@ export default function WaitlistForm() {
     email: "",
     name: "",
     company: "",
-    role: "",
-    industry: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [waitlistCount, setWaitlistCount] = useState(3); // Default count
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -50,12 +39,11 @@ export default function WaitlistForm() {
 
       if (response.ok) {
         setStatus("success");
+        setWaitlistCount(data.count || waitlistCount + 1);
         setFormData({
           email: "",
           name: "",
           company: "",
-          role: "",
-          industry: "",
         });
       } else {
         setStatus("error");
@@ -69,10 +57,10 @@ export default function WaitlistForm() {
 
   if (status === "success") {
     return (
-      <section className="py-24 relative" id="waitlist">
+      <section className="py-20" id="waitlist">
         <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="glass-card py-12">
+          <div className="max-w-2xl mx-auto">
+            <div className="p-8 md:p-12 rounded-2xl bg-navy-light/50 border border-cyan/20 text-center">
               {/* Success Icon */}
               <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyan/20 text-cyan">
                 <svg
@@ -93,10 +81,15 @@ export default function WaitlistForm() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 You&apos;re on the list!
               </h2>
-              <p className="text-slate-400">
-                Thanks for joining the beta. We&apos;ll be in touch soon with
-                early access details.
+              <p className="text-slate-400 mb-6">
+                Thanks for joining the beta. We&apos;ll be in touch soon with early access details.
               </p>
+              <button
+                onClick={() => setStatus("idle")}
+                className="text-cyan hover:text-cyan-dark transition-colors"
+              >
+                Add another email
+              </button>
             </div>
           </div>
         </div>
@@ -105,176 +98,90 @@ export default function WaitlistForm() {
   }
 
   return (
-    <section className="py-24 relative" id="waitlist">
-      {/* Background accent */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container-custom relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="section-title">
-            Join the <span className="gradient-text">Beta</span>
-          </h2>
-          <p className="section-subtitle">
-            Be among the first to experience the future of team building
-          </p>
-        </div>
-
-        {/* Form */}
+    <section className="py-20" id="waitlist">
+      <div className="container-custom">
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-card" suppressHydrationWarning>
-            <div className="space-y-6" suppressHydrationWarning>
-              {/* Email - Required */}
-              <div suppressHydrationWarning>
+          <div className="p-8 md:p-12 rounded-2xl bg-navy-light/50 border border-cyan/20">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Join the <span className="gradient-text">LU Teams Beta</span>
+              </h2>
+              <p className="text-lg text-slate-400">
+                Be among the first to experience the Synergy Prediction Engine.
+              </p>
+              {waitlistCount > 0 && (
+                <p className="mt-4 text-sm text-cyan">
+                  {waitlistCount} leaders have already joined
+                </p>
+              )}
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
                 <label htmlFor="email" className="label-text">
-                  Email <span className="text-cyan">*</span>
+                  Email *
                 </label>
                 <input
-                  type="email"
                   id="email"
                   name="email"
+                  type="email"
+                  placeholder="your.email@company.com"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="you@company.com"
                   className="input-field"
-                  disabled={status === "loading"}
-                  autoComplete="off"
-                  data-lpignore="true"
-                  data-form-type="other"
                 />
               </div>
 
-              {/* Name - Optional */}
-              <div suppressHydrationWarning>
+              <div className="space-y-2">
                 <label htmlFor="name" className="label-text">
-                  Name <span className="text-slate-400/60">(optional)</span>
+                  Name (optional)
                 </label>
                 <input
-                  type="text"
                   id="name"
                   name="name"
+                  type="text"
+                  placeholder="John Doe"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
                   className="input-field"
-                  disabled={status === "loading"}
-                  autoComplete="off"
-                  data-lpignore="true"
-                  data-form-type="other"
                 />
               </div>
 
-              {/* Company - Optional */}
-              <div suppressHydrationWarning>
+              <div className="space-y-2">
                 <label htmlFor="company" className="label-text">
-                  Company <span className="text-slate-400/60">(optional)</span>
+                  Company (optional)
                 </label>
                 <input
-                  type="text"
                   id="company"
                   name="company"
+                  type="text"
+                  placeholder="Acme Corp"
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Acme Corp"
                   className="input-field"
-                  disabled={status === "loading"}
-                  autoComplete="off"
-                  data-lpignore="true"
-                  data-form-type="other"
                 />
               </div>
 
-              {/* Role - Optional */}
-              <div suppressHydrationWarning>
-                <label htmlFor="role" className="label-text">
-                  Role <span className="text-slate-400/60">(optional)</span>
-                </label>
-                <input
-                  type="text"
-                  id="role"
-                  name="role"
-                  value={formData.role}
-                  onChange={handleChange}
-                  placeholder="Engineering Manager"
-                  className="input-field"
-                  disabled={status === "loading"}
-                  autoComplete="off"
-                  data-lpignore="true"
-                  data-form-type="other"
-                />
-              </div>
-
-              {/* Industry - Optional */}
-              <div>
-                <label htmlFor="industry" className="label-text">
-                  Industry <span className="text-slate-400/60">(optional)</span>
-                </label>
-                <select
-                  id="industry"
-                  name="industry"
-                  value={formData.industry}
-                  onChange={handleChange}
-                  className="input-field appearance-none cursor-pointer"
-                  disabled={status === "loading"}
-                >
-                  <option value="">Select your industry</option>
-                  {industries.map((industry) => (
-                    <option key={industry} value={industry}>
-                      {industry}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Error Message */}
               {status === "error" && (
-                <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400">
+                <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/50 text-red-400">
                   {errorMessage}
                 </div>
               )}
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={status === "loading"}
                 className="w-full btn-primary-filled text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === "loading" ? (
-                  <span className="inline-flex items-center">
-                    <svg
-                      className="animate-spin -ml-1 mr-3 h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      />
-                    </svg>
-                    Joining...
-                  </span>
-                ) : (
-                  "Join the Beta"
-                )}
+                {status === "loading" ? "Joining..." : "Join the Waitlist"}
               </button>
 
-              <p className="text-center text-sm text-slate-400">
-                No spam, ever. We&apos;ll only contact you about LU Teams.
+              <p className="text-sm text-slate-400 text-center">
+                We&apos;ll notify you when beta access is available. No spam, ever.
               </p>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
