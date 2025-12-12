@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-20">
+    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-20 pb-32">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/5 rounded-full blur-3xl" />
@@ -12,14 +12,13 @@ export default function Hero() {
       <div className="container-custom relative z-10 text-center">
         {/* Animated Logo */}
         <div className="mb-8 animate-fade-in">
-          <div className="inline-block relative">
-            <div className="absolute inset-0 animate-pulse-glow rounded-full" />
+          <div className="inline-block relative logo-glow">
             <Image
               src="/logo.svg"
               alt="LU Teams Logo"
               width={120}
               height={120}
-              className="relative z-10 drop-shadow-[0_0_25px_rgba(100,255,218,0.5)]"
+              className="relative z-10"
               priority
             />
           </div>
@@ -43,23 +42,23 @@ export default function Hero() {
             Join the Beta
           </a>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-          <svg
-            className="w-6 h-6 text-cyan"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
+      {/* Scroll indicator - positioned at bottom of section */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50 z-10">
+        <svg
+          className="w-6 h-6 text-cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </div>
     </section>
   );
