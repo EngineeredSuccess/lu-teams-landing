@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getSupabase, WaitlistEntry } from "@/lib/supabase";
+import { resend, isResendConfigured } from "@/lib/resend";
+import { WaitlistWelcomeEmail, getWaitlistWelcomePlainText } from "@/lib/emails/waitlist-welcome";
 
 // Validation schema
 const waitlistSchema = z.object({
@@ -93,6 +95,23 @@ export async function POST(request: Request) {
         { success: false, error: "Failed to join waitlist. Please try again." },
         { status: 500 }
       );
+    }
+
+    // Send welcome email via Resend (non-blocking)
+    if (isResendConfigured() && resend) {
+      try {
+        await resend.emails.send({
+          from: "LU Teams <noreply@luteams.com>",
+          to: email,
+          subject: "Welcome to LU Teams Beta! 🚀",
+          react: WaitlistWelcomeEmail({ name: name || undefined }),
+          text: getWaitlistWelcomePlainText(name || undefined),
+        });
+        console.log("Welcome email sent to:", email);
+      } catch (emailError) {
+        // Log but don't fail the request if email fails
+        console.error("Failed to send welcome email:", emailError);
+      }
     }
 
     return NextResponse.json(
