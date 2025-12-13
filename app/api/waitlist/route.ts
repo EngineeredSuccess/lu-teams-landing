@@ -98,20 +98,29 @@ export async function POST(request: Request) {
     }
 
     // Send welcome email via Resend (non-blocking)
+    console.log("Checking Resend config - isConfigured:", isResendConfigured(), "resend client exists:", !!resend);
+    
     if (isResendConfigured() && resend) {
       try {
-        await resend.emails.send({
-          from: "LU Teams <noreply@luteams.com>",
+        // Use verified domain (luteams.com)
+        const fromEmail = process.env.RESEND_FROM_EMAIL || "LU Teams <noreply@luteams.com>";
+        
+        console.log("Sending email from:", fromEmail, "to:", email);
+        
+        const emailResult = await resend.emails.send({
+          from: fromEmail,
           to: email,
           subject: "Welcome to LU Teams Beta! 🚀",
           react: WaitlistWelcomeEmail({ name: name || undefined }),
           text: getWaitlistWelcomePlainText(name || undefined),
         });
-        console.log("Welcome email sent to:", email);
+        console.log("Welcome email sent successfully:", JSON.stringify(emailResult));
       } catch (emailError) {
         // Log but don't fail the request if email fails
         console.error("Failed to send welcome email:", emailError);
       }
+    } else {
+      console.log("Resend not configured - RESEND_API_KEY:", process.env.RESEND_API_KEY ? "set (length: " + process.env.RESEND_API_KEY.length + ")" : "NOT SET");
     }
 
     return NextResponse.json(
