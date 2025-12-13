@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getSupabase, WaitlistEntry } from "@/lib/supabase";
 import { resend, isResendConfigured } from "@/lib/resend";
-import { WaitlistWelcomeEmail, getWaitlistWelcomePlainText } from "@/lib/emails/waitlist-welcome";
+import { getWaitlistWelcomeHtml, getWaitlistWelcomePlainText } from "@/lib/emails/waitlist-welcome";
 
 // Validation schema
 const waitlistSchema = z.object({
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
           from: fromEmail,
           to: email,
           subject: "Welcome to LU Teams Beta! 🚀",
-          react: WaitlistWelcomeEmail({ name: name || undefined }),
+          html: getWaitlistWelcomeHtml(name || undefined),
           text: getWaitlistWelcomePlainText(name || undefined),
         });
         console.log("Welcome email sent successfully:", JSON.stringify(emailResult));
