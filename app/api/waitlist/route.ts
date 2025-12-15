@@ -75,11 +75,16 @@ export async function POST(request: Request) {
       company: company?.trim() || null,
       role: role?.trim() || null,
       industry: industry || null,
+      welcome_email_sent: false,
     };
 
     // Insert into Supabase
     const supabase = getSupabase();
-    const { error } = await supabase.from("waitlist").insert([entry]);
+    const { data: insertedData, error } = await supabase
+      .from("waitlist")
+      .insert([entry])
+      .select()
+      .single();
 
     if (error) {
       // Check for duplicate email (unique constraint violation)
@@ -115,6 +120,14 @@ export async function POST(request: Request) {
           text: getWaitlistWelcomePlainText(name || undefined),
         });
         console.log("Welcome email sent successfully:", JSON.stringify(emailResult));
+        
+        // Update record to mark welcome email as sent
+        if (insertedData?.id) {
+          await supabase
+            .from("waitlist")
+            .update({ welcome_email_sent: true })
+            .eq("id", insertedData.id);
+        }
       } catch (emailError) {
         // Log but don't fail the request if email fails
         console.error("Failed to send welcome email:", emailError);

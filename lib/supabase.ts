@@ -30,4 +30,8 @@ export interface WaitlistEntry {
   industry?: string | null;
   created_at?: string;
   updated_at?: string;
+  // Email tracking fields
+  welcome_email_sent?: boolean;
+  beta_invitation_sent_at?: string | null;
+  feedback_request_sent_at?: string | null;
 }
