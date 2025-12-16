@@ -68,14 +68,13 @@ export async function POST(request: Request) {
 
     const { email, name, company, role, industry } = validationResult.data;
 
-    // Prepare entry
-    const entry: WaitlistEntry = {
+    // Prepare entry (don't include email tracking fields - they may not exist in older schemas)
+    const entry: Omit<WaitlistEntry, 'welcome_email_sent' | 'beta_invitation_sent_at' | 'feedback_request_sent_at'> = {
       email: email.toLowerCase().trim(),
       name: name?.trim() || null,
       company: company?.trim() || null,
       role: role?.trim() || null,
       industry: industry || null,
-      welcome_email_sent: false,
     };
 
     // Insert into Supabase
@@ -83,7 +82,7 @@ export async function POST(request: Request) {
     const { data: insertedData, error } = await supabase
       .from("waitlist")
       .insert([entry])
-      .select()
+      .select("id, email")
       .single();
 
     if (error) {
@@ -121,12 +120,17 @@ export async function POST(request: Request) {
         });
         console.log("Welcome email sent successfully:", JSON.stringify(emailResult));
         
-        // Update record to mark welcome email as sent
+        // Update record to mark welcome email as sent (if column exists)
         if (insertedData?.id) {
-          await supabase
-            .from("waitlist")
-            .update({ welcome_email_sent: true })
-            .eq("id", insertedData.id);
+          try {
+            await supabase
+              .from("waitlist")
+              .update({ welcome_email_sent: true })
+              .eq("id", insertedData.id);
+          } catch (updateError) {
+            // Column may not exist yet - ignore
+            console.log("Could not update welcome_email_sent (column may not exist):", updateError);
+          }
         }
       } catch (emailError) {
         // Log but don't fail the request if email fails
