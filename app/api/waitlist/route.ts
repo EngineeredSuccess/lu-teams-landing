@@ -28,10 +28,6 @@ function isSupabaseConfigured(): boolean {
 
 export async function POST(request: Request) {
   try {
-    // Debug: Log environment info
-    console.log("Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
-    console.log("Supabase key prefix:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.substring(0, 20) + "...");
-    
     // Check if Supabase is configured
     if (!isSupabaseConfigured()) {
       console.log("Supabase not configured - simulating success for development");

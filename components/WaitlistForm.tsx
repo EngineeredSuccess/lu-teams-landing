@@ -45,6 +45,8 @@ export default function WaitlistForm() {
           name: "",
           company: "",
         });
+        // Update URL for conversion tracking
+        window.history.pushState({}, "", "/?signup=success");
       } else {
         setStatus("error");
         setErrorMessage(data.error || "Something went wrong. Please try again.");
