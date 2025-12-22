@@ -11,72 +11,37 @@ import {
     CheckCircle2,
     X
 } from "lucide-react";
+import { Translations } from "@/lib/translations";
+
+interface RoadmapProps {
+    content: Translations["roadmap"];
+}
 
 interface RoadmapItem {
     quarter: string;
     title: string;
     description: string;
     details: string[];
-    icon: typeof Zap; // Just to type the component properly
+    icon: any; // Using any to avoid type complexity with Lucide icons in this context
 }
 
-const roadmapData: RoadmapItem[] = [
-    {
-        quarter: "Q1 2026",
-        title: "Monetization & Core",
-        description: "Tiered Pricing Rollout & AI Safety Features",
-        icon: Zap,
-        details: [
-            "Launch Basic, Mid, and Enterprise plans",
-            "Restricted AI actions for safety",
-            "Dynamic recommendations",
-            "Enterprise tools (static agents, RAG for custom data)",
-            "Secure initial enterprise partnerships",
-            "User Feedback Integration"
-        ]
-    },
-    {
-        quarter: "Q2 2026",
-        title: "Expansion & Consultancy",
-        description: "AI/ML Advisory & Tool Integrations",
-        icon: Rocket,
-        details: [
-            "AI/ML Consultancy Services rollout",
-            "Jira, Slack, and MS Teams integrations",
-            "Measuring ROI for team productivity",
-            "Success story case studies published"
-        ]
-    },
-    {
-        quarter: "Q3 2026",
-        title: "Growth & Infrastructure",
-        description: "Team Scaling & Hardware Decisions",
-        icon: ZoomIn,
-        details: [
-            "Hire key talent in ML and Dev",
-            "Finalize Hardware & LLM selection",
-            "Prepare for advanced on-prem deployments",
-            "Aim for 10-15 active enterprise clients",
-            "Focus on high-stakes sectors"
-        ]
-    },
-    {
-        quarter: "Q4 2026",
-        title: "Independence & Advanced",
-        description: "Local LLM & Global Production",
-        icon: Globe,
-        details: [
-            "Local/On-prem LLM Deployment (Mistral-based)",
-            "Multi-agent systems introduction",
-            "Office suite integrations",
-            "Custom fine-tuning for enterprise",
-            "Full production global availability"
-        ]
-    }
-];
-
-export default function Roadmap() {
+export default function Roadmap({ content }: RoadmapProps) {
     const [selectedItem, setSelectedItem] = useState<RoadmapItem | null>(null);
+
+    const getIcon = (index: number) => {
+        switch (index) {
+            case 0: return Zap;
+            case 1: return Rocket;
+            case 2: return ZoomIn;
+            case 3: return Globe;
+            default: return Zap;
+        }
+    };
+
+    const roadmapData: RoadmapItem[] = content.items.map((item, index) => ({
+        ...item,
+        icon: getIcon(index)
+    }));
 
     return (
         <section className="py-24 bg-navy relative overflow-hidden" id="roadmap">
@@ -86,14 +51,13 @@ export default function Roadmap() {
             <div className="container-custom relative">
                 <div className="text-center mb-16">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-cyan/10 border border-cyan/20 text-cyan text-sm font-medium mb-4">
-                        Future Vision
+                        {content.badge}
                     </span>
                     <h2 className="section-title">
-                        Roadmap <span className="gradient-text">2026</span>
+                        {content.title} <span className="gradient-text">{content.highlight}</span>
                     </h2>
                     <p className="section-subtitle">
-                        Our commitment to data-driven innovation and user privacy.
-                        Follow our journey from core features to full AI independence.
+                        {content.subtitle}
                     </p>
                 </div>
 
@@ -133,7 +97,7 @@ export default function Roadmap() {
                                         </p>
 
                                         <div className="mt-auto flex items-center gap-2 text-cyan font-medium text-sm group-hover:gap-3 transition-all">
-                                            Details <ArrowRight className="w-4 h-4" />
+                                            {content.details} <ArrowRight className="w-4 h-4" />
                                         </div>
                                     </div>
                                 </motion.div>
@@ -187,7 +151,7 @@ export default function Roadmap() {
                             <div className="space-y-4">
                                 <h4 className="flex items-center gap-2 font-semibold text-white">
                                     <CheckCircle2 className="w-5 h-5 text-cyan" />
-                                    Key Objectives
+                                    {content.keyObjectives}
                                 </h4>
 
                                 <ul className="grid gap-3">
@@ -207,7 +171,7 @@ export default function Roadmap() {
                                     onClick={() => setSelectedItem(null)}
                                     className="w-full btn-primary-filled"
                                 >
-                                    Close Details
+                                    {content.close}
                                 </button>
                             </div>
                         </motion.div>

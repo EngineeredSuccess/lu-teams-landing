@@ -1,4 +1,10 @@
-export default function Footer() {
+import { Translations } from "@/lib/translations";
+
+interface FooterProps {
+  content: Translations["footer"];
+}
+
+export default function Footer({ content }: FooterProps) {
   return (
     <footer className="py-12 border-t border-slate-400/10">
       <div className="container-custom">
@@ -10,9 +16,16 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-slate-400 text-sm">
-            © 2025 LU Teams by Leadership Unfiltered. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <div className="flex gap-4 text-sm text-slate-400">
+              <a href="/" className="hover:text-cyan transition-colors">English</a>
+              <span className="text-slate-600">|</span>
+              <a href="/pl" className="hover:text-cyan transition-colors">Polski</a>
+            </div>
+            <p className="text-slate-400 text-sm">
+              {content.copyright}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

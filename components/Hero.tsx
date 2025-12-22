@@ -1,10 +1,10 @@
-const featureBadges = [
-  "For Aerospace & Tech Leaders",
-  "Predictive Analytics",
-  "Data-Driven Insights",
-];
+import { Translations } from "@/lib/translations";
 
-export default function Hero() {
+interface HeroProps {
+  content: Translations["hero"];
+}
+
+export default function Hero({ content }: HeroProps) {
   return (
     <section className="min-h-screen relative overflow-hidden pt-20 pb-10">
       {/* Background gradient effects */}
@@ -28,27 +28,24 @@ export default function Hero() {
                 <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
               </svg>
               <span className="text-cyan text-sm font-medium">
-                AI-Powered Team Intelligence
+                {content.badge}
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up leading-tight">
-              The technical leader&apos;s{" "}
-              <span className="gradient-text">sixth sense</span> for team
-              chemistry
+              {content.headline}{" "}
+              <span className="gradient-text">{content.headlineGradient}</span> {content.headlineSuffix}
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-slate-400 mb-8 animate-fade-in-up animation-delay-200 max-w-xl">
-              Stop guessing who works well together. LU Teams analyzes
-              personality dynamics to predict team synergy before you even start
-              a project.
+              {content.subheadline}
             </p>
 
             {/* Feature Badges */}
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
-              {featureBadges.map((badge, index) => (
+              {content.badges.map((badge, index) => (
                 <div
                   key={index}
                   className="inline-flex items-center gap-2 text-slate-300 text-sm"
@@ -77,7 +74,7 @@ export default function Hero() {
             <div className="relative w-full max-w-lg">
               {/* Glowing background effect */}
               <div className="absolute inset-0 bg-cyan/20 blur-3xl rounded-full animate-pulse-slow" />
-              
+
               {/* Video container */}
               <div className="relative">
                 <video
@@ -90,9 +87,9 @@ export default function Hero() {
                 >
                   <source src="/logo-animation.mp4" type="video/mp4" />
                   {/* Fallback image if video doesn't load */}
-                  <img 
-                    src="/logo.png" 
-                    alt="Leadership Unfiltered AI" 
+                  <img
+                    src="/logo.png"
+                    alt="Leadership Unfiltered AI"
                     className="w-full h-auto"
                   />
                 </video>

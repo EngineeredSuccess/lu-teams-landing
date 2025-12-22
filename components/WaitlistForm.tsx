@@ -4,7 +4,13 @@ import { useState } from "react";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-export default function WaitlistForm() {
+import { Translations } from "@/lib/translations";
+
+interface WaitlistFormProps {
+  content: Translations["waitlist"];
+}
+
+export default function WaitlistForm({ content }: WaitlistFormProps) {
   const [formData, setFormData] = useState({
     email: "",
     name: "",
@@ -49,11 +55,11 @@ export default function WaitlistForm() {
         window.history.pushState({}, "", "/?signup=success");
       } else {
         setStatus("error");
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
+        setErrorMessage(data.error || content.form.error);
       }
     } catch {
       setStatus("error");
-      setErrorMessage("Network error. Please try again.");
+      setErrorMessage(content.form.networkError);
     }
   };
 
@@ -81,16 +87,16 @@ export default function WaitlistForm() {
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                You&apos;re on the list!
+                {content.success.title}
               </h2>
               <p className="text-slate-400 mb-6">
-                Thanks for joining the beta. We&apos;ll be in touch soon with early access details.
+                {content.success.message}
               </p>
               <button
                 onClick={() => setStatus("idle")}
                 className="text-cyan hover:text-cyan-dark transition-colors"
               >
-                Add another email
+                {content.success.reset}
               </button>
             </div>
           </div>
@@ -106,14 +112,14 @@ export default function WaitlistForm() {
           <div className="p-8 md:p-12 rounded-2xl bg-navy-light/50 border border-cyan/20">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Join the <span className="gradient-text">LU Teams Beta</span>
+                {content.header.title} <span className="gradient-text">{content.header.highlight}</span>
               </h2>
               <p className="text-lg text-slate-400">
-                Be among the first to experience the Synergy Prediction Engine.
+                {content.header.description}
               </p>
               {waitlistCount > 0 && (
                 <p className="mt-4 text-sm text-cyan">
-                  {waitlistCount} leaders have already joined
+                  {content.header.count.replace("{count}", waitlistCount.toString())}
                 </p>
               )}
             </div>
@@ -121,13 +127,13 @@ export default function WaitlistForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label htmlFor="email" className="label-text">
-                  Email *
+                  {content.form.email}
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="your.email@company.com"
+                  placeholder={content.form.emailPlaceholder}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -137,13 +143,13 @@ export default function WaitlistForm() {
 
               <div className="space-y-2">
                 <label htmlFor="name" className="label-text">
-                  Name (optional)
+                  {content.form.name}
                 </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder={content.form.namePlaceholder}
                   value={formData.name}
                   onChange={handleChange}
                   className="input-field"
@@ -152,13 +158,13 @@ export default function WaitlistForm() {
 
               <div className="space-y-2">
                 <label htmlFor="company" className="label-text">
-                  Company (optional)
+                  {content.form.company}
                 </label>
                 <input
                   id="company"
                   name="company"
                   type="text"
-                  placeholder="Acme Corp"
+                  placeholder={content.form.companyPlaceholder}
                   value={formData.company}
                   onChange={handleChange}
                   className="input-field"
@@ -176,11 +182,11 @@ export default function WaitlistForm() {
                 disabled={status === "loading"}
                 className="w-full btn-primary-filled text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === "loading" ? "Joining..." : "Join the Waitlist"}
+                {status === "loading" ? content.form.submitting : content.form.submit}
               </button>
 
               <p className="text-sm text-slate-400 text-center">
-                We&apos;ll notify you when beta access is available. No spam, ever.
+                {content.form.footer}
               </p>
             </form>
           </div>
