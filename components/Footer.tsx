@@ -1,4 +1,5 @@
 import { Translations } from "@/lib/translations";
+import Link from "next/link";
 
 interface FooterProps {
   content: Translations["footer"];
@@ -18,9 +19,9 @@ export default function Footer({ content }: FooterProps) {
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
             <div className="flex gap-4 text-sm text-slate-400">
-              <a href="/" className="hover:text-cyan transition-colors">English</a>
+              <Link href="/" className="hover:text-cyan transition-colors">English</Link>
               <span className="text-slate-600">|</span>
-              <a href="/pl" className="hover:text-cyan transition-colors">Polski</a>
+              <Link href="/pl" className="hover:text-cyan transition-colors">Polski</Link>
             </div>
             <p className="text-slate-400 text-sm">
               {content.copyright}

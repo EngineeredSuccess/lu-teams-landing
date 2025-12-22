@@ -9,7 +9,8 @@ import {
     Globe,
     ArrowRight,
     CheckCircle2,
-    X
+    X,
+    LucideIcon
 } from "lucide-react";
 import { Translations } from "@/lib/translations";
 
@@ -22,7 +23,7 @@ interface RoadmapItem {
     title: string;
     description: string;
     details: string[];
-    icon: any; // Using any to avoid type complexity with Lucide icons in this context
+    icon: LucideIcon;
 }
 
 export default function Roadmap({ content }: RoadmapProps) {
