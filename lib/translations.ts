@@ -156,8 +156,8 @@ export const translations = {
             badge: "Inteligencja Zespołowa Wspierana przez AI",
             headline: "Szósty zmysł",
             headlineGradient: "lidera technicznego",
-            headlineSuffix: "do chemii w zespole",
-            subheadline: "Przestań zgadywać, kto dobrze ze sobą współpracuje. LU Teams analizuje dynamikę osobowości, aby przewidzieć synergię zespołu, zanim w ogóle rozpoczniesz projekt.",
+            headlineSuffix: ". Buduj zespoły z matematyczną precyzją",
+            subheadline: "Koniec z wróżeniem z fusów. Przewiduj synergię zespołu dzięki AI, zanim ruszy projekt.",
             badges: [
                 "Dla Liderów Tech i Aerospace",
                 "Analityka Predykcyjna",
@@ -165,9 +165,9 @@ export const translations = {
             ]
         },
         problemStatement: {
-            title: "Jesteś świetny w strategii.",
-            gradient: "Pozwól LU Teams zająć się dynamiką ludzi.",
-            description: "Nie zostałeś liderem technicznym dlatego, że świetnie czytasz ludzi. Jesteś tu, ponieważ świetnie rozwiązujesz złożone problemy. Ale zarządzanie zespołami wymaga innego zestawu umiejętności – tego, który teraz zapewnia LU Teams."
+            title: "Jesteś genialnym strategiem.",
+            gradient: "Pozwól LU Teams zadbać o dynamikę Twojego zespołu.",
+            description: "Nie zostałeś liderem technicznym, bo potrafisz czytać w ludzkich myślach. Jesteś nim, bo rozwiązujesz najbardziej złożone problemy. Zarządzanie ludźmi to inny rodzaj wyzwania – teraz LU Teams bierze je na siebie."
         },
         features: {
             header: {
@@ -177,16 +177,16 @@ export const translations = {
             },
             items: [
                 {
-                    title: "Analiza Osobowości",
-                    description: "LU Teams analizuje profile DiSC i Gallupa, aby zrozumieć styl pracy, mocne strony i potencjalne martwe punkty każdego członka zespołu."
+                    title: "Kod DNA Twojego zespołu",
+                    description: "Analiza profili DiSC i Gallup pod kątem stylu pracy."
                 },
                 {
-                    title: "Przewidywanie Konfliktów",
-                    description: "Identyfikuje potencjalne konflikty zanim wystąpią. Zobacz, które kombinacje osobowości tworzą tarcie, a które 'flow'."
+                    title: "Wczesne ostrzeganie przed tarciami",
+                    description: "Zidentyfikuj punkty zapalne, zanim wpłyną na projekt."
                 },
                 {
-                    title: "Inteligentne Rekomendacje",
-                    description: "Otrzymuj praktyczne wnioski dotyczące składu zespołu, przydziału ról i strategii komunikacji dostosowanych do Twojego projektu."
+                    title: "Gotowe scenariusze współpracy",
+                    description: "Konkretne wskazówki dotyczące składu zespołu i komunikacji."
                 }
             ]
         },
@@ -198,11 +198,11 @@ export const translations = {
             items: [
                 {
                     title: "Lotnictwo i Obronność",
-                    description: "W lotnictwie konflikt w zespole to nie kwestia produktywności – to ryzyko misji. LU Teams pomaga zarządzać wieloletnimi projektami o wysokiej stawce z pewnością, że dynamika zespołu jest zoptymalizowana."
+                    description: "W sektorze Aerospace konflikt to ryzyko misji. Zarządzaj dynamiką tam, gdzie nie ma miejsca na błąd."
                 },
                 {
                     title: "Tech i SaaS",
-                    description: "Zła chemia w zespole to błąd, a nie funkcja. LU Teams pomaga budować zespoły inżynierskie, które dostarczają szybciej, rozumiejąc, kto dobrze ze sobą współpracuje, zanim konflikty Was spowolnią."
+                    description: "Zła chemia w zespole to błąd w kodzie, a nie funkcja. Buduj teamy, które dowożą szybciej."
                 },
                 {
                     title: "Zaawansowana Produkcja",
