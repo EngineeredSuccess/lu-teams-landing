@@ -4,7 +4,7 @@ export const translations = {
             badge: "AI-Powered Team Intelligence",
             headline: "The technical leader's",
             headlineGradient: "sixth sense",
-            headlineSuffix: "for team chemistry",
+            headlineSuffix: " for team chemistry",
             subheadline: "Stop guessing who works well together. LU Teams analyzes personality dynamics to predict team synergy before you even start a project.",
             badges: [
                 "For Aerospace & Tech Leaders",

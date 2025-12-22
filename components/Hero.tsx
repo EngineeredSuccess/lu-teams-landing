@@ -35,7 +35,7 @@ export default function Hero({ content }: HeroProps) {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up leading-tight">
               {content.headline}{" "}
-              <span className="gradient-text">{content.headlineGradient}</span> {content.headlineSuffix}
+              <span className="gradient-text">{content.headlineGradient}</span>{content.headlineSuffix}
             </h1>
 
             {/* Subheadline */}
