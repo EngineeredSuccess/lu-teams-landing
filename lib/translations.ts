@@ -1,11 +1,11 @@
 export const translations = {
     en: {
         hero: {
-            badge: "AI-Powered Team Intelligence",
-            headline: "The technical leader's",
-            headlineGradient: "sixth sense",
-            headlineSuffix: " for team chemistry",
-            subheadline: "Stop guessing who works well together. LU Teams analyzes personality dynamics to predict team synergy before you even start a project.",
+            badge: "The Precision Instrument",
+            headline: "The Precision Instrument",
+            headlineGradient: "for Engineering",
+            headlineSuffix: " Synergy",
+            subheadline: "Stop guessing with surface-level personality tests. LU Teams uses deep HEXACO metrics and Team Role Dynamics to predict synergy and prevent mission-critical friction.",
             badges: [
                 "For Aerospace & Tech Leaders",
                 "Predictive Analytics",
@@ -13,48 +13,60 @@ export const translations = {
             ]
         },
         problemStatement: {
-            title: "You're brilliant at strategy.",
-            gradient: "Let LU Teams handle the people dynamics.",
-            description: "You didn't become a technical leader because you're great at reading people. You got here because you're great at solving complex problems. But managing teams requires a different skill set—one that LU Teams now provides."
+            title: "Why Engineering Leaders Choose LU Teams",
+            gradient: "Choose LU Teams",
+            description: "You didn't become a technical leader to manage \"office politics.\" You got here because you solve complex problems. But a single \"brilliant but toxic\" engineer or a team of five visionaries with zero \"finishers\" can sink a $10M project. LU Teams provides the data layer for your human stack."
         },
         features: {
             header: {
-                title: "Introducing",
-                highlight: "LU Teams",
-                description: "The Synergy Prediction Engine that reads your team better than you do. Make decisions with intelligence, not intuition."
+                title: "Our Methodology",
+                highlight: "(The HEXACO + Roles Advantage)",
+                description: "Instead of generic DiSC or Gallup profiles, we utilize the most scientifically robust framework for high-stakes environments:"
             },
             items: [
                 {
-                    title: "Personality Analysis",
-                    description: "LU Teams analyzes DiSC and Gallup profiles to understand each team member's working style, strengths, and potential blind spots."
+                    title: "HEXACO Deep-Core Analysis",
+                    description: "We go beyond the surface. By measuring the Honesty-Humility (H) factor, we identify high-integrity leaders and flag potential \"toxic brilliance\" before it disrupts your culture."
+                },
+                {
+                    title: "Engineering Team Roles",
+                    description: "Our AI analyzes how individuals function within a technical machine. Do you have enough Architects to design, Optimizers to refine, and Finishers to ship?"
+                },
+                {
+                    title: "The Synergy Radar",
+                    description: "We don't just show you individual scores. Our engine maps how two engineers will actually collaborate during a high-pressure sprint or a complex code review."
                 },
                 {
                     title: "Conflict Prediction",
-                    description: "Identifies potential clashes before they happen. See which personality combinations create friction and which create flow."
+                    description: "Identify where \"clashes in cognitive style\" will occur before the first line of code is written."
                 },
                 {
-                    title: "Smart Recommendations",
-                    description: "Get actionable insights on team composition, role assignments, and communication strategies tailored to your project."
+                    title: "Hiring Calibration",
+                    description: "Don't just hire for skill; hire for the missing piece in your team's \"Synergy Radar.\""
+                },
+                {
+                    title: "Automated Retrospectives",
+                    description: "Use personality data to understand why a sprint failed and how to reconfigure for the next one."
                 }
             ]
         },
         useCases: {
             header: {
-                title: "Built for",
-                highlight: "Technical Leaders"
+                title: "Industry-Specific",
+                highlight: "Solutions"
             },
             items: [
                 {
                     title: "Aerospace & Defense",
-                    description: "In aerospace, team conflict isn't a productivity issue—it's a mission risk. LU Teams helps you manage multi-year, high-stakes projects with confidence knowing your team dynamics are optimized."
+                    description: "In mission-critical engineering, \"Integrity\" isn't a buzzword—it's a safety requirement. Our HEXACO-based modeling ensures your team has the emotional stability and conscientiousness required for zero-fail environments."
                 },
                 {
-                    title: "Tech & SaaS",
-                    description: "Bad team chemistry is a bug, not a feature. LU Teams helps you build engineering teams that ship faster by understanding who works well together before conflicts slow you down."
+                    title: "High-Velocity Tech & SaaS",
+                    description: "Bad chemistry is a bug that scales. LU Teams helps you optimize your \"human API,\" ensuring that your senior architects and junior developers are matched for maximum knowledge transfer and minimum friction."
                 },
                 {
                     title: "Advanced Manufacturing",
-                    description: "Coordinate cross-functional teams across mechanical, electrical, and software engineering. LU Teams helps you prevent costly delays caused by team friction."
+                    description: "Coordinate across mechanical, electrical, and software silos. Our Team Role analysis ensures that cross-functional dependencies are managed by people whose profiles naturally bridge communication gaps."
                 }
             ]
         },
@@ -144,20 +156,20 @@ export const translations = {
             }
         },
         footer: {
-            copyright: "© 2025 LU Teams by Leadership Unfiltered. All rights reserved."
+            copyright: "LU Teams utilizes an independent methodology based on the HEXACO-PI-R and open-source Team Role models. We provide data-driven insights, not just labels. © 2025 Leadership Unfiltered."
         },
         metadata: {
-            title: "LU Teams - The Technical Leader's Sixth Sense for Team Chemistry",
-            description: "Stop guessing who works well together. LU Teams analyzes personality dynamics to predict team synergy before you even start a project."
+            title: "LU Teams - The Precision Instrument for Engineering Synergy",
+            description: "Stop guessing with surface-level personality tests. LU Teams uses deep HEXACO metrics and Team Role Dynamics to predict synergy and prevent mission-critical friction."
         }
     },
     pl: {
         hero: {
-            badge: "Inteligencja Zespołowa Wspierana przez AI",
-            headline: "Szósty zmysł",
-            headlineGradient: "lidera technicznego",
-            headlineSuffix: ". Buduj zespoły z matematyczną precyzją",
-            subheadline: "Koniec z wróżeniem z fusów. Przewiduj synergię zespołu dzięki AI, zanim ruszy projekt.",
+            badge: "Precyzyjne Narzędzie",
+            headline: "Precyzyjne Narzędzie",
+            headlineGradient: "dla Inżynierii",
+            headlineSuffix: " Synergii",
+            subheadline: "Przestań zgadywać za pomocą powierzchownych testów osobowości. LU Teams wykorzystuje głębokie metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i zapobiegać krytycznym tarciom.",
             badges: [
                 "Dla Liderów Tech i Aerospace",
                 "Analityka Predykcyjna",
@@ -165,48 +177,60 @@ export const translations = {
             ]
         },
         problemStatement: {
-            title: "Jesteś genialnym strategiem.",
-            gradient: "Pozwól LU Teams zadbać o dynamikę Twojego zespołu.",
-            description: "Nie zostałeś liderem technicznym, bo potrafisz czytać w ludzkich myślach. Jesteś nim, bo rozwiązujesz najbardziej złożone problemy. Zarządzanie ludźmi to inny rodzaj wyzwania – teraz LU Teams bierze je na siebie."
+            title: "Dlaczego Liderzy Inżynierii",
+            gradient: "Wybierają LU Teams",
+            description: "Nie zostałeś liderem technicznym, aby zarządzać \"polityką biurową\". Jesteś tu, ponieważ rozwiązujesz złożone problemy. Ale pojedynczy \"genialny, ale toksyczny\" inżynier lub zespół pięciu wizjonerów bez żadnego \"executora\" może zatopić projekt za 10 mln USD. LU Teams dostarcza warstwę danych dla Twojego ludzkiego stacku."
         },
         features: {
             header: {
-                title: "Przedstawiamy",
-                highlight: "LU Teams",
-                description: "Silnik Przewidywania Synergii, który czyta Twój zespół lepiej niż Ty. Podejmuj decyzje w oparciu o inteligencję, a nie intuicję."
+                title: "Nasza Metodologia",
+                highlight: "(Przewaga HEXACO + Ról)",
+                description: "Zamiast generycznych profili DiSC czy Gallupa, wykorzystujemy najbardziej naukowo solidne ramy dla środowisk o wysokiej stawce:"
             },
             items: [
                 {
-                    title: "Kod DNA Twojego zespołu",
-                    description: "Analiza profili DiSC i Gallup pod kątem stylu pracy."
+                    title: "Analiza Głębinowa HEXACO",
+                    description: "Wychodzimy poza powierzchnię. Mierząc czynnik Uczciwości-Pokory (H), identyfikujemy liderów o wysokiej integralności i oznaczamy potencjalną \"toksyczną genialność\", zanim zakłóci kulturę."
                 },
                 {
-                    title: "Wczesne ostrzeganie przed tarciami",
-                    description: "Zidentyfikuj punkty zapalne, zanim wpłyną na projekt."
+                    title: "Role Zespołów Inżynierskich",
+                    description: "Nasze AI analizuje, jak jednostki funkcjonują wewnątrz technicznej machiny. Czy masz wystarczająco dużo Architektów do projektowania, Optymalizatorów do ulepszania i Zamykających (Finishers) do dostarczania?"
                 },
                 {
-                    title: "Gotowe scenariusze współpracy",
-                    description: "Konkretne wskazówki dotyczące składu zespołu i komunikacji."
+                    title: "Radar Synergii",
+                    description: "Nie pokazujemy tylko indywidualnych wyników. Nasz silnik mapuje, jak dwóch inżynierów będzie faktycznie współpracować podczas sprintu pod dużą presją lub skomplikowanego code review."
+                },
+                {
+                    title: "Przewidywanie Konfliktów",
+                    description: "Zidentyfikuj, gdzie wystąpią \"zderzenia stylów poznawczych\", zanim zostanie napisana pierwsza linijka kodu."
+                },
+                {
+                    title: "Kalibracja Rekrutacji",
+                    description: "Nie zatrudniaj tylko dla umiejętności; zatrudniaj brakujący element w \"Radarze Synergii\" Twojego zespołu."
+                },
+                {
+                    title: "Zautomatyzowane Retrospektywy",
+                    description: "Wykorzystaj dane osobowościowe, aby zrozumieć, dlaczego sprint się nie udał i jak skonfigurować kolejny."
                 }
             ]
         },
         useCases: {
             header: {
-                title: "Stworzone dla",
-                highlight: "Liderów Technicznych"
+                title: "Rozwiązania",
+                highlight: "Branżowe"
             },
             items: [
                 {
                     title: "Lotnictwo i Obronność",
-                    description: "W sektorze Aerospace konflikt to ryzyko misji. Zarządzaj dynamiką tam, gdzie nie ma miejsca na błąd."
+                    description: "W inżynierii o krytycznym znaczeniu, \"Integralność\" to nie frazes – to wymóg bezpieczeństwa. Nasze modelowanie oparte na HEXACO zapewnia, że Twój zespół ma stabilność emocjonalną i sumienność wymaganą w środowiskach zero-fail."
                 },
                 {
-                    title: "Tech i SaaS",
-                    description: "Zła chemia w zespole to błąd w kodzie, a nie funkcja. Buduj teamy, które dowożą szybciej."
+                    title: "Dynamiczny Tech i SaaS",
+                    description: "Zła chemia to błąd, który się skaluje. LU Teams pomaga zoptymalizować Twoje \"ludzkie API\", zapewniając, że Twoi starsi architekci i młodsi programiści są dopasowani dla maksymalnego transferu wiedzy i minimalnego tarcia."
                 },
                 {
                     title: "Zaawansowana Produkcja",
-                    description: "Koordynuj zespoły interdyscyplinarne w inżynierii mechanicznej, elektrycznej i oprogramowania. LU Teams pomaga zapobiegać kosztownym opóźnieniom spowodowanym nieporozumieniami w zespole."
+                    description: "Koordynuj silosy mechaniczne, elektryczne i programowe. Nasza analiza Ról Zespołowych zapewnia, że zależności międzyfunkcyjne są zarządzane przez ludzi, których profile naturalnie mostkują luki komunikacyjne."
                 }
             ]
         },
@@ -296,11 +320,11 @@ export const translations = {
             }
         },
         footer: {
-            copyright: "© 2025 LU Teams by Leadership Unfiltered. Wszelkie prawa zastrzeżone."
+            copyright: "LU Teams wykorzystuje niezależną metodologię opartą na HEXACO-PI-R i modelach Ról Zespołowych open-source. Dostarczamy wnioski oparte na danych, a nie tylko etykiety. © 2025 Leadership Unfiltered."
         },
         metadata: {
-            title: "LU Teams - Szósty zmysł lidera technicznego do chemii w zespole",
-            description: "Przestań zgadywać, kto dobrze ze sobą współpracuje. LU Teams analizuje dynamikę osobowości, aby przewidzieć synergię zespołu, zanim w ogóle rozpoczniesz projekt."
+            title: "LU Teams - Precyzyjne Narzędzie do Synergii Inżynierskiej",
+            description: "Przestań zgadywać za pomocą powierzchownych testów osobowości. LU Teams wykorzystuje głębokie metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i zapobiegać krytycznym tarciom."
         }
     }
 };
