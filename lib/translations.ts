@@ -166,10 +166,10 @@ export const translations = {
     pl: {
         hero: {
             badge: "Precyzyjne Narzędzie",
-            headline: "Precyzyjne Narzędzie",
-            headlineGradient: "dla Inżynierii",
-            headlineSuffix: " Synergii",
-            subheadline: "Przestań zgadywać za pomocą powierzchownych testów osobowości. LU Teams wykorzystuje głębokie metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i zapobiegać krytycznym tarciom.",
+            headline: "Inżynieria Synergii: ",
+            headlineGradient: "Precyzyjne Narzędzie",
+            headlineSuffix: " dla Liderów Tech",
+            subheadline: "Zrezygnuj z powierzchownych testów osobowości. LU Teams wykorzystuje zaawansowane metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i eliminować krytyczne tarcia w zespole.",
             badges: [
                 "Dla Liderów Tech i Aerospace",
                 "Analityka Predykcyjna",
@@ -179,7 +179,7 @@ export const translations = {
         problemStatement: {
             title: "Dlaczego Liderzy Inżynierii",
             gradient: "Wybierają LU Teams",
-            description: "Nie zostałeś liderem technicznym, aby zarządzać \"polityką biurową\". Jesteś tu, ponieważ rozwiązujesz złożone problemy. Ale pojedynczy \"genialny, ale toksyczny\" inżynier lub zespół pięciu wizjonerów bez żadnego \"executora\" może zatopić projekt za 10 mln USD. LU Teams dostarcza warstwę danych dla Twojego ludzkiego stacku."
+            description: "Nie zostałeś liderem technicznym, aby zarządzać \"polityką biurową\". Jesteś tu, ponieważ rozwiązujesz złożone problemy. Ale pojedynczy \"genialny, ale toksyczny\" inżynier lub zespół pięciu wizjonerów bez żadnego \"executora\" może pogrzebać projekt o budżecie 10 mln USD. LU Teams to warstwa danych o Twoim zespole wpleciona w Twój tech stack."
         },
         features: {
             header: {
@@ -189,12 +189,12 @@ export const translations = {
             },
             items: [
                 {
-                    title: "Analiza Głębinowa HEXACO",
-                    description: "Wychodzimy poza powierzchnię. Mierząc czynnik Uczciwości-Pokory (H), identyfikujemy liderów o wysokiej integralności i oznaczamy potencjalną \"toksyczną genialność\", zanim zakłóci kulturę."
+                    title: "Analiza Rdzenia Osobowości HEXACO",
+                    description: "Wychodzimy poza powierzchnię. Mierząc czynnik Uczciwości-Pokory (H), identyfikujemy liderów o wysokiej integralności, wykrywając 'toksyczny geniusz' na wczesnym etapie."
                 },
                 {
                     title: "Role Zespołów Inżynierskich",
-                    description: "Nasze AI analizuje, jak jednostki funkcjonują wewnątrz technicznej machiny. Czy masz wystarczająco dużo Architektów do projektowania, Optymalizatorów do ulepszania i Zamykających (Finishers) do dostarczania?"
+                    description: "Nasze AI analizuje, jak jednostki funkcjonują wewnątrz technicznego ekosystemu. Czy masz wystarczająco dużo Architektów do projektowania, Optymalizatorów do ulepszania i Finalizatorów do dostarczania?"
                 },
                 {
                     title: "Radar Synergii",
@@ -226,7 +226,7 @@ export const translations = {
                 },
                 {
                     title: "Dynamiczny Tech i SaaS",
-                    description: "Zła chemia to błąd, który się skaluje. LU Teams pomaga zoptymalizować Twoje \"ludzkie API\", zapewniając, że Twoi starsi architekci i młodsi programiści są dopasowani dla maksymalnego transferu wiedzy i minimalnego tarcia."
+                    description: "Zła chemia to błąd, który się skaluje. LU Teams pomaga zoptymalizować 'ludzkie API' Twojej firmy, zapewniając, że Twoi starsi architekci i młodsi programiści są dopasowani dla maksymalnego transferu wiedzy i minimalnego tarcia."
                 },
                 {
                     title: "Zaawansowana Produkcja",
@@ -297,7 +297,7 @@ export const translations = {
             header: {
                 title: "Dołącz do Bety",
                 highlight: "LU Teams",
-                description: "Bądź jednym z pierwszych, którzy doświadczą Silnika Przewidywania Synergii.",
+                description: "Sprawdź w praktyce nasz Algorytm Przewidywania Synergii.",
                 count: "{count} liderów już dołączyło"
             },
             form: {
