@@ -9,6 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // New Premium Palette
+        primary: {
+          DEFAULT: '#d4af37', // Muted gold
+          dark: '#b8941f',
+          light: '#e6c968'
+        },
+        secondary: {
+          DEFAULT: '#2c7a7b', // Deep teal
+          dark: '#1f5657',
+          light: '#3d9b9c'
+        },
+        background: {
+          DEFAULT: '#0d0d0d', // Charcoal black
+          surface: '#1a1a1a', // Card backgrounds
+          elevated: '#242424'
+        },
+        text: {
+          primary: '#e8e8e8',
+          secondary: '#a0a0a0',
+          muted: '#707070'
+        },
+        // Legacy Support (to be phased out)
         navy: {
           DEFAULT: "#0a192f",
           light: "#112240",
@@ -27,6 +49,12 @@ const config: Config = {
           300: "#ccd6f6",
           400: "#8892b0",
         },
+      },
+      borderColor: {
+        'primary-subtle': 'rgba(212, 175, 55, 0.2)',
+      },
+      backdropBlur: {
+        'subtle': '8px',
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

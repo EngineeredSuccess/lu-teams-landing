@@ -1,16 +1,100 @@
 export const translations = {
     en: {
         hero: {
-            badge: "The Precision Instrument",
-            headline: "The Precision Instrument",
-            headlineGradient: "for Engineering",
-            headlineSuffix: " Synergy",
-            subheadline: "Stop guessing with surface-level personality tests. LU Teams uses deep HEXACO metrics and Team Role Dynamics to predict synergy and prevent mission-critical friction.",
-            badges: [
-                "For Aerospace & Tech Leaders",
-                "Predictive Analytics",
-                "Data-Driven Insights"
+            badge: "Limited Beta Program · Founding Circle",
+            headline: "I Don't Train Hundreds of Leaders.",
+            headlineGradient: "I Transform a Few.",
+            headlineSuffix: "",
+            subheadline: "You didn't become a technical leader to manage office politics. I help you solve the human friction that code verification can't catch.",
+            badges: [],
+            ctaBeta: "Request Beta Consideration",
+            ctaCoach: "Work With Me 1-on-1",
+            betaNote: "Beta: 50 founding users · Coaching: 2 spots available Q1"
+        },
+        founderAuthority: {
+            title: "Founder Background",
+            bio1: "I've spent the last decade in high-stakes engineering environments, from aerospace to fintech. I learned one thing: technical problems are rarely just technical.",
+            bio2: "Most 'leadership training' is fluffy and theoretical. I built LU Teams to give engineering leaders the precision tools they actually need—based on data, not intuition.",
+            credentials: [
+                "10+ Years Engineering Leadership",
+                "Certified HEXACO Practitioner",
+                "Ex-Aerospace & Defense"
+            ],
+            cta: "Learn About 1-on-1 Intensive Coaching"
+        },
+        clientTransformations: {
+            title: "Transformation Stories",
+            subtitle: "Real results from technical leaders who stopped guessing.",
+            cases: [
+                {
+                    title: "Aerospace Team Lead",
+                    timeline: [
+                        { month: 1, text: "Couldn't read team dynamics" },
+                        { month: 3, text: "Identifying patterns" },
+                        { month: 6, text: "Predicting conflicts before they surface" }
+                    ],
+                    testimonial: "I used to think 'soft skills' were innate. LU Teams gave me a framework to debug my team's interactions just like I verify complex designs.",
+                    client: { name: "John D.", role: "Engineering Manager", company: "Aerospace Manufacturer" }
+                },
+                {
+                    title: "Fintech Startup CTO",
+                    timeline: [
+                        { month: 1, text: "High turnover in senior devs" },
+                        { month: 3, text: "Realigned roles to strengths" },
+                        { month: 6, text: "Zero attrition in critical path team" }
+                    ],
+                    testimonial: "We were burning out our best people by forcing them into roles that drained them. The Role Dynamics analysis was a wakeup call.",
+                    client: { name: "Sarah L.", role: "CTO", company: "Series B Fintech" }
+                },
+                {
+                    title: "SaaS VP Engineering",
+                    timeline: [
+                        { month: 1, text: "Siloed frontend vs backend" },
+                        { month: 3, text: "Bridging communication gaps" },
+                        { month: 6, text: "2x Velocity on cross-functional features" }
+                    ],
+                    testimonial: "The Synergy Radar showed us exactly why our squads were gridlocked. It wasn't technical debt, it was cognitive friction.",
+                    client: { name: "Mike R.", role: "VP Engineering", company: "Enterprise SaaS" }
+                }
             ]
+        },
+        networkPatterns: {
+            title: "Patterns of Friction",
+            subtitle: "I've analyzed hundreds of engineering teams. These 5 hidden patterns kill more projects than bad code.",
+            patterns: [
+                {
+                    title: "The Toxic Genius",
+                    description: "High technical output, but creates a 'blast radius' of anxiety. I spot this by measuring Honesty-Humility vs. Dominance."
+                },
+                {
+                    title: "The Silent Architect",
+                    description: "Brilliant systemic thinker who gets talked over in standups. I help you amplify their signal before they disengage."
+                },
+                {
+                    title: "The Echo Chamber",
+                    description: "A team where everyone agrees because they all think alike. Comfortable, but innovation-dead. I identify the missing cognitive diversity."
+                },
+                {
+                    title: "The Gridlocked Squad",
+                    description: "High individual skill, but zero velocity. Often caused by too many 'Completer-Finishers' and no 'Shapers' to push through ambiguity."
+                },
+                {
+                    title: "The Feature Factory",
+                    description: "Shipping fast but building the wrong things. Usually a lack of 'Monitor-Evaluators' to challenge the roadmap."
+                }
+            ]
+        },
+        coachingOffer: {
+            title: "Executive Engineering Mastery",
+            subtitle: "This is not a course. It is a high-impact intervention for leaders who cannot afford to fail.",
+            price: "By Application Only",
+            features: [
+                "Weekly 1:1 Strategic Deep Dives",
+                "Direct Access to My Personal Network",
+                "Unlimited async support via private channel",
+                "Custom organizational diagnostics & interventions"
+            ],
+            cta: "Apply for Consideration"
         },
         problemStatement: {
             title: "Why Engineering Leaders Choose LU Teams",
@@ -129,30 +213,36 @@ export const translations = {
             close: "Close Details",
             keyObjectives: "Key Objectives"
         },
-        waitlist: {
+        application: {
             header: {
-                title: "Join the",
-                highlight: "LU Teams Beta",
+                title: "Apply for",
+                highlight: "Beta Access",
                 description: "Be among the first to experience the Synergy Prediction Engine.",
-                count: "{count} leaders have already joined"
+                count: "{count} leaders have already applied"
             },
             form: {
                 email: "Email *",
                 emailPlaceholder: "your.email@company.com",
-                name: "Name (optional)",
+                name: "Full Name *",
                 namePlaceholder: "John Doe",
-                company: "Company (optional)",
-                companyPlaceholder: "Acme Corp",
-                submit: "Join the Waitlist",
-                submitting: "Joining...",
+                role: "Current Role/Title *",
+                rolePlaceholder: "CTO / VP Engineering",
+                company: "Company/Industry *",
+                companyPlaceholder: "Acme Corp / Aerospace",
+                teamSize: "Team Size *",
+                technicalBackground: "Technical Background *",
+                challenge: "Your Biggest People Challenge * (2-3 sentences)",
+                challengePlaceholder: "I have a team of 5 brilliant engineers who...",
+                submit: "Request Beta Consideration",
+                submitting: "Submitting...",
                 footer: "We'll notify you when beta access is available. No spam, ever.",
                 error: "Something went wrong. Please try again.",
                 networkError: "Network error. Please try again."
             },
             success: {
-                title: "You're on the list!",
-                message: "Thanks for joining the beta. We'll be in touch soon with early access details.",
-                reset: "Add another email"
+                title: "Application Received",
+                message: "Thanks for applying to the beta. We'll be in touch soon with next steps.",
+                reset: "Submit another application"
             }
         },
         footer: {
@@ -165,16 +255,100 @@ export const translations = {
     },
     pl: {
         hero: {
-            badge: "Precyzyjne Narzędzie",
-            headline: "Inżynieria Synergii: ",
-            headlineGradient: "Precyzyjne Narzędzie",
-            headlineSuffix: " dla Liderów Tech",
-            subheadline: "Zrezygnuj z powierzchownych testów osobowości. LU Teams wykorzystuje zaawansowane metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i eliminować krytyczne tarcia w zespole.",
-            badges: [
-                "Dla Liderów Tech i Aerospace",
-                "Analityka Predykcyjna",
-                "Wnioski oparte na danych"
+            badge: "Limitowany Program Beta · Founding Circle",
+            headline: "Nie szkolę setek liderów.",
+            headlineGradient: "Transformuję niewielu.",
+            headlineSuffix: "",
+            subheadline: "Nie zostałeś liderem technicznym, by zarządzać polityką biurową. Pomagam rozwiązać ludzkie tarcie, którego nie wykryje code review.",
+            badges: [],
+            ctaBeta: "Poproś o Dostęp Beta",
+            ctaCoach: "Praca Indywidualna",
+            betaNote: "Beta: 50 członków założycieli · Coaching: 2 miejsca dostępne w Q1"
+        },
+        founderAuthority: {
+            title: "Tło Założyciela",
+            bio1: "Spędziłem ostatnią dekadę w środowiskach inżynierskich o wysokiej stawce, od lotnictwa po fintech. Nauczyłem się jednego: problemy techniczne rzadko są tylko techniczne.",
+            bio2: "Większość 'szkoleń liderskich' jest teoretyczna i oderwana od rzeczywistości. Zbudowałem LU Teams, aby dać liderom inżynierii precyzyjne narzędzia, których faktycznie potrzebują – oparte na danych, a nie intuicji.",
+            credentials: [
+                "10+ Lat w Liderstwie Inżynierskim",
+                "Certyfikowany Praktyk HEXACO",
+                "Ex-Aerospace & Defense"
+            ],
+            cta: "Dowiedz się o Coachingu Indywidualnym"
+        },
+        clientTransformations: {
+            title: "Historie Transformacji",
+            subtitle: "Prawdziwe wyniki liderów technicznych, którzy przestali zgadywać.",
+            cases: [
+                {
+                    title: "Lider Zespołu Aerospace",
+                    timeline: [
+                        { month: 1, text: "Brak zrozumienia dynamiki zespołu" },
+                        { month: 3, text: "Identyfikacja wzorców" },
+                        { month: 6, text: "Przewidywanie konfliktów zanim wystąpią" }
+                    ],
+                    testimonial: "Myślałem, że 'umiejętności miękkie' są wrodzone. LU Teams dało mi ramy do debugowania interakcji zespołu tak, jak weryfikuję złożone projekty.",
+                    client: { name: "John D.", role: "Engineering Manager", company: "Producent Aerospace" }
+                },
+                {
+                    title: "CTO Startup Fintech",
+                    timeline: [
+                        { month: 1, text: "Wysoka rotacja seniorów" },
+                        { month: 3, text: "Dopasowanie ról do silnych stron" },
+                        { month: 6, text: "Zerowa rotacja w kluczowym zespole" }
+                    ],
+                    testimonial: "Wypalaliśmy naszych najlepszych ludzi, zmuszając ich do ról, które ich wyczerpywały. Analiza Dynamiki Ról była pobudką.",
+                    client: { name: "Sarah L.", role: "CTO", company: "Fintech Serii B" }
+                },
+                {
+                    title: "VP Engineering SaaS",
+                    timeline: [
+                        { month: 1, text: "Silosy frontend vs backend" },
+                        { month: 3, text: "Mostkowanie luk komunikacyjnych" },
+                        { month: 6, text: "2x Prędkość w funkcjach międzyzespołowych" }
+                    ],
+                    testimonial: "Radar Synergii pokazał nam dokładnie, dlaczego nasze zespoły były zablokowane. To nie był dług technologiczny, to było tarcie poznawcze.",
+                    client: { name: "Mike R.", role: "VP Engineering", company: "Enterprise SaaS" }
+                }
             ]
+        },
+        networkPatterns: {
+            title: "Wzorce Tarcia",
+            subtitle: "Przeanalizowałem setki zespołów inżynierskich. Te 5 ukrytych wzorców zabija więcej projektów niż zły kod.",
+            patterns: [
+                {
+                    title: "Toksyczny Geniusz",
+                    description: "Wysoka wydajność techniczna, ale tworzy 'strefę wybuchu' lęku. Wykrywam to, mierząc Uczciwość-Pokorę vs. Dominację."
+                },
+                {
+                    title: "Cichy Architekt",
+                    description: "Genialny myśliciel systemowy, który jest zagłuszany na standupach. Pomagam wzmocnić ich sygnał, zanim się wycofają."
+                },
+                {
+                    title: "Komora Echa",
+                    description: "Zespół, w którym wszyscy się zgadzają, bo myślą tak samo. Wygodne, ale zabójcze dla innowacji. Identyfikuję brakującą różnorodność poznawczą."
+                },
+                {
+                    title: "Zablokowany Oddział",
+                    description: "Wysokie umiejętności indywidualne, ale zerowa prędkość. Często spowodowane nadmiarem 'Perfekcjonistów' i brakiem 'Lokomotyw' do pchania przez niejednoznaczność."
+                },
+                {
+                    title: "Fabryka Funkcji",
+                    description: "Szybkie dostarczanie, ale budowanie niewłaściwych rzeczy. Zazwyczaj brak 'Ewaluatorów', by kwestionować roadmapę."
+                }
+            ]
+        },
+        coachingOffer: {
+            title: "Mistrzostwo Liderstwa Inżynierskiego",
+            subtitle: "To nie jest kurs. To interwencja o wysokim wpływie dla liderów, którzy nie mogą sobie pozwolić na porażkę.",
+            price: "Tylko na Zaproszenie",
+            features: [
+                "Cotygodniowe Strategiczne Sesje 1:1",
+                "Bezpośredni Dostęp do Mojego Networku",
+                "Nielimitowane wsparcie asynchroniczne",
+                "Dedykowana diagnostyka organizacyjna"
+            ],
+            cta: "Aplikuj o Przyjęcie"
         },
         problemStatement: {
             title: "Dlaczego Liderzy Inżynierii",
@@ -293,30 +467,36 @@ export const translations = {
             close: "Zamknij Szczegóły",
             keyObjectives: "Kluczowe Cele"
         },
-        waitlist: {
+        application: {
             header: {
-                title: "Dołącz do Bety",
-                highlight: "LU Teams",
-                description: "Sprawdź w praktyce nasz Algorytm Przewidywania Synergii.",
-                count: "{count} liderów już dołączyło"
+                title: "Aplikuj do",
+                highlight: "Wersji Beta",
+                description: "Bądź jednym z pierwszych użytkowników Systemu Przewidywania Synergii.",
+                count: "{count} liderów już aplikowało"
             },
             form: {
                 email: "Email *",
                 emailPlaceholder: "twoj.email@firma.com",
-                name: "Imię (opcjonalnie)",
+                name: "Pełne Imię i Nazwisko *",
                 namePlaceholder: "Jan Kowalski",
-                company: "Firma (opcjonalnie)",
-                companyPlaceholder: "Acme Corp",
-                submit: "Dołącz do Listy Oczekujących",
-                submitting: "Dołączanie...",
-                footer: "Powiadomimy Cię, gdy dostęp do bety będzie możliwy. Żadnego spamu.",
+                role: "Obecna Rola/Stanowisko *",
+                rolePlaceholder: "CTO / VP Engineering",
+                company: "Firma/Branża *",
+                companyPlaceholder: "Acme Corp / Aerospace",
+                teamSize: "Wielkość Zespołu *",
+                technicalBackground: "Tło Techniczne *",
+                challenge: "Twoje Największe Wyzwanie z Ludźmi * (2-3 zdania)",
+                challengePlaceholder: "Mam zespół 5 świetnych inżynierów, którzy...",
+                submit: "Poproś o Dostęp Beta",
+                submitting: "Wysyłanie...",
+                footer: "Powiadomimy Cię o dostępie. Zero spamu.",
                 error: "Coś poszło nie tak. Spróbuj ponownie.",
                 networkError: "Błąd sieci. Spróbuj ponownie."
             },
             success: {
-                title: "Jesteś na liście!",
-                message: "Dzięki za dołączenie do bety. Wkrótce skontaktujemy się ze szczegółami wczesnego dostępu.",
-                reset: "Dodaj kolejny email"
+                title: "Aplikacja Przyjęta",
+                message: "Dziękujemy za zgłoszenie. Skontaktujemy się wkrótce.",
+                reset: "Wyślij kolejne zgłoszenie"
             }
         },
         footer: {
