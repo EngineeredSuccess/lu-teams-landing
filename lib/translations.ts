@@ -16,11 +16,20 @@ export const translations = {
             bio1: "I've spent the last decade in high-stakes engineering environments, from aerospace to fintech. I learned one thing: technical problems are rarely just technical.",
             bio2: "Most 'leadership training' is fluffy and theoretical. I built LU Teams to give engineering leaders the precision tools they actually need—based on data, not intuition.",
             credentials: [
-                "10+ Years Engineering Leadership",
+                "15+ Years in Engineering",
+                "Leading Teams since 2021",
                 "Certified HEXACO Practitioner",
                 "Ex-Aerospace & Defense"
             ],
-            cta: "Learn About 1-on-1 Intensive Coaching"
+            cta: "Learn About 1-on-1 Intensive Coaching",
+            turningPoint: {
+                title: "The Moment Everything Changed",
+                content: "I watched a brilliant aerospace engineer—someone with a 150 IQ who could solve impossible technical problems—completely implode a $10M project because he couldn't read his team's dynamics. Three senior developers quit in two months. Exit interviews blamed \"culture.\" But it wasn't culture—it was invisible friction he never saw coming.\n\nThat's when I knew: technical leaders need precision tools for the human stack, not fluffy workshops. LU Teams is that tool."
+            },
+            currentWork: {
+                clients: "CTO at a SaaS scale-up (50-person engineering org), Engineering Director at an aerospace defense contractor, Senior Dev → Tech Lead at a fintech startup",
+                availability: "Taking applications for Q2 2025: 2 intensive coaching spots available"
+            }
         },
         clientTransformations: {
             title: "Transformation Stories",
@@ -64,23 +73,38 @@ export const translations = {
             patterns: [
                 {
                     title: "The Toxic Genius",
-                    description: "High technical output, but creates a 'blast radius' of anxiety. I spot this by measuring Honesty-Humility vs. Dominance."
+                    description: "High technical output, but creates a 'blast radius' of anxiety.",
+                    story: "A staff engineer at an aerospace contractor had 10x output but created a 'no-code-review' zone around himself. Nobody dared challenge him.",
+                    consequence: "Six months later, team velocity had dropped 40% and two senior devs quit.",
+                    solution: "LU Teams' Honesty-Humility (H) factor flags this pattern early—before you lose your best people."
                 },
                 {
                     title: "The Silent Architect",
-                    description: "Brilliant systemic thinker who gets talked over in standups. I help you amplify their signal before they disengage."
+                    description: "Brilliant systemic thinker who gets talked over in standups.",
+                    story: "A principal architect in a fintech firm designed the entire clearing system but stopped speaking in meetings because of two dominant personalities.",
+                    consequence: "Critical architectural flaws weren't caught until the staging phase, costing $200k in rework.",
+                    solution: "Identifying the 'Monitor-Evaluator' role ensures these signals are amplified before the code is written."
                 },
                 {
                     title: "The Echo Chamber",
-                    description: "A team where everyone agrees because they all think alike. Comfortable, but innovation-dead. I identify the missing cognitive diversity."
+                    description: "A team where everyone agrees because they all think alike.",
+                    story: "A mobile dev team hired exclusively from the same bootcamp. They shipped fast, but couldn't solve a single complex memory leak for three months.",
+                    consequence: "Zero cognitive diversity led to a shared blind spot that stalled production.",
+                    solution: "Synergy Radar identifies 'Cognitive Gaps' so you can hire for the missing perspective."
                 },
                 {
                     title: "The Gridlocked Squad",
-                    description: "High individual skill, but zero velocity. Often caused by too many 'Completer-Finishers' and no 'Shapers' to push through ambiguity."
+                    description: "High individual skill, but zero velocity.",
+                    story: "Five senior developers, all 'Completer-Finishers'. They spent weeks debating edge cases instead of shipping the MVP.",
+                    consequence: "The project missed the market window because nobody was comfortable with ambiguity.",
+                    solution: "Mapping 'Team Roles' helps you identify when you need a 'Shaper' to push through the noise."
                 },
                 {
                     title: "The Feature Factory",
-                    description: "Shipping fast but building the wrong things. Usually a lack of 'Monitor-Evaluators' to challenge the roadmap."
+                    description: "Shipping fast but building the wrong things.",
+                    story: "A high-velocity SaaS team that never questioned the roadmap. They built 12 features in 4 months; only 1 was used by customers.",
+                    consequence: "Burnout and wasted burn rate on features that added zero value.",
+                    solution: "Balanced teams need 'Resource Investigators' and 'Monitor-Evaluators' to bridge the gap between code and market."
                 }
             ]
         },
@@ -133,6 +157,26 @@ export const translations = {
                     description: "Use personality data to understand why a sprint failed and how to reconfigure for the next one."
                 }
             ]
+        },
+        howItWorks: {
+            title: "How The Synergy Radar Works",
+            subtitle: "The methodology I use in intensive coaching, now automated in software",
+            steps: [
+                {
+                    title: "HEXACO Assessment",
+                    description: "Team members take a brief, scientifically-validated personality assessment."
+                },
+                {
+                    title: "Synergy Analysis",
+                    description: "LU Teams analyzes hidden patterns and maps cognitive friction points."
+                },
+                {
+                    title: "Predictive Insights",
+                    description: "Get actionable data to optimize your team before conflicts emerge."
+                }
+            ],
+            interfaceTitle: "The Synergy Radar Interface",
+            interfaceNote: "Beta interface - helping you predict friction before it happens"
         },
         useCases: {
             header: {
@@ -246,7 +290,39 @@ export const translations = {
             }
         },
         footer: {
-            copyright: "LU Teams utilizes an independent methodology based on the HEXACO-PI-R and open-source Team Role models. We provide data-driven insights, not just labels. © 2025 Leadership Unfiltered."
+            copyright: "LU Teams utilizes an independent methodology based on the HEXACO-PI-R and open-source Team Role models. We provide data-driven insights, not just labels. © 2025 Leadership Unfiltered.",
+            social: {
+                linkedin: "https://linkedin.com/company/leadership-unfiltered",
+                personal: "https://linkedin.com/in/paul-h"
+            }
+        },
+        nav: {
+            howItWorks: "How It Works",
+            patterns: "Patterns",
+            transformations: "Stories",
+            insights: "Insights",
+            apply: "Get Started"
+        },
+        faq: {
+            title: "Frequently Asked Questions",
+            items: [
+                {
+                    question: "What's the difference between Beta and 1-on-1 coaching?",
+                    answer: "The Beta provides access to our software for data self-service. 1-on-1 coaching is an intensive, 6-month partnership where I personally help you implement these frameworks in your organization."
+                },
+                {
+                    question: "How long does intensive coaching take?",
+                    answer: "The standard engagement is 6 months, though many leaders continue for a year. We meet weekly for strategic deep dives."
+                },
+                {
+                    question: "How is this different from DiSC or Myers-Briggs?",
+                    answer: "DiSC/MBTI are based on older psychological models and often lack predictive power in high-stakes environments. HEXACO is the most scientifically robust model, specifically measuring honesty, integrity, and risk-taking."
+                },
+                {
+                    question: "Do you work with remote teams?",
+                    answer: "Yes. In fact, remote teams often have more 'invisible friction' because they lack informal physical signals. LU Teams is designed specifically to solve these digital-first communication gaps."
+                }
+            ]
         },
         metadata: {
             title: "LU Teams - The Precision Instrument for Engineering Synergy",
@@ -270,11 +346,20 @@ export const translations = {
             bio1: "Spędziłem ostatnią dekadę w środowiskach inżynierskich o wysokiej stawce, od lotnictwa po fintech. Nauczyłem się jednego: problemy techniczne rzadko są tylko techniczne.",
             bio2: "Większość 'szkoleń liderskich' jest teoretyczna i oderwana od rzeczywistości. Zbudowałem LU Teams, aby dać liderom inżynierii precyzyjne narzędzia, których faktycznie potrzebują – oparte na danych, a nie intuicji.",
             credentials: [
-                "10+ Lat w Liderstwie Inżynierskim",
+                "15+ lat w inżynierii",
+                "Lider zespołów od 2021",
                 "Certyfikowany Praktyk HEXACO",
                 "Ex-Aerospace & Defense"
             ],
-            cta: "Dowiedz się o Coachingu Indywidualnym"
+            cta: "Dowiedz się o Coachingu Indywidualnym",
+            turningPoint: {
+                title: "Moment, w którym wszystko się zmieniło",
+                content: "Obserwowałem genialnego inżyniera lotnictwa – kogoś z IQ 150, kto potrafił rozwiązać niemożliwe problemy techniczne – jak całkowicie położył projekt o wartości 10 mln USD, ponieważ nie potrafił odczytać dynamiki swojego zespołu. Trzech starszych programistów odeszło w ciągu dwóch miesięcy. Wywiady końcowe wskazywały na „kulturę”. Ale to nie była kultura – to było niewidoczne tarcie, którego nie przewidział.\n\nWtedy zrozumiałem: liderzy techniczni potrzebują precyzyjnych narzędzi do obsługi „ludzkiego stosu” (human stack), a nie puszystych warsztatów. LU Teams jest tym narzędziem."
+            },
+            currentWork: {
+                clients: "CTO w skalującym się SaaS (zespół 50 osób), Dyrektor Inżynierii u kontrahenta z branży lotniczej i obronnej, Senior Dev → Tech Lead w startupie fintech",
+                availability: "Przyjmuję aplikacje na Q2 2025: dostępne 2 miejsca na intensywny coaching"
+            }
         },
         clientTransformations: {
             title: "Historie Transformacji",
@@ -318,23 +403,38 @@ export const translations = {
             patterns: [
                 {
                     title: "Toksyczny Geniusz",
-                    description: "Wysoka wydajność techniczna, ale tworzy 'strefę wybuchu' lęku. Wykrywam to, mierząc Uczciwość-Pokorę vs. Dominację."
+                    description: "Wysoka wydajność techniczna, ale tworzy 'strefę wybuchu' lęku.",
+                    story: "Główny inżynier u kontrahenta z branży lotniczej miał 10-krotnie wyższą wydajność, ale stworzył wokół siebie strefę 'zakazu przeglądu kodu'. Nikt nie odważył się go zakwestionować.",
+                    consequence: "Sześć miesięcy później prędkość zespołu spadła o 40%, a dwóch starszych deweloperów odeszło.",
+                    solution: "Czynnik Uczciwości-Pokory (H) w LU Teams flaguje ten wzorzec wcześnie – zanim stracisz swoich najlepszych ludzi."
                 },
                 {
                     title: "Cichy Architekt",
-                    description: "Genialny myśliciel systemowy, który jest zagłuszany na standupach. Pomagam wzmocnić ich sygnał, zanim się wycofają."
+                    description: "Genialny myśliciel systemowy, który jest zagłuszany na standupach.",
+                    story: "Główny architekt w firmie fintech zaprojektował cały system rozliczeniowy, ale przestał odzywać się na spotkaniach z powodu dwóch dominujących osobowości.",
+                    consequence: "Krytyczne błędy architektoniczne nie zostały wykryte aż do fazy stagingu, co kosztowało 200 tys. USD w poprawkach.",
+                    solution: "Zidentyfikowanie roli 'Ewaluatora' zapewnia, że te sygnały zostaną wzmocnione przed napisaniem kodu."
                 },
                 {
                     title: "Komora Echa",
-                    description: "Zespół, w którym wszyscy się zgadzają, bo myślą tak samo. Wygodne, ale zabójcze dla innowacji. Identyfikuję brakującą różnorodność poznawczą."
+                    description: "Zespół, w którym wszyscy się zgadzają, bo myślą tak samo.",
+                    story: "Zespół deweloperów mobilnych zatrudniony wyłącznie z tego samego bootcampu. Dostarczali szybko, ale przez trzy miesiące nie potrafili rozwiązać ani jednego złożonego wycieku pamięci.",
+                    consequence: "Brak różnorodności poznawczej doprowadził do wspólnego martwego punktu, który zatrzymał produkcję.",
+                    solution: "Radar Synergii identyfikuje 'Luki Poznawcze', dzięki czemu możesz zatrudnić osobę z brakującą perspektywą."
                 },
                 {
                     title: "Zablokowany Oddział",
-                    description: "Wysokie umiejętności indywidualne, ale zerowa prędkość. Często spowodowane nadmiarem 'Perfekcjonistów' i brakiem 'Lokomotyw' do pchania przez niejednoznaczność."
+                    description: "Wysokie umiejętności indywidualne, ale zerowa prędkość.",
+                    story: "Pięciu starszych programistów, wszyscy typu 'Perfekcjonista'. Spędzali tygodnie na debacie o skrajnych przypadkach zamiast dostarczyć MVP.",
+                    consequence: "Projekt przegapił okno rynkowe, ponieważ nikt nie czuł się komfortowo z niejednoznacznością.",
+                    solution: "Mapowanie 'Ról Zespołowych' pomaga zidentyfikować, kiedy potrzebujesz 'Lokomotywy', aby przebić się przez szum."
                 },
                 {
                     title: "Fabryka Funkcji",
-                    description: "Szybkie dostarczanie, ale budowanie niewłaściwych rzeczy. Zazwyczaj brak 'Ewaluatorów', by kwestionować roadmapę."
+                    description: "Szybkie dostarczanie, ale budowanie niewłaściwych rzeczy.",
+                    story: "Dynamiczny zespół SaaS, który nigdy nie kwestionował roadmapy. Zbudowali 12 funkcji w 4 miesiące; tylko 1 była używana przez klientów.",
+                    consequence: "Wypalenie i zmarnowany budżet na funkcje, które nie wniosły żadnej wartości.",
+                    solution: "Zrównoważone zespoły potrzebują 'Poszukiwaczy Zasobów' i 'Ewaluatorów', aby mostkować lukę między kodem a rynkiem."
                 }
             ]
         },
@@ -387,6 +487,26 @@ export const translations = {
                     description: "Wykorzystaj dane osobowościowe, aby zrozumieć, dlaczego sprint się nie udał i jak skonfigurować kolejny."
                 }
             ]
+        },
+        howItWorks: {
+            title: "Jak działa Radar Synergii",
+            subtitle: "Metodologia, którą stosuję w intensywnym coachingu, teraz zautomatyzowana w oprogramowaniu",
+            steps: [
+                {
+                    title: "Ocena HEXACO",
+                    description: "Członkowie zespołu przechodzą krótką, naukowo zweryfikowaną ocenę osobowości."
+                },
+                {
+                    title: "Analiza Synergii",
+                    description: "LU Teams analizuje ukryte wzorce i mapuje punkty tarcia poznawczego."
+                },
+                {
+                    title: "Przewidujące Wnioski",
+                    description: "Otrzymaj praktyczne dane, aby zoptymalizować zespół, zanim pojawią się konflikty."
+                }
+            ],
+            interfaceTitle: "Interfejs Radaru Synergii",
+            interfaceNote: "Interfejs Beta - pomaga przewidzieć tarcie, zanim się wydarzy"
         },
         useCases: {
             header: {
@@ -500,7 +620,39 @@ export const translations = {
             }
         },
         footer: {
-            copyright: "LU Teams wykorzystuje niezależną metodologię opartą na HEXACO-PI-R i modelach Ról Zespołowych open-source. Dostarczamy wnioski oparte na danych, a nie tylko etykiety. © 2025 Leadership Unfiltered."
+            copyright: "LU Teams wykorzystuje niezależną metodologię opartą na HEXACO-PI-R i modelach Ról Zespołowych open-source. Dostarczamy wnioski oparte na danych, a nie tylko etykiety. © 2025 Leadership Unfiltered.",
+            social: {
+                linkedin: "https://linkedin.com/company/leadership-unfiltered",
+                personal: "https://linkedin.com/in/paul-h"
+            }
+        },
+        nav: {
+            howItWorks: "Jak to działa",
+            patterns: "Wzorce",
+            transformations: "Historie",
+            insights: "Baza Wiedzy",
+            apply: "Rozpocznij"
+        },
+        faq: {
+            title: "Często Zadawane Pytania",
+            items: [
+                {
+                    question: "Jaka jest różnica między Betą a coachingiem 1-na-1?",
+                    answer: "Wersja Beta zapewnia dostęp do naszego oprogramowania do samodzielnej analizy danych. Coaching 1-na-1 to intensywne, 6-miesięczne partnerstwo, w którym osobiście pomagam Ci wdrożyć te ramy w Twojej organizacji."
+                },
+                {
+                    question: "Jak długo trwa intensywny coaching?",
+                    answer: "Standardowe zaangażowanie trwa 6 miesięcy, choć wielu liderów kontynuuje współpracę przez rok. Spotykamy się co tydzień na strategiczne sesje."
+                },
+                {
+                    question: "Czym to się różni od DiSC lub Myers-Briggs?",
+                    answer: "DiSC/MBTI opierają się na starszych modelach psychologicznych i często brakuje im siły precyzyjnej w środowiskach o wysokiej stawce. HEXACO to najbardziej naukowo solidny model, mierzący konkretnie uczciwość, integralność i podejmowanie ryzyka."
+                },
+                {
+                    question: "Czy pracujesz z zespołami zdalnymi?",
+                    answer: "Tak. W rzeczywistości zespoły zdalne często mają więcej 'niewidocznego tarcia', ponieważ brakuje im nieformalnych sygnałów fizycznych. LU Teams zostało zaprojektowane specjalnie po to, by rozwiązywać te luki komunikacyjne w świecie digital-first."
+                }
+            ]
         },
         metadata: {
             title: "LU Teams - Precyzyjne Narzędzie do Synergii Inżynierskiej",

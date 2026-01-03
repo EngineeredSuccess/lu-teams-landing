@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import Header from "@/components/Header";
+import { translations } from "@/lib/translations";
 import "../globals.css";
 
 const inter = Inter({
@@ -17,9 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://luteams.com"),
-    title: "LU Teams - Szósty zmysł lidera technicznego do chemii zespołu",
+    title: "LU Teams - Szósty zmysł lidera technicznego",
     description:
-        "Przestań zgadywać, kto dobrze ze sobą współpracuje. LU Teams analizuje dynamikę osobowości, aby przewidzieć synergię zespołu, zanim w ogóle rozpoczniesz projekt.",
+        "Intensywny coaching i narzędzia oparte na HEXACO dla liderów technicznych w lotnictwie, obronności i SaaS. Przewiduj synergię zespołu.",
     keywords: [
         "chemia zespołu",
         "analiza osobowości",
@@ -82,6 +84,54 @@ export default function RootLayout({
     return (
         <html lang="pl" className={`${inter.variable} ${jetbrainsMono.variable}`}>
             <head>
+                {/* Schema Markup */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            "name": "Paul H.",
+                            "jobTitle": "Technical Leadership Coach",
+                            "description": "Boutique'owy coaching dla liderów technicznych w lotnictwie i IT",
+                            "url": "https://luteams.com/pl",
+                            "sameAs": [
+                                "https://linkedin.com/in/paul-h",
+                                "https://linkedin.com/company/leadership-unfiltered"
+                            ]
+                        })
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "SoftwareApplication",
+                            "name": "LU Teams",
+                            "applicationCategory": "BusinessApplication",
+                            "description": "Przewidywanie synergii zespołu oparte na HEXACO",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD"
+                            }
+                        })
+                    }}
+                />
+                {/* Google Analytics */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-XXXXXXXXXX');
+                    `}
+                </Script>
                 {/* LinkedIn Insight Tag */}
                 <Script id="linkedin-partner" strategy="afterInteractive">
                     {`
@@ -114,7 +164,10 @@ export default function RootLayout({
                     />
                 </noscript>
             </head>
-            <body className="font-sans">{children}</body>
+            <body className="font-sans">
+                <Header content={translations.pl.nav} lang="pl" />
+                {children}
+            </body>
         </html>
     );
 }

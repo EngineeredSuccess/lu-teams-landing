@@ -49,6 +49,28 @@ export default function FounderAuthority({ content }: FounderAuthorityProps) {
                             ))}
                         </div>
 
+                        {/* Turning Point Story */}
+                        {content.turningPoint && (
+                            <div className="bg-primary/5 border-l-4 border-primary p-6 my-6 rounded-r-xl">
+                                <h3 className="font-bold text-white mb-2">{content.turningPoint.title}</h3>
+                                <p className="text-text-secondary text-sm leading-relaxed italic">
+                                    {content.turningPoint.content}
+                                </p>
+                            </div>
+                        )}
+
+                        {/* Current WorkTransparency */}
+                        {content.currentWork && (
+                            <div className="border-t border-white/10 pt-6 mt-6 space-y-3">
+                                <p className="text-sm text-text-secondary">
+                                    <strong className="text-white">Currently working with:</strong> {content.currentWork.clients}
+                                </p>
+                                <p className="text-xs text-primary/80 font-medium">
+                                    {content.currentWork.availability}
+                                </p>
+                            </div>
+                        )}
+
                         {/* CTA */}
                         <div className="pt-6">
                             <a href="#coaching" className="text-primary hover:text-primary-light font-semibold border-b border-primary hover:border-primary-light pb-1 transition-all">

@@ -1,102 +1,77 @@
-# TODO.md - LU Teams Landing Page Redesign
+# TODO.md - LU Teams Phase 2 Refinements
 
-## 📋 Project Overview
+## 📋 Project Overview - Iteration 2
 
-**Objective**: Transform luteams.com from generic SaaS landing → boutique founder-driven platform  
-**Strategy**: Reposition from mass-market → exclusive/intimate expertise  
-**Timeline**: 4 weeks (flexible based on resources)  
-**Tech Stack**: Next.js 14, TypeScript, Tailwind CSS, Supabase
-
----
-
-## 🚀 QUICK WINS (Start Here - 4 hours total)
-
-These 3 changes deliver 70% of the positioning shift with minimal effort.
-
-### Phase 0: Immediate Impact Changes
-
-- [ ] **Hero Copy Replacement** (30 min) 🔴 CRITICAL
-  - File: `components/Hero.tsx`
-  - Replace entire text content with founder-first narrative
-  - Change H1 to: "I Don't Train Hundreds of Leaders. I Transform a Few."
-  - Update body copy to intimate, first-person story
-  - **Code location**: Lines 10-40 approximately
-  - **Test**: Preview on localhost:3000
-
-- [ ] **CTA Button Text Changes** (15 min) 🔴 CRITICAL
-  - File: `components/Hero.tsx` and `components/WaitlistForm.tsx`
-  - Change "Join the Waitlist" → "Request Beta Consideration"
-  - Add secondary CTA: "Work With Me 1-on-1"
-  - **Visual check**: Buttons should be side-by-side on desktop
-
-- [ ] **Waitlist Form Upgrade** (2.5 hours) 🔴 CRITICAL
-  - File: `components/WaitlistForm.tsx`
-  - Add fields: Full Name, Role/Title, Company, Team Size, Technical Background
-  - Add textarea: "Your Biggest People Challenge (2-3 sentences)"
-  - Update validation logic
-  - **Backend update needed**: See Phase 3
-
-**Total Phase 0 Time**: ~3-4 hours  
-**Impact**: Immediate positioning shift from mass-market → exclusive
+**Objective**: Deepen storytelling, add visual proof, improve SEO/navigation  
+**Current Status**: Core repositioning complete (Phase 1)  
+**Focus**: Authenticity, thought leadership, technical credibility  
+**Timeline**: 2-3 weeks (flexible)
 
 ---
 
-## 📅 PHASE 1: Content & Structure (Week 1)
+## 🎯 CRITICAL PRIORITIES (Do First)
 
-**Goal**: Rebuild page structure with founder-centric narrative  
-**Estimated Time**: 20-25 hours
+These 5 fixes deliver maximum impact based on expert panel feedback.
 
-### 1.1 Hero Section Overhaul
+### Priority #1: Synergy Radar Visual (MISSING FLAGSHIP FEATURE)
 
-- [ ] **Update Hero Component** (2 hours) 🔴
-  - File: `components/Hero.tsx`
-  - [ ] Replace animated logo with founder photo placeholder
-  - [ ] Implement new copy structure (3 paragraphs)
-  - [ ] Add "Limited Beta Program · Founding Circle" badge at top
-  - [ ] Create dual CTA layout (Beta + Coaching buttons)
-  - [ ] Add small text below CTAs: "Beta: 50 founding users · Coaching: 2 spots available Q1"
+**Problem**: You talk about "Synergy Radar" as core feature but never show it  
+**Impact**: HIGH - This is your unique differentiator  
+**Time**: 6-8 hours
+
+- [ ] **Create Synergy Radar Mockup/Wireframe** 🔴 CRITICAL
+  - [ ] Design visual representation of how the radar works
+  - Options:
+    - **Option A**: Actual screenshot if product exists (even alpha)
+    - **Option B**: High-fidelity mockup (Figma/Sketch)
+    - **Option C**: Annotated wireframe with explanations
+  - Elements to show:
+    - Two profiles being compared
+    - Compatibility scores (visual meter/gauge)
+    - Conflict prediction areas highlighted
+    - Team role dynamics visualization
+  - Format: Interactive or static image
   
-  **Code snippet for dual CTAs**:
-  ```tsx
-  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-    <button className="bg-primary hover:bg-primary/90 text-background px-8 py-4 rounded-lg font-semibold">
-      Apply for Beta Access
-    </button>
-    <button className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-lg font-semibold">
-      Work With Me 1-on-1
-    </button>
-  </div>
-  <p className="text-sm text-text-secondary mt-4">
-    Beta: 50 founding users · Coaching: 2 spots available Q1
-  </p>
-  ```
-
-### 1.2 New Components Creation
-
-- [ ] **Create FounderAuthority Component** (3 hours) 🔴
-  - File: `components/FounderAuthority.tsx` (NEW)
-  - [ ] Create split-screen layout (40% photo, 60% bio)
-  - [ ] Add placeholder for founder photo
-  - [ ] Write first-person bio copy
-  - [ ] Add subtle credentials section
-  - [ ] Include CTA: "Learn About 1-on-1 Intensive Coaching"
-  - [ ] Style with dark glass morphism card
+- [ ] **Add "How It Works" Section** (NEW) 🔴
+  - File: `components/HowItWorks.tsx` (NEW)
+  - Location: After Founder Background, before Methodology
+  - [ ] Create 3-step visual explainer:
+    1. "Team members take HEXACO assessment"
+    2. "LU Teams analyzes synergy patterns" (SHOW THE RADAR)
+    3. "Get predictive insights before conflicts emerge"
+  - [ ] Include Synergy Radar mockup as centerpiece
+  - [ ] Add short demo video (2-3 min) if possible
   
   **Component structure**:
   ```tsx
-  export default function FounderAuthority() {
+  // components/HowItWorks.tsx
+  export default function HowItWorks() {
     return (
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-background-elevated">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-8 bg-surface/30 backdrop-blur-lg rounded-2xl p-8 border border-primary/20">
-            <div className="md:col-span-2">
-              {/* Founder Photo */}
-              <img src="/founder-photo.jpg" alt="Founder" className="rounded-lg" />
-            </div>
-            <div className="md:col-span-3">
-              <h2 className="text-3xl font-bold mb-4">About This Work</h2>
-              {/* Bio copy here */}
-            </div>
+          <h2 className="text-4xl font-display text-center mb-4">
+            How The Synergy Radar Works
+          </h2>
+          <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
+            The methodology I use in intensive coaching, now automated in software
+          </p>
+          
+          {/* 3-step process */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Steps here */}
+          </div>
+          
+          {/* FLAGSHIP VISUAL */}
+          <div className="bg-background-surface border-2 border-primary/30 rounded-xl p-8">
+            <h3 className="text-2xl mb-6 text-center">The Synergy Radar Interface</h3>
+            <img 
+              src="/synergy-radar-mockup.png" 
+              alt="Synergy Radar showing team compatibility analysis"
+              className="w-full rounded-lg"
+            />
+            <p className="text-sm text-text-secondary text-center mt-4">
+              Beta interface - helping you predict friction before it happens
+            </p>
           </div>
         </div>
       </section>
@@ -104,762 +79,610 @@ These 3 changes deliver 70% of the positioning shift with minimal effort.
   }
   ```
 
-- [ ] **Create ClientTransformations Component** (4 hours) 🔴
-  - File: `components/ClientTransformations.tsx` (NEW)
-  - [ ] Create 3-column layout for case studies
-  - [ ] Design timeline cards (Month 1/3/6 format)
-  - [ ] Add testimonial quote sections
-  - [ ] Style with premium card aesthetic
-  - [ ] Make responsive (stack on mobile)
+---
+
+### Priority #2: Deepen Founder Story with Specifics
+
+**Problem**: "10+ Years Engineering Leadership" lacks credibility details  
+**Impact**: HIGH - Trust building for expensive coaching  
+**Time**: 3-4 hours
+
+- [ ] **Enhance Founder Background Section** 🔴
+  - File: `components/FounderAuthority.tsx`
+  - [ ] Add specific credentials:
+    - Replace vague "10+ Years" with: "12 Years Leading Engineering Teams"
+    - Add: "Ex-[Aerospace/Defense Company Type] Engineering Manager"
+    - Include: "Led 40+ person distributed teams across 3 continents"
+    - Add: "Managed $50M+ budget projects in mission-critical environments"
+  - [ ] Add "Turning Point Story" paragraph:
   
-  **Data structure** (create `lib/caseStudies.ts`):
-  ```typescript
-  export const caseStudies = [
-    {
-      title: "Aerospace Team Lead",
-      timeline: [
-        { month: 1, challenge: "Couldn't read team dynamics" },
-        { month: 3, progress: "Identifying patterns" },
-        { month: 6, result: "Predicting conflicts before they surface" }
-      ],
-      testimonial: "Detailed testimonial 2-3 sentences...",
-      client: {
-        name: "John D.",
-        title: "Engineering Manager",
-        company: "Aerospace Manufacturer"
-      }
-    },
-    // ... 2 more
-  ];
-  ```
-
-- [ ] **Create NetworkPatterns Component** (3 hours) 🟡
-  - File: `components/NetworkPatterns.tsx` (NEW)
-  - [ ] Design infographic visual (15-20 leaders → 5 blindspots → 1 solution)
-  - [ ] Create 5 pattern cards (reuse current "Industry Solutions" content)
-  - [ ] Reframe each pattern with first-person observations
-  - [ ] Add intro paragraph about observing 15-20 leaders
-
-- [ ] **Create CoachingOffer Component** (2 hours) 🟡
-  - File: `components/CoachingOffer.tsx` (NEW)
-  - [ ] Two-column comparison layout (Beta vs Coaching)
-  - [ ] Add feature lists for each option
-  - [ ] Include separate CTAs
-  - [ ] Add urgency text: "2 spots available Q1"
-
-### 1.3 Update Main Page Structure
-
-- [ ] **Refactor app/page.tsx** (2 hours) 🔴
-  - File: `app/page.tsx`
-  - [ ] Import new components
-  - [ ] Reorder sections:
-    1. Hero
-    2. FounderAuthority
-    3. Methodology (existing, updated framing)
-    4. ClientTransformations
-    5. NetworkPatterns
-    6. CoachingOffer
-    7. Beta Application Form
-    8. Footer
-  - [ ] Update section titles to first-person ("What I've Learned..." not "Our Methodology")
-
-### 1.4 Form Component Updates
-
-- [ ] **Upgrade WaitlistForm → ApplicationForm** (3 hours) 🔴
-  - File: `components/WaitlistForm.tsx` → Rename to `components/ApplicationForm.tsx`
-  - [ ] Add new input fields:
-    - Full Name (required)
-    - Current Role/Title (required)
-    - Company/Industry (required)
-    - Team Size (required, dropdown)
-    - Technical Background (required, radio buttons)
-    - Biggest People Challenge (required, textarea, 2-3 sentences)
-  - [ ] Update form validation (Zod schema or similar)
-  - [ ] Change submit button text: "Request Beta Consideration"
-  - [ ] Add application status text: "12 founding members confirmed · 38 spots remaining"
-  
-  **Form fields structure**:
   ```tsx
-  <form onSubmit={handleSubmit} className="space-y-4">
-    <input type="email" name="email" required placeholder="Email *" />
-    <input type="text" name="fullName" required placeholder="Full Name *" />
-    <input type="text" name="role" required placeholder="Current Role/Title *" />
-    <input type="text" name="company" required placeholder="Company/Industry *" />
-    
-    <select name="teamSize" required>
-      <option value="">Team Size *</option>
-      <option value="1-5">1-5</option>
-      <option value="6-15">6-15</option>
-      <option value="16-50">16-50</option>
-      <option value="50+">50+</option>
-    </select>
-    
-    <fieldset>
-      <legend>Technical Background *</legend>
-      <label><input type="radio" name="background" value="eng-lead" required /> Engineering/Tech Lead</label>
-      <label><input type="radio" name="background" value="dev-mgr" /> Senior Developer → Manager</label>
-      <label><input type="radio" name="background" value="cto" /> CTO/VP Engineering</label>
-      <label><input type="radio" name="background" value="other" /> Other Technical Leadership</label>
-    </fieldset>
-    
-    <textarea 
-      name="challenge" 
-      required 
-      rows={4}
-      placeholder="Your Biggest People Challenge * (2-3 sentences)"
-      minLength={50}
-    />
-    
-    <button type="submit">Request Beta Consideration</button>
-  </form>
+  <div className="bg-primary/5 border-l-4 border-primary p-6 my-6">
+    <h3 className="font-semibold mb-2">The Moment Everything Changed</h3>
+    <p className="text-text-secondary">
+      I watched a brilliant aerospace engineer—someone with a 150 IQ who could 
+      solve impossible technical problems—completely implode a $10M project 
+      because he couldn't read his team's dynamics. Three senior developers 
+      quit in two months. Exit interviews blamed "culture." But it wasn't 
+      culture—it was invisible friction he never saw coming.
+      
+      That's when I knew: technical leaders need precision tools for the 
+      human stack, not fluffy workshops. LU Teams is that tool.
+    </p>
+  </div>
   ```
 
-- [ ] **Update Footer** (1 hour) 🟢
+- [ ] **Add "Current Work" Transparency** 🔴
+  - Below bio, add small section:
+  ```tsx
+  <div className="border-t border-text-muted/20 pt-6 mt-6">
+    <p className="text-sm text-text-secondary">
+      <strong>Currently working with:</strong> CTO at a SaaS scale-up (50-person 
+      engineering org), Engineering Director at an aerospace defense contractor, 
+      Senior Dev → Tech Lead at a fintech startup
+    </p>
+    <p className="text-sm text-text-secondary mt-2">
+      <strong>Taking applications for Q2 2025:</strong> 2 intensive coaching 
+      spots available
+    </p>
+  </div>
+  ```
+
+---
+
+### Priority #3: Navigation & SEO Critical Fixes
+
+**Problem**: No blog link, no LinkedIn, missing schema markup  
+**Impact**: HIGH - SEO and credibility  
+**Time**: 4-5 hours
+
+- [ ] **Add Blog/Insights Navigation** 🔴
+  - File: `components/Header.tsx` or main navigation
+  - [ ] Add "Insights" link to main navigation
+  - [ ] Point to: `/insights` or `/blog`
+  - [ ] If blog doesn't exist yet, create placeholder page:
+  
+  ```tsx
+  // app/insights/page.tsx (NEW)
+  export default function InsightsPage() {
+    return (
+      <div className="min-h-screen py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-display mb-4">Leadership Insights</h1>
+          <p className="text-xl text-text-secondary mb-12">
+            Pattern recognition from 100+ hours with technical leaders
+          </p>
+          
+          {/* Coming soon or first articles */}
+          <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
+            <h2 className="text-2xl mb-4">Deep-Dive Articles Coming Soon</h2>
+            <p className="text-text-secondary mb-6">
+              I'm publishing the patterns I see repeatedly in my intensive 
+              coaching work. Each article: 3,000+ words, real case studies 
+              (anonymized), actionable frameworks.
+            </p>
+            <button className="bg-primary text-background px-6 py-3 rounded-lg">
+              Notify Me When Published
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ```
+
+- [ ] **Add Social Links to Footer** 🔴
   - File: `components/Footer.tsx`
-  - [ ] Simplify to personal/boutique tone
-  - [ ] Update tagline: "Boutique leadership coaching methodology, now accessible through software"
-  - [ ] Add links: About the Work, 1-on-1 Coaching, Beta Access
-  - [ ] Keep it minimal
-
-### 1.5 Content Writing Tasks
-
-- [ ] **Write Hero Copy** (1 hour) 🔴
-  - Use provided template from proposal
-  - Personalize with your actual years of experience
-  - Add specific industries if different from aerospace/IT
-
-- [ ] **Write Founder Bio** (1 hour) 🔴
-  - First-person narrative
-  - Include actual credentials (years, industries, approach)
-  - Keep intimate and authentic tone
-
-- [ ] **Prepare 3 Case Studies** (3 hours) 🔴
-  - [ ] Reach out to 3-4 intensive clients for permission
-  - [ ] Get detailed testimonials (2-3 paragraphs)
-  - [ ] Anonymize if necessary
-  - [ ] Structure timeline format (Month 1/3/6)
-  - [ ] Write compelling "before/after" narratives
-
-- [ ] **Document 5 Network Patterns** (2 hours) 🟡
-  - Based on observations from 15-20 leaders
-  - First-person framing: "I see this repeatedly..."
-  - Include specific examples (anonymized)
-
-**Phase 1 Checkpoint**: Preview site with new structure, check flow
-
----
-
-## 🎨 PHASE 2: Visual Design & Branding (Week 2)
-
-**Goal**: Transform visual language from generic tech → premium boutique  
-**Estimated Time**: 15-20 hours
-
-### 2.1 Color Palette Update
-
-- [ ] **Update Tailwind Config** (1 hour) 🔴
-  - File: `tailwind.config.ts`
-  - [ ] Replace color scheme:
+  - [ ] Add social icons section:
+    - LinkedIn (company page + personal profile)
+    - Twitter/X if applicable
   
-  ```typescript
-  theme: {
-    extend: {
-      colors: {
-        // New Premium Palette
-        primary: {
-          DEFAULT: '#d4af37', // Muted gold
-          dark: '#b8941f',
-          light: '#e6c968'
-        },
-        secondary: {
-          DEFAULT: '#2c7a7b', // Deep teal
-          dark: '#1f5657',
-          light: '#3d9b9c'
-        },
-        background: {
-          DEFAULT: '#0d0d0d', // Charcoal black
-          surface: '#1a1a1a', // Card backgrounds
-          elevated: '#242424'
-        },
-        text: {
-          primary: '#e8e8e8',
-          secondary: '#a0a0a0',
-          muted: '#707070'
+  ```tsx
+  <div className="flex items-center gap-4">
+    <a 
+      href="https://linkedin.com/company/leadership-unfiltered" 
+      target="_blank"
+      className="text-text-secondary hover:text-primary transition-colors"
+      aria-label="LinkedIn"
+    >
+      <LinkedInIcon className="w-6 h-6" />
+    </a>
+    {/* Add other socials */}
+  </div>
+  ```
+
+- [ ] **Add Schema Markup** 🔴
+  - File: `app/layout.tsx`
+  - [ ] Add structured data in head:
+  
+  ```tsx
+  // In layout.tsx head section
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "[Your Name]",
+        "jobTitle": "Technical Leadership Coach",
+        "description": "Boutique coaching for technical leaders in aerospace and IT",
+        "url": "https://luteams.com",
+        "sameAs": [
+          "https://linkedin.com/in/[your-profile]",
+          "https://linkedin.com/company/leadership-unfiltered"
+        ]
+      })
+    }}
+  />
+  
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LU Teams",
+        "applicationCategory": "BusinessApplication",
+        "description": "HEXACO-based team synergy prediction for technical leaders",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
         }
-      },
-      borderColor: {
-        'primary-subtle': 'rgba(212, 175, 55, 0.2)',
-      },
-      backdropBlur: {
-        'subtle': '8px',
-      }
+      })
+    }}
+  />
+  ```
+
+- [ ] **Update Meta Descriptions** 🔴
+  - File: `app/layout.tsx`
+  - [ ] Ensure unique, keyword-rich description:
+  ```tsx
+  export const metadata = {
+    title: "LU Teams - Boutique Technical Leadership Coaching",
+    description: "Intensive coaching for 3-4 technical leaders at a time. Aerospace, IT, and SaaS engineering managers. Pattern recognition from 100+ hours of deep transformation work. Beta access + 1-on-1 coaching.",
+    // ... other meta tags
+  }
+  ```
+
+---
+
+### Priority #4: Enhance Patterns Section with Micro-Stories
+
+**Problem**: Patterns are good but too generic/theoretical  
+**Impact**: MEDIUM-HIGH - Differentiation & thought leadership  
+**Time**: 5-6 hours
+
+- [ ] **Rewrite Each Pattern with Real Example** 🟡
+  - File: `components/NetworkPatterns.tsx` or wherever patterns live
+  - [ ] For EACH of the 5 patterns, add specific micro-story
+  - [ ] Structure each pattern card:
+    1. Pattern name + icon
+    2. **Real-world example** (1-2 sentences, anonymized)
+    3. Consequence (what happened)
+    4. How LU Teams helps
+  
+  **Example rewrite**:
+  
+  ```tsx
+  // Before (generic):
+  {
+    title: "The Toxic Genius",
+    description: "Brilliant individual contributors who create team friction"
+  }
+  
+  // After (specific story):
+  {
+    title: "The Toxic Genius",
+    story: "A staff engineer at an aerospace contractor had 10x output but created a 'no-code-review' zone around himself. Nobody dared challenge him. Six months later, team velocity had dropped 40% and two senior devs quit.",
+    consequence: "High output, but team paralysis and turnover",
+    solution: "LU Teams' Honesty-Humility (H) factor flags this pattern early—before you lose your best people."
+  }
+  ```
+
+- [ ] **Make Patterns Expandable/Interactive** 🟡
+  - [ ] Add "Read More" functionality for each pattern
+  - [ ] On click, expand to show:
+    - Longer case study
+    - How to identify this pattern
+    - What to do about it
+    - Link to full article (when blog exists)
+  
+  **Component pattern**:
+  ```tsx
+  const [expandedPattern, setExpandedPattern] = useState<string | null>(null);
+  
+  return (
+    <div className="pattern-card">
+      <h3>{pattern.title}</h3>
+      <p className="text-sm text-text-secondary italic mb-2">
+        Real example: {pattern.story}
+      </p>
+      <p>{pattern.consequence}</p>
+      
+      {expandedPattern === pattern.id ? (
+        <div className="expanded-content mt-4 p-4 bg-primary/5 rounded">
+          <h4>How to Spot This Pattern</h4>
+          <p>{pattern.howToSpot}</p>
+          
+          <h4>What To Do</h4>
+          <p>{pattern.whatToDo}</p>
+          
+          <a href={`/insights/${pattern.slug}`} className="text-primary">
+            Read Full Article →
+          </a>
+        </div>
+      ) : (
+        <button 
+          onClick={() => setExpandedPattern(pattern.id)}
+          className="text-primary text-sm mt-2"
+        >
+          Read More →
+        </button>
+      )}
+    </div>
+  );
+  ```
+
+---
+
+### Priority #5: Visual Enhancements for Premium Feel
+
+**Problem**: Design is good but needs more context/authenticity  
+**Impact**: MEDIUM - Trust building  
+**Time**: 6-8 hours
+
+- [ ] **Add Context Photos** 🟡
+  - Requirements:
+    - [ ] Founder during workshop (whiteboard visible)
+    - [ ] Small group coaching session
+    - [ ] Aerospace/defense environment (if possible without NDA violations)
+  - [ ] Replace or supplement current headshot photos
+  - [ ] Add to: Founder section, About page, maybe hero background (subtle)
+
+- [ ] **Create Custom Icons/Illustrations for Patterns** 🟡
+  - File: `/public/icons/` (NEW directory)
+  - [ ] Design or commission 5 custom icons for patterns:
+    - The Toxic Genius → lightning bolt with warning
+    - The Echo Chamber → connected nodes all same color
+    - The Gridlocked Squad → gears stuck
+    - The Invisible Leader → faded silhouette
+    - The Overwhelmed Delegate → single node with too many connections
+  - Tools: Figma, or hire on Fiverr/Upwork (~$50-100 for set)
+
+- [ ] **Add Visual Elements to Transformation Stories** 🟡
+  - File: `components/ClientTransformations.tsx`
+  - [ ] Add industry-specific icons to each card:
+    - Aerospace → rocket/aircraft icon
+    - Fintech → graph/chart icon
+    - SaaS → code/cloud icon
+  - [ ] Add mini progress chart showing improvement
+  - [ ] Use color coding per industry
+
+- [ ] **Refine Color Palette** (Optional) 🟢
+  - File: `tailwind.config.ts`
+  - [ ] Current palette is OK, but consider:
+    - Deeper navy backgrounds
+    - Richer gold accent (less yellow, more bronze)
+    - Add "premium" gradient options
+  
+  ```typescript
+  colors: {
+    primary: {
+      DEFAULT: '#b8941f', // Darker gold
+      light: '#d4af37',
+      dark: '#8b6f14'
+    },
+    background: {
+      DEFAULT: '#0a0a0a', // Deeper black
+      surface: '#161616',
+      elevated: '#1f1f1f'
     }
   }
   ```
 
-- [ ] **Global Style Updates** (2 hours) 🔴
-  - File: `app/globals.css`
-  - [ ] Update background color to new charcoal
-  - [ ] Replace all neon cyan/purple references with gold/teal
-  - [ ] Adjust glass morphism opacity for darker background
+---
 
-### 2.2 Typography Enhancement
+## 📝 CONTENT UPDATES
 
-- [ ] **Import Premium Fonts** (1 hour) 🔴
-  - File: `app/layout.tsx`
-  - [ ] Add Google Fonts: Playfair Display (headers) + current sans-serif (body)
-  - [ ] Or use Next.js font optimization
-  
-  ```typescript
-  import { Playfair_Display, Inter } from 'next/font/google';
-  
-  const playfair = Playfair_Display({ 
-    subsets: ['latin'],
-    variable: '--font-playfair'
-  });
-  
-  const inter = Inter({ 
-    subsets: ['latin'],
-    variable: '--font-inter'
-  });
-  ```
+### Content Task List
 
-- [ ] **Update Typography Styles** (1.5 hours) 🔴
-  - File: `app/globals.css`
-  - [ ] Increase base font size: 18px
-  - [ ] Set H1 to 60px (desktop), 40px (mobile)
-  - [ ] Add font-family classes:
-  
-  ```css
-  .font-display {
-    font-family: var(--font-playfair), serif;
-  }
-  
-  h1, h2 {
-    font-family: var(--font-playfair), serif;
-    font-weight: 700;
-  }
-  
-  body {
-    font-family: var(--font-inter), sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-  }
-  ```
+- [ ] **Write Turning Point Story** (1 hour) 🔴
+  - One specific moment/project that led you to build LU Teams
+  - Include: stakes, failure, realization, action
+  - ~150-200 words
+  - Goes in: Founder Background section
 
-### 2.3 Component Styling Updates
+- [ ] **Document Specific Credentials** (30 min) 🔴
+  - List all concrete facts:
+    - Years of experience (exact number)
+    - Previous companies (can be "Aerospace Prime Contractor" if NDA)
+    - Team sizes managed
+    - Budget sizes
+    - Geographic scope
+  - Replace all generic language
 
-- [ ] **Restyle All Cards** (3 hours) 🟡
-  - Files: All component files
-  - [ ] Replace bright neon borders with subtle gold
-  - [ ] Darken glass morphism backgrounds
-  - [ ] Add gold accent borders on hover
-  
-  **Card style template**:
-  ```tsx
-  className="bg-background-surface/30 backdrop-blur-subtle border border-primary-subtle hover:border-primary/40 rounded-xl p-6 transition-all duration-300"
-  ```
+- [ ] **Write 5 Pattern Micro-Stories** (2-3 hours) 🔴
+  - For each pattern, write:
+    - Real example (anonymized) - 2 sentences
+    - Consequence - 1 sentence
+    - How LU Teams helps - 1 sentence
+  - Save to: `lib/patternsData.ts`
 
-- [ ] **Update Button Styles** (1 hour) 🟡
-  - [ ] Primary CTA: Gold background, dark text
-  - [ ] Secondary CTA: Gold border, transparent bg
-  - [ ] Hover states with smooth transitions
+- [ ] **Update Transformation Stories with Details** (2 hours) 🟡
+  - Current stories are good structure, but add:
+    - More specific "before" state: exact symptoms
+    - Concrete "after" metrics where possible
+    - More substantial testimonial quotes (3-4 sentences minimum)
+  - If these are composite: add disclaimer
   
   ```tsx
-  // Primary Button
-  className="bg-primary text-background px-8 py-4 rounded-lg font-semibold hover:bg-primary-light transition-colors"
-  
-  // Secondary Button
-  className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-lg font-semibold transition-colors"
+  <p className="text-xs text-text-muted italic">
+    * Composite case studies drawn from multiple intensive engagements. 
+    Details changed to protect client confidentiality.
+  </p>
   ```
 
-- [ ] **Hero Section Visual Refinement** (2 hours) 🟡
+- [ ] **Create FAQ Content** (1-2 hours) 🟡
+  - File: `components/FAQ.tsx` (NEW)
+  - Common questions:
+    - "What's the difference between Beta and 1-on-1 coaching?"
+    - "How long does intensive coaching take?"
+    - "What if I don't have an engineering background?"
+    - "How is this different from DiSC/Myers-Briggs?"
+    - "What's your success rate?"
+    - "Do you work with remote teams?"
+  - Add at bottom of page before footer
+
+---
+
+## 🔧 TECHNICAL IMPROVEMENTS
+
+### SEO & Performance
+
+- [ ] **Internal Anchor Navigation** (1 hour) 🟡
   - File: `components/Hero.tsx`
-  - [ ] Remove or minimize animated logo
-  - [ ] Add founder photo or workshop image
-  - [ ] Adjust layout for new visual hierarchy
-  - [ ] Add subtle badge styling for "Limited Beta Program"
+  - [ ] Add anchor links in hero to jump to sections:
+  ```tsx
+  <div className="flex gap-4 justify-center text-sm mt-6">
+    <a href="#how-it-works" className="text-primary hover:underline">
+      See How It Works ↓
+    </a>
+    <a href="#patterns" className="text-primary hover:underline">
+      Read Common Patterns ↓
+    </a>
+    <a href="#transformations" className="text-primary hover:underline">
+      View Success Stories ↓
+    </a>
+  </div>
+  ```
+  - [ ] Add corresponding IDs to section components
 
-### 2.4 Responsive Design Check
+- [ ] **Reading Time Indicators** (30 min) 🟢
+  - Add to longer sections:
+  ```tsx
+  <p className="text-sm text-text-muted">
+    <ClockIcon className="inline w-4 h-4" /> 5 min read
+  </p>
+  ```
 
-- [ ] **Mobile Optimization** (3 hours) 🟡
-  - [ ] Test all new components on mobile (375px width)
-  - [ ] Ensure dual CTAs stack properly
-  - [ ] Check form readability
-  - [ ] Verify case study cards stack correctly
-  - [ ] Test navigation/scroll behavior
-
-- [ ] **Tablet Optimization** (1.5 hours) 🟢
-  - [ ] Test at 768px and 1024px widths
-  - [ ] Adjust grid layouts if needed
-  - [ ] Check image sizing
-
-### 2.5 Asset Preparation
-
-- [ ] **Gather Required Images** (4-6 hours) 🔴
-  - [ ] Commission or take founder photo
-    - Requirements: Professional but approachable
-    - Setting: Workshop/office, not corporate studio
-    - Format: High-res (min 1200x1600px)
-    - Background: Neutral or slightly blurred
-  
-  - [ ] Collect workshop photos (if available)
-    - Small group settings preferred
-    - Whiteboard/collaboration scenes
-    - No stock photos
-  
-  - [ ] Create placeholder images if photos not ready
-    - Use subtle illustrations
-    - Or tasteful text-based placeholders
-
-- [ ] **Optimize Images** (1 hour) 🟡
-  - [ ] Compress for web (WebP format)
-  - [ ] Create responsive variants
-  - [ ] Add to `/public` directory
-  - [ ] Update image references in components
-
-**Phase 2 Checkpoint**: Visual consistency check across all sections
+- [ ] **"As Seen In" Section** (if applicable) (1 hour) 🟢
+  - File: `components/Credentials.tsx` (NEW)
+  - [ ] Add logos/links if you have:
+    - Speaking engagements
+    - Publications/articles written
+    - Podcasts appeared on
+    - Companies worked with (with permission)
+  - Place after Founder Background
 
 ---
 
-## 💾 PHASE 3: Backend & Data (Week 3)
+## 📊 TRACKING & ANALYTICS
 
-**Goal**: Update database and API to handle new application form  
-**Estimated Time**: 8-12 hours
-
-### 3.1 Database Schema Update
-
-- [ ] **Update Supabase Table** (1 hour) 🔴
-  - File: `supabase/schema.sql` (or run directly in Supabase SQL Editor)
-  - [ ] Rename table: `waitlist` → `beta_applications`
-  - [ ] Add new columns
+- [ ] **Set Up Advanced Event Tracking** (2 hours) 🟡
+  - [ ] Track which "Pattern" users click to expand
+  - [ ] Track CTA performance: Beta vs Coaching clicks
+  - [ ] Track scroll depth: how far users read
+  - [ ] Track form field completion rates
   
-  ```sql
-  -- Rename table
-  ALTER TABLE waitlist RENAME TO beta_applications;
+  **Using GA4 events**:
+  ```tsx
+  // When pattern expands
+  gtag('event', 'pattern_expanded', {
+    pattern_name: pattern.title,
+    location: 'patterns_section'
+  });
   
-  -- Add new columns
-  ALTER TABLE beta_applications
-  ADD COLUMN full_name VARCHAR(100),
-  ADD COLUMN role VARCHAR(150),
-  ADD COLUMN company VARCHAR(150),
-  ADD COLUMN team_size VARCHAR(20),
-  ADD COLUMN biggest_challenge TEXT,
-  ADD COLUMN technical_background VARCHAR(50),
-  ADD COLUMN application_status VARCHAR(20) DEFAULT 'pending',
-  ADD COLUMN reviewed_at TIMESTAMPTZ,
-  ADD COLUMN notes TEXT;
-  
-  -- Update existing email column if needed
-  ALTER TABLE beta_applications
-  ALTER COLUMN email SET NOT NULL;
-  
-  -- Add indexes for common queries
-  CREATE INDEX idx_application_status ON beta_applications(application_status);
-  CREATE INDEX idx_created_at ON beta_applications(created_at DESC);
-  ```
-
-- [ ] **Test Database Changes** (30 min) 🔴
-  - [ ] Run SQL in Supabase dashboard
-  - [ ] Verify columns added correctly
-  - [ ] Check existing data migrated (if any)
-
-### 3.2 API Route Updates
-
-- [ ] **Rename and Update API Route** (2 hours) 🔴
-  - File: `app/api/waitlist/route.ts` → Rename to `app/api/application/route.ts`
-  - [ ] Update to handle new form fields
-  - [ ] Add validation for all required fields
-  - [ ] Add server-side validation for challenge length
-  
-  ```typescript
-  // app/api/application/route.ts
-  import { createClient } from '@/lib/supabase';
-  
-  export async function POST(request: Request) {
-    try {
-      const body = await request.json();
-      
-      // Validation
-      const { email, fullName, role, company, teamSize, biggestChallenge, technicalBackground } = body;
-      
-      if (!email || !fullName || !role || !company || !teamSize || !biggestChallenge || !technicalBackground) {
-        return Response.json({ error: 'All fields are required' }, { status: 400 });
-      }
-      
-      if (biggestChallenge.length < 50) {
-        return Response.json({ error: 'Challenge description too short (min 50 characters)' }, { status: 400 });
-      }
-      
-      // Insert to database
-      const supabase = createClient();
-      const { data, error } = await supabase
-        .from('beta_applications')
-        .insert([{
-          email,
-          full_name: fullName,
-          role,
-          company,
-          team_size: teamSize,
-          biggest_challenge: biggestChallenge,
-          technical_background: technicalBackground,
-          application_status: 'pending'
-        }])
-        .select();
-      
-      if (error) throw error;
-      
-      return Response.json({ success: true, data });
-      
-    } catch (error) {
-      console.error('Application error:', error);
-      return Response.json({ error: 'Failed to submit application' }, { status: 500 });
-    }
-  }
-  ```
-
-- [ ] **Update Form Submission Handler** (1 hour) 🔴
-  - File: `components/ApplicationForm.tsx`
-  - [ ] Change API endpoint: `/api/waitlist` → `/api/application`
-  - [ ] Update request body with new fields
-  - [ ] Handle new validation errors
-  - [ ] Update success message
-
-### 3.3 Email Notifications (Optional but Recommended)
-
-- [ ] **Set Up Application Notifications** (3 hours) 🟡
-  - [ ] Choose email service (Resend, SendGrid, or Supabase Edge Functions)
-  - [ ] Create email template for new applications
-  - [ ] Add notification trigger in API route
-  - [ ] Test email delivery
-  
-  **Simple Resend integration**:
-  ```typescript
-  // In app/api/application/route.ts
-  import { Resend } from 'resend';
-  
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  
-  // After successful insert:
-  await resend.emails.send({
-    from: 'notifications@luteams.com',
-    to: 'your-email@domain.com',
-    subject: 'New Beta Application',
-    html: `
-      <h2>New application from ${fullName}</h2>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Role:</strong> ${role}</p>
-      <p><strong>Company:</strong> ${company}</p>
-      <p><strong>Team Size:</strong> ${teamSize}</p>
-      <p><strong>Challenge:</strong> ${biggestChallenge}</p>
-    `
+  // When CTA clicked
+  gtag('event', 'cta_clicked', {
+    cta_type: 'beta_access', // or '1on1_coaching'
+    location: 'hero' // or 'coaching_section', etc.
   });
   ```
 
-### 3.4 Admin Dashboard (Optional)
+- [ ] **Set Up Hotjar or Similar** (1 hour) 🟢
+  - Heat mapping to see:
+    - Where users spend time
+    - Where they drop off
+    - Which sections get most attention
 
-- [ ] **Create Simple Admin View** (4 hours) 🟢
-  - File: `app/admin/applications/page.tsx` (NEW)
-  - [ ] Password-protected route
-  - [ ] Display all applications in table
-  - [ ] Filter by status (pending/reviewed/accepted/rejected)
-  - [ ] Add notes field
-  - [ ] Mark as reviewed
+---
+
+## 🎨 DESIGN POLISH
+
+### Nice-to-Have Visual Improvements
+
+- [ ] **Add Subtle Animations** (2-3 hours) 🟢
+  - File: `app/globals.css` or component-specific
+  - [ ] Fade-in on scroll for sections
+  - [ ] Hover effects on pattern cards
+  - [ ] Smooth transitions on expandable content
   
-  **Note**: This is optional but very useful for managing applications manually
+  **Using Framer Motion**:
+  ```tsx
+  import { motion } from 'framer-motion';
+  
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
+    {/* Content */}
+  </motion.div>
+  ```
 
-**Phase 3 Checkpoint**: Test full form submission flow, verify data saves correctly
+- [ ] **Improve Mobile Experience** (2 hours) 🟡
+  - [ ] Test all new sections on mobile
+  - [ ] Ensure expandable patterns work smoothly
+  - [ ] Check form usability with longer fields
+  - [ ] Verify images scale properly
 
----
-
-## 🧪 PHASE 4: Testing & Optimization (Week 4)
-
-**Goal**: Polish, test, and prepare for launch  
-**Estimated Time**: 10-15 hours
-
-### 4.1 Content Finalization
-
-- [ ] **Proofread All Copy** (2 hours) 🔴
-  - [ ] Check for typos/grammar
-  - [ ] Verify first-person consistency ("I" not "We")
-  - [ ] Ensure authentic, not marketing-speak tone
-  - [ ] Verify numbers (years of experience, client counts, etc.)
-
-- [ ] **Get Testimonial Approvals** (ongoing) 🔴
-  - [ ] Confirm permission from all quoted clients
-  - [ ] Get written approval for case study details
-  - [ ] Anonymize if requested
-
-### 4.2 Cross-Browser Testing
-
-- [ ] **Desktop Testing** (2 hours) 🔴
-  - [ ] Chrome (latest)
-  - [ ] Firefox (latest)
-  - [ ] Safari (latest)
-  - [ ] Edge (latest)
-  - Check: Layout, colors, fonts, animations, form submission
-
-- [ ] **Mobile Testing** (2 hours) 🔴
-  - [ ] iOS Safari (iPhone)
-  - [ ] Android Chrome
-  - [ ] Test form usability on small screens
-  - [ ] Check touch target sizes
-
-### 4.3 Performance Optimization
-
-- [ ] **Image Optimization** (1.5 hours) 🟡
-  - [ ] Compress all images (TinyPNG or similar)
-  - [ ] Use Next.js Image component for optimization
-  - [ ] Implement lazy loading for below-fold images
-  - [ ] Add proper alt text
-
-- [ ] **Code Optimization** (2 hours) 🟡
-  - [ ] Remove unused components
-  - [ ] Check for console errors
-  - [ ] Minimize bundle size
-  - [ ] Run Lighthouse audit, aim for 90+ score
-
-### 4.4 SEO & Metadata
-
-- [ ] **Update Meta Tags** (1 hour) 🟡
-  - File: `app/layout.tsx`
-  - [ ] Update title: "LU Teams - Boutique Technical Leadership Coaching"
-  - [ ] Update description with founder-first narrative
-  - [ ] Add Open Graph images (founder photo or logo)
-  - [ ] Set proper canonical URLs
-
-- [ ] **Schema Markup** (1 hour) 🟢
-  - Add Person schema for founder
-  - Add Organization schema
-  - Add SoftwareApplication schema
-
-### 4.5 Analytics Setup
-
-- [ ] **Install Analytics** (1 hour) 🟡
-  - [ ] Add Google Analytics 4 or Plausible
-  - [ ] Set up conversion tracking for form submissions
-  - [ ] Track CTA button clicks (Beta vs Coaching)
-  - [ ] Set up custom events
-
-### 4.6 Final QA Checklist
-
-- [ ] **Functionality Tests** 🔴
-  - [ ] All links work (internal and external)
-  - [ ] Form validation works correctly
-  - [ ] Form submission succeeds
-  - [ ] Success/error messages display properly
-  - [ ] Responsive navigation works
-  - [ ] All images load correctly
-
-- [ ] **Content Accuracy** 🔴
-  - [ ] All numbers are correct (years, client counts, spots available)
-  - [ ] Contact information is accurate
-  - [ ] No placeholder text remains ("Lorem ipsum", etc.)
-  - [ ] Testimonials are properly attributed
-
-- [ ] **Visual Consistency** 🟡
-  - [ ] Color palette consistent throughout
-  - [ ] Typography hierarchy clear
-  - [ ] Spacing/padding consistent
-  - [ ] No layout shifts on page load
+- [ ] **Add Micro-Interactions** (1-2 hours) 🟢
+  - [ ] Button hover states
+  - [ ] Card hover elevations
+  - [ ] Progress indicators for long form
+  - [ ] Success animations on form submit
 
 ---
 
-## 🚢 PHASE 5: Deployment & Launch
+## 📅 IMPLEMENTATION PHASES
 
-### 5.1 Pre-Launch
+### Week 1: Critical Visual & Content
 
-- [ ] **Environment Variables Check** (30 min) 🔴
-  - [ ] Verify all env vars set in Vercel
-  - [ ] Test Supabase connection in production
-  - [ ] Check API routes work in production
+**Focus**: Synergy Radar + Founder Story  
+**Time**: 15-18 hours
 
-- [ ] **Create Backup** (15 min) 🔴
-  - [ ] Commit all changes to git
-  - [ ] Tag release: `v2.0-boutique-redesign`
-  - [ ] Create branch: `old-version` for rollback if needed
+- [ ] Day 1-2: Create Synergy Radar mockup/wireframe
+- [ ] Day 2-3: Build "How It Works" section with radar visual
+- [ ] Day 3-4: Enhance Founder Background with specific credentials
+- [ ] Day 4-5: Write turning point story + current work section
 
-### 5.2 Deployment
-
-- [ ] **Deploy to Vercel** (30 min) 🔴
-  - [ ] Push to main branch (triggers auto-deploy)
-  - [ ] Or use: `vercel --prod`
-  - [ ] Monitor build logs for errors
-  - [ ] Test production URL immediately
-
-- [ ] **Post-Deploy Verification** (1 hour) 🔴
-  - [ ] Test form submission on live site
-  - [ ] Verify database writes work
-  - [ ] Check all images load
-  - [ ] Test on mobile device
-  - [ ] Run Lighthouse audit on production
-
-### 5.3 Launch Communications
-
-- [ ] **Announce Redesign** 🟡
-  - [ ] LinkedIn post (founder personal account)
-  - [ ] Email to existing waitlist (if applicable)
-  - [ ] Update any external links
+**Deliverable**: Page now shows flagship feature and builds founder credibility
 
 ---
 
-## 📊 POST-LAUNCH MONITORING (Ongoing)
+### Week 2: Navigation, SEO, & Patterns
 
-### Week 1 After Launch
+**Focus**: Blog link + Pattern depth  
+**Time**: 12-15 hours
 
-- [ ] **Daily Checks** 🔴
-  - [ ] Monitor application submissions
-  - [ ] Check for any errors in Vercel logs
-  - [ ] Review analytics data
-  - [ ] Respond to any contact form submissions
+- [ ] Day 1: Add blog/insights navigation + placeholder page
+- [ ] Day 1-2: Add social links to footer + schema markup
+- [ ] Day 2-3: Rewrite all 5 patterns with micro-stories
+- [ ] Day 3-4: Implement expandable pattern functionality
+- [ ] Day 4-5: Write FAQ section
 
-- [ ] **Gather Feedback** 🟡
-  - [ ] Ask 3-5 trusted colleagues to review
-  - [ ] Note any confusion points
-  - [ ] Track which CTA gets more clicks (Beta vs Coaching)
-
-### Week 2-4 After Launch
-
-- [ ] **A/B Testing Ideas** 🟢
-  - [ ] Test different hero headlines
-  - [ ] Try different CTA button text
-  - [ ] Experiment with form length
-
-- [ ] **Content Iteration** 🟢
-  - [ ] Add blog post/case study if possible
-  - [ ] Update with real application numbers
-  - [ ] Refine copy based on feedback
+**Deliverable**: SEO foundations + thought leadership depth
 
 ---
 
-## 🔧 TECHNICAL DEPENDENCIES
+### Week 3: Polish & Launch
 
-### Required Accounts/Services
-- [x] Vercel account (already have)
-- [x] Supabase account (already have)
-- [ ] Domain configured (luteams.com)
-- [ ] Email service (optional: Resend/SendGrid)
-- [ ] Analytics (optional: GA4/Plausible)
+**Focus**: Visual polish + tracking  
+**Time**: 10-12 hours
 
-### Development Environment
-- [x] Node.js 18+
-- [x] Git
-- [x] Code editor (VS Code recommended)
-- [ ] Supabase CLI (optional, for local dev)
+- [ ] Day 1-2: Add context photos (if available)
+- [ ] Day 2-3: Create custom pattern icons
+- [ ] Day 3-4: Add visual enhancements to transformation stories
+- [ ] Day 4-5: Set up advanced analytics tracking
+- [ ] Day 5: Final QA and deploy
+
+**Deliverable**: Polished, premium, tracked
 
 ---
 
 ## ⏱️ TIME ESTIMATES SUMMARY
 
-| Phase | Estimated Time | Priority |
-|-------|----------------|----------|
-| Phase 0 (Quick Wins) | 3-4 hours | 🔴 CRITICAL |
-| Phase 1 (Content) | 20-25 hours | 🔴 CRITICAL |
-| Phase 2 (Design) | 15-20 hours | 🔴 CRITICAL |
-| Phase 3 (Backend) | 8-12 hours | 🔴 CRITICAL |
-| Phase 4 (Testing) | 10-15 hours | 🟡 IMPORTANT |
-| Phase 5 (Deployment) | 2-3 hours | 🔴 CRITICAL |
-| **TOTAL** | **58-79 hours** | Full redesign |
+| Priority | Task Group | Time | Impact |
+|----------|-----------|------|--------|
+| 🔴 #1 | Synergy Radar Visual | 6-8 hrs | CRITICAL |
+| 🔴 #2 | Founder Story Depth | 3-4 hrs | HIGH |
+| 🔴 #3 | Navigation & SEO | 4-5 hrs | HIGH |
+| 🟡 #4 | Pattern Micro-Stories | 5-6 hrs | MED-HIGH |
+| 🟡 #5 | Visual Polish | 6-8 hrs | MEDIUM |
+| 🟡 Additional | Content + FAQ | 6-8 hrs | MEDIUM |
+| 🟢 Optional | Animations + Icons | 4-6 hrs | LOW-MED |
+| **TOTAL** | **Full Phase 2** | **34-45 hrs** | Complete |
 
-### Reduced Scope Options
+### Minimum Viable Iteration
 
-**If time/budget is tight, prioritize:**
+**If time is limited, do these 3:**
 
-1. ✅ **Phase 0** (Quick Wins) - 4 hours - Immediate positioning shift
-2. ✅ **Phase 1.1-1.3** (Hero + Founder sections) - 12 hours - Core narrative
-3. ✅ **Phase 2.1-2.2** (Colors + Typography) - 4 hours - Visual refresh
-4. ✅ **Phase 3.1-3.2** (Database + API) - 3 hours - Form functionality
-5. ✅ **Phase 5** (Deploy) - 2 hours
+1. ✅ **Synergy Radar Visual** (8 hrs) - Shows your product
+2. ✅ **Founder Story + Credentials** (4 hrs) - Builds trust
+3. ✅ **Blog Link + Schema** (3 hrs) - SEO fundamentals
 
-**Minimum viable redesign**: ~25 hours to get 80% of the impact
+**= 15 hours for 70% of impact**
 
 ---
 
-## 📝 NOTES & TIPS
+## 📋 QUICK REFERENCE: File Changes
 
-### Git Workflow
-- Commit frequently with descriptive messages
-- Create feature branches for major changes
-- Test locally before pushing to main
+| File | Changes | Priority |
+|------|---------|----------|
+| `components/HowItWorks.tsx` | NEW - Synergy Radar section | 🔴 |
+| `components/FounderAuthority.tsx` | Add credentials + turning point | 🔴 |
+| `components/Header.tsx` | Add blog navigation | 🔴 |
+| `components/Footer.tsx` | Add social icons | 🔴 |
+| `app/layout.tsx` | Schema markup + meta | 🔴 |
+| `app/insights/page.tsx` | NEW - Blog placeholder | 🔴 |
+| `components/NetworkPatterns.tsx` | Add micro-stories + expandable | 🟡 |
+| `components/FAQ.tsx` | NEW - FAQ section | 🟡 |
+| `components/ClientTransformations.tsx` | Visual enhancements | 🟡 |
+| `lib/patternsData.ts` | NEW - Pattern stories data | 🟡 |
+| `tailwind.config.ts` | Color refinements (optional) | 🟢 |
 
-### Testing Locally
+---
+
+## ✅ DEFINITION OF DONE - Phase 2
+
+Project complete when:
+
+- [ ] Synergy Radar visual displayed prominently
+- [ ] Founder section has specific credentials (company types, years, team sizes)
+- [ ] Turning point story added
+- [ ] Blog/Insights link in navigation (even if placeholder)
+- [ ] Social icons in footer (LinkedIn minimum)
+- [ ] Schema markup added for Person + Product
+- [ ] All 5 patterns have micro-story examples
+- [ ] Patterns are expandable/interactive
+- [ ] FAQ section added
+- [ ] Advanced analytics tracking patterns + CTAs
+- [ ] Mobile tested and optimized
+- [ ] Lighthouse score maintained (90+)
+
+---
+
+## 🚀 START HERE
+
+**To begin Phase 2 implementation:**
+
 ```bash
-# Run development server
+# 1. Create feature branch
+git checkout -b phase-2-refinements
+
+# 2. Start with highest priority
+# Create Synergy Radar mockup first (external tool)
+# Then build HowItWorks component
+
+# 3. Work through priorities in order
+# Priority 1 → Priority 2 → Priority 3...
+
+# 4. Test locally after each major change
 npm run dev
 
-# Test production build locally
-npm run build
-npm start
+# 5. Commit frequently
+git add .
+git commit -m "Add Synergy Radar visual to How It Works section"
+
+# Let's refine this to A+ level! 🎯
 ```
-
-### Common Issues & Solutions
-
-**Issue**: Form not submitting  
-**Solution**: Check Supabase connection, verify API route path, check browser console
-
-**Issue**: Images not loading  
-**Solution**: Verify files in `/public` directory, check image paths (no leading slash for public assets)
-
-**Issue**: Styling not updating  
-**Solution**: Clear browser cache, restart dev server, check Tailwind config loaded
-
----
-
-## ✅ DEFINITION OF DONE
-
-Project is complete when:
-
-- [ ] All Phase 0-5 tasks marked complete
-- [ ] Site deployed to production
-- [ ] Form submissions working and saving to database
-- [ ] Mobile responsive on iOS and Android
-- [ ] No console errors in browser
-- [ ] Lighthouse score 90+ on desktop
-- [ ] All images optimized and loading
-- [ ] Founder photo and testimonials live
-- [ ] Analytics tracking conversions
-- [ ] At least 3 test applications submitted successfully
-
----
-
-## 🆘 NEED HELP?
-
-If you get stuck on any task:
-
-1. **Check documentation**: Next.js docs, Tailwind docs, Supabase docs
-2. **Console errors**: Always check browser console first
-3. **Git history**: Use `git log` to see what changed
-4. **Rollback**: Use `git checkout old-version` if needed
-
-**Contact points**:
-- Vercel support: https://vercel.com/help
-- Supabase support: https://supabase.com/docs
-- Next.js Discord: https://nextjs.org/discord
 
 ---
 
 **Last Updated**: 2025-01-03  
-**Version**: 2.0 - Boutique Redesign  
-**Status**: Ready to implement
-
----
-
-## 🎯 QUICK START COMMAND
-
-To begin implementation right now:
-
-```bash
-# 1. Create a new branch
-git checkout -b boutique-redesign
-
-# 2. Start with Phase 0 - Hero copy
-# Edit components/Hero.tsx
-
-# 3. Test locally
-npm run dev
-
-# 4. Commit your changes
-git add .
-git commit -m "Phase 0: Update hero copy to founder-first narrative"
-
-# Let's go! 🚀
-```
+**Version**: Phase 2 - Refinements & Depth  
+**Status**: Ready to implement  
+**Expected Outcome**: A+ positioning with visual proof and thought leadership

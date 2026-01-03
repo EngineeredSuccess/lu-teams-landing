@@ -56,6 +56,22 @@ export default function Hero({ content }: HeroProps) {
               </a>
             </div>
 
+            {/* Quick Links */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs mt-8 animate-fade-in-up animation-delay-400">
+              <a href="#how-it-works" className="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+                <span>See How It Works</span>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" /></svg>
+              </a>
+              <a href="#patterns" className="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+                <span>Read Patterns</span>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" /></svg>
+              </a>
+              <a href="#faq" className="text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+                <span>View FAQ</span>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" /></svg>
+              </a>
+            </div>
+
             <p className="text-sm text-text-muted mt-6 animate-fade-in-up animation-delay-300">
               {content.betaNote}
             </p>

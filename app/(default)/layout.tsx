@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import Header from "@/components/Header";
+import { translations } from "@/lib/translations";
 import "../globals.css";
 
 const inter = Inter({
@@ -17,9 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://luteams.com"),
-  title: "LU Teams - The Technical Leader's Sixth Sense for Team Chemistry",
+  title: "LU Teams - Technical Leadership Sixth Sense",
   description:
-    "Stop guessing who works well together. LU Teams analyzes personality dynamics to predict team synergy before you even start a project.",
+    "Intensive HEXACO-based coaching and tools for technical leaders in aerospace, defense, and SaaS. Predict team synergy before you start.",
   keywords: [
     "team chemistry",
     "personality analysis",
@@ -82,6 +84,54 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        {/* Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Paul H.",
+              "jobTitle": "Technical Leadership Coach",
+              "description": "Boutique coaching for technical leaders in aerospace and IT",
+              "url": "https://luteams.com",
+              "sameAs": [
+                "https://linkedin.com/in/paul-h",
+                "https://linkedin.com/company/leadership-unfiltered"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "LU Teams",
+              "applicationCategory": "BusinessApplication",
+              "description": "HEXACO-based team synergy prediction for technical leaders",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-partner" strategy="afterInteractive">
           {`
@@ -113,7 +163,10 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <Header content={translations.en.nav} lang="en" />
+        {children}
+      </body>
     </html>
   );
 }
