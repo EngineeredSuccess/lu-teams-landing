@@ -292,7 +292,7 @@ export const translations = {
             copyright: "LU Teams utilizes an independent methodology based on the HEXACO-PI-R and open-source Team Role models. We provide data-driven insights, not just labels. © 2025 Leadership Unfiltered.",
             social: {
                 linkedin: "https://linkedin.com/company/leadership-unfiltered",
-                personal: "https://linkedin.com/in/paul-h"
+                personal: "https://www.linkedin.com/in/pawel-rzepecki-tech-lead/"
             }
         },
         nav: {
@@ -621,7 +621,7 @@ export const translations = {
             copyright: "LU Teams wykorzystuje niezależną metodologię opartą na HEXACO-PI-R i modelach Ról Zespołowych open-source. Dostarczamy wnioski oparte na danych, a nie tylko etykiety. © 2025 Leadership Unfiltered.",
             social: {
                 linkedin: "https://linkedin.com/company/leadership-unfiltered",
-                personal: "https://linkedin.com/in/paul-h"
+                personal: "https://www.linkedin.com/in/pawel-rzepecki-tech-lead/"
             }
         },
         nav: {

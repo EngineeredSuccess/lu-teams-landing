@@ -91,12 +91,12 @@ export default function RootLayout({
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "Person",
-                            "name": "Paul H.",
+                            "name": "Paweł Rzepecki",
                             "jobTitle": "Technical Leadership Coach",
                             "description": "Boutique'owy coaching dla liderów technicznych w lotnictwie i IT",
                             "url": "https://luteams.com/pl",
                             "sameAs": [
-                                "https://linkedin.com/in/paul-h",
+                                "https://www.linkedin.com/in/pawel-rzepecki-tech-lead/",
                                 "https://linkedin.com/company/leadership-unfiltered"
                             ]
                         })

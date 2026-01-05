@@ -100,7 +100,7 @@ export default function RootLayout({
                 "name": "Leadership Unfiltered"
               },
               "sameAs": [
-                "https://linkedin.com/in/paul-h",
+                "https://www.linkedin.com/in/pawel-rzepecki-tech-lead/",
                 "https://linkedin.com/company/leadership-unfiltered"
               ]
             })
