@@ -87,7 +87,7 @@ export default function Hero({ content }: HeroProps) {
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                 <img
                   src="/founder-jacket.png"
-                  alt="Founder"
+                  alt="Paweł Rzepecki, technical leadership coach specializing in engineering team dynamics and HEXACO-based synergy prediction"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
