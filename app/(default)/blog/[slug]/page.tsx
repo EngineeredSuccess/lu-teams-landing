@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { JsonLd } from "@/components/blog/JsonLd";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 interface Props {
     params: Promise<{
@@ -12,10 +13,43 @@ interface Props {
     }>;
 }
 
+// Map of custom blog posts
+const customBlogs: Record<string, any> = {
+    "toxic-genius-pattern": dynamic(() => import("@/blogs/blog-1-toxic-genius-pattern")),
+    "silent-architect-pattern": dynamic(() => import("@/blogs/blog-2-silent-architect-pattern")),
+    "echo-chamber-effect": dynamic(() => import("@/blogs/blog-3-echo-chamber-effect")),
+    "gridlocked-squad-pattern": dynamic(() => import("@/blogs/blog-4-gridlocked-squad-pattern")),
+    "overwhelmed-delegate-pattern": dynamic(() => import("@/blogs/blog-5-overwhelmed-delegate-pattern")),
+};
+
 export const revalidate = 3600; // Revalidate every hour
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
+
+    // Check if it's a custom blog first
+    if (customBlogs[slug]) {
+        const titles: Record<string, string> = {
+            "toxic-genius-pattern": "The Toxic Genius: How One Brilliant Engineer Cost Us $10 Million",
+            "silent-architect-pattern": "The Silent Architect: When Your Best Engineer is About to Quit",
+            "echo-chamber-effect": "The Echo Chamber: Why Smart Teams Make Stupid Decisions",
+            "gridlocked-squad-pattern": "The Gridlocked Squad: Five Stars, Zero Shipping",
+            "overwhelmed-delegate-pattern": "The Overwhelmed Delegate: Why Your Best IC Became Your Worst Manager",
+        };
+
+        return {
+            title: titles[slug] || "LU Teams Blog",
+            description: "Pattern recognition from 100+ hours of intensive coaching with technical leaders.",
+            alternates: {
+                languages: {
+                    "pl-PL": `/pl/blog/${slug}`,
+                    "en-US": `/blog/${slug}`,
+                },
+            }
+        };
+    }
+
+    // Otherwise use Supabase
     const supabase = getSupabase();
     const { data: post } = await supabase
         .from("posts")
@@ -42,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
         alternates: {
             languages: {
-                "pl-PL": `/pl/blog/${slug}`, // Assuming same slug for simplicity, or handle translation logic
+                "pl-PL": `/pl/blog/${slug}`,
                 "en-US": `/blog/${slug}`,
             }
         }
@@ -51,6 +85,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
+
+    // Check if it's a custom blog
+    if (customBlogs[slug]) {
+        const CustomBlogComponent = customBlogs[slug];
+        return <CustomBlogComponent />;
+    }
+
+    // Otherwise load from Supabase
     const supabase = getSupabase();
     const { data: post } = await supabase
         .from("posts")

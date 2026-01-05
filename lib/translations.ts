@@ -16,10 +16,9 @@ export const translations = {
             bio1: "I've spent the last decade in high-stakes engineering environments, from aerospace to fintech. I learned one thing: technical problems are rarely just technical.",
             bio2: "Most 'leadership training' is fluffy and theoretical. I built LU Teams to give engineering leaders the precision tools they actually need—based on data, not intuition.",
             credentials: [
-                "15+ Years in Engineering",
-                "Leading Teams since 2021",
-                "Certified HEXACO Practitioner",
-                "Ex-Aerospace & Defense"
+                "Engineering Background: 15+ years in aerospace & defense",
+                "Leadership Focus: Full-time coaching & consulting since 2021",
+                "Team Leadership Experience: Led 40+ person teams (2015-2021)"
             ],
             cta: "Learn About 1-on-1 Intensive Coaching",
             turningPoint: {
@@ -346,10 +345,9 @@ export const translations = {
             bio1: "Spędziłem ostatnią dekadę w środowiskach inżynierskich o wysokiej stawce, od lotnictwa po fintech. Nauczyłem się jednego: problemy techniczne rzadko są tylko techniczne.",
             bio2: "Większość 'szkoleń liderskich' jest teoretyczna i oderwana od rzeczywistości. Zbudowałem LU Teams, aby dać liderom inżynierii precyzyjne narzędzia, których faktycznie potrzebują – oparte na danych, a nie intuicji.",
             credentials: [
-                "15+ lat w inżynierii",
-                "Lider zespołów od 2021",
-                "Certyfikowany Praktyk HEXACO",
-                "Ex-Aerospace & Defense"
+                "Doświadczenie inżynierskie: 15+ lat w lotnictwie i obronności",
+                "Skupienie na liderstwo: Pełnoetatowy coaching i doradztwo od 2021",
+                "Lider zespołów: 40+ osobowe zespoły (2015-2021)"
             ],
             cta: "Dowiedz się o Coachingu Indywidualnym",
             turningPoint: {

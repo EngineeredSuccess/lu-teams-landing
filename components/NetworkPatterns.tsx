@@ -2,6 +2,7 @@
 
 import { Translations } from "@/lib/translations";
 import { useState } from "react";
+import Link from "next/link";
 
 interface NetworkPatternsProps {
     content: Translations["networkPatterns"];
@@ -9,6 +10,15 @@ interface NetworkPatternsProps {
 
 export default function NetworkPatterns({ content }: NetworkPatternsProps) {
     const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+
+    // Map pattern index to blog slug
+    const patternSlugs = [
+        "toxic-genius-pattern",
+        "silent-architect-pattern",
+        "echo-chamber-effect",
+        "gridlocked-squad-pattern",
+        "overwhelmed-delegate-pattern",
+    ];
 
     return (
         <section id="patterns" className="py-24 bg-background relative overflow-hidden">
@@ -30,27 +40,27 @@ export default function NetworkPatterns({ content }: NetworkPatternsProps) {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                     {content.patterns.map((pattern: any, idx) => (
                         <div
                             key={idx}
-                            className={`bg-background-elevated border transition-all duration-300 p-8 rounded-2xl group relative ${expandedIdx === idx ? "border-primary/60 ring-1 ring-primary/20 shadow-xl shadow-primary/5" : "border-white/5 hover:border-primary/40"
+                            className={`h-full bg-background-elevated border transition-all duration-300 p-8 rounded-2xl group relative flex flex-col ${expandedIdx === idx ? "border-primary/60 ring-1 ring-primary/20 shadow-xl shadow-primary/5" : "border-white/5 hover:border-primary/40"
                                 }`}
                         >
-                            <div className="flex justify-between items-start mb-6">
+                            <div className="flex justify-between items-start mb-6 flex-shrink-0">
                                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${expandedIdx === idx ? "bg-primary text-background" : "bg-primary/10 text-primary group-hover:bg-primary/20"
                                     }`}>
                                     <span className="font-bold font-display text-xl">{idx + 1}</span>
                                 </div>
-                                <button
-                                    onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
-                                    className="text-xs font-bold uppercase tracking-wider text-primary hover:text-primary-light transition-colors"
+                                <Link
+                                    href={`/blog/${patternSlugs[idx]}`}
+                                    className="text-xs font-bold uppercase tracking-wider text-primary hover:text-primary-light transition-colors underline decoration-dashed underline-offset-4 flex-shrink-0"
                                 >
-                                    {expandedIdx === idx ? "Close" : "Read Story →"}
-                                </button>
+                                    Read Full Story →
+                                </Link>
                             </div>
 
-                            <h3 className="text-xl font-bold text-text-primary mb-3">{pattern.title}</h3>
+                            <h3 className="text-xl font-bold text-text-primary mb-3 flex-shrink-0">{pattern.title}</h3>
                             <p className="text-text-secondary leading-relaxed mb-4">{pattern.description}</p>
 
                             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedIdx === idx ? "max-h-[500px] opacity-100 mt-6" : "max-h-0 opacity-0"
@@ -67,6 +77,14 @@ export default function NetworkPatterns({ content }: NetworkPatternsProps) {
                                     <div className="space-y-2">
                                         <h4 className="text-xs font-bold uppercase text-green-500/60 tracking-widest">LU Strategy</h4>
                                         <p className="text-sm text-text-secondary">{pattern.solution}</p>
+                                    </div>
+                                    <div className="pt-4">
+                                        <button
+                                            onClick={() => setExpandedIdx(null)}
+                                            className="text-xs font-bold uppercase tracking-wider text-primary hover:text-primary-light transition-colors"
+                                        >
+                                            Close
+                                        </button>
                                     </div>
                                 </div>
                             </div>

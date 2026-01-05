@@ -19,7 +19,7 @@ export default function FounderAuthority({ content }: FounderAuthorityProps) {
                         <div className="aspect-[3/4] rounded-lg overflow-hidden border border-white/5 shadow-xl">
                             <img
                                 src="/founder-photo.png"
-                                alt="Founder"
+                                alt="Paweł Rzepecki, technical leadership coach with 15+ years aerospace and defense engineering background, during strategic session"
                                 className="w-full h-full object-cover"
                             />
                         </div>

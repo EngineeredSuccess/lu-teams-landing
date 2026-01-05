@@ -64,8 +64,8 @@ export default function HowItWorks({ content }: HowItWorksProps) {
 
                         <div className="relative rounded-xl overflow-hidden border border-white/5 bg-navy shadow-inner">
                             <img
-                                src="/synergy-radar-mockup.png"
-                                alt="Synergy Radar Mockup"
+                                src="/synergy-radar-actual.png"
+                                alt="Synergy Radar interface showing HEXACO personality comparison between two team members with metrics for Honesty-Humility, Emotional Stability, Extraversion, Agreeableness, Conscientiousness, and Openness to Experience"
                                 className="w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />

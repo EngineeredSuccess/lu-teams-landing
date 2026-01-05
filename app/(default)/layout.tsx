@@ -19,9 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://luteams.com"),
-  title: "LU Teams - Technical Leadership Sixth Sense",
+  title: "LU Teams - Boutique Technical Leadership Coaching | HEXACO Team Synergy",
   description:
-    "Intensive HEXACO-based coaching and tools for technical leaders in aerospace, defense, and SaaS. Predict team synergy before you start.",
+    "Intensive coaching for 3-4 technical leaders at a time. Aerospace, IT, SaaS focus. Predict team friction with HEXACO-based Synergy Radar. 15+ years engineering background. Beta + 1-on-1 coaching available.",
   keywords: [
     "team chemistry",
     "personality analysis",
@@ -91,12 +91,34 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Paul H.",
-              "jobTitle": "Technical Leadership Coach",
-              "description": "Boutique coaching for technical leaders in aerospace and IT",
+              "name": "Paweł Rzepecki",
+              "jobTitle": "Technical Leadership Coach & Founder",
+              "description": "Boutique coaching for technical leaders. 15+ years engineering background, intensive work with 3-4 leaders at a time.",
               "url": "https://luteams.com",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Leadership Unfiltered"
+              },
               "sameAs": [
                 "https://linkedin.com/in/paul-h",
+                "https://linkedin.com/company/leadership-unfiltered"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Leadership Unfiltered",
+              "alternateName": "LU Teams",
+              "url": "https://luteams.com",
+              "logo": "https://luteams.com/logo.png",
+              "description": "Boutique technical leadership coaching with HEXACO-based team synergy prediction software",
+              "foundingDate": "2021",
+              "sameAs": [
                 "https://linkedin.com/company/leadership-unfiltered"
               ]
             })
@@ -110,11 +132,14 @@ export default function RootLayout({
               "@type": "SoftwareApplication",
               "name": "LU Teams",
               "applicationCategory": "BusinessApplication",
-              "description": "HEXACO-based team synergy prediction for technical leaders",
+              "operatingSystem": "Web",
+              "description": "HEXACO-based team synergy prediction for technical leaders in aerospace, IT, and SaaS. Predict friction before it happens.",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "USD"
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/LimitedAvailability",
+                "description": "Beta access - limited to 50 founding users"
               }
             })
           }}
