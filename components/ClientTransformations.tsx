@@ -6,7 +6,7 @@ interface ClientTransformationsProps {
 
 export default function ClientTransformations({ content }: ClientTransformationsProps) {
     return (
-        <section className="py-20 bg-background-elevated relative overflow-hidden">
+        <section id="transformations" className="py-20 bg-background-elevated relative overflow-hidden">
             <div className="container-custom">
                 {/* Header */}
                 <div className="text-center mb-16 max-w-3xl mx-auto">

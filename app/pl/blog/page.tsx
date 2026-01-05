@@ -28,6 +28,43 @@ export default async function BlogPagePL() {
         console.error("Error fetching posts:", error);
     }
 
+    // Custom pattern posts (always shown first) - Polish versions
+    const customPosts = [
+        {
+            title: "Toksyczny Geniusz: Kiedy Wybitni Inżynierowie Niszczą Dynamikę Zespołu",
+            excerpt: "Główny inżynier z 10-krotnością wydajności kosztował firmę 2 mln USD w utraconej produktywności. Nikt nie przewidział tego do ostatniej chwili.",
+            slug: "toxic-genius-pattern",
+            published_at: "2024-12-01T00:00:00Z"
+        },
+        {
+            title: "Cichy Architekt: Dlaczego Twoi Najlepsi Inżynierowie Nie Są Słyszani",
+            excerpt: "Główny architekt zaprojektował cały system rozliczeniowy, ale przestał zabierać głos na spotkaniach. Krytyczne błędy wykryto dopiero na etapie stagingu.",
+            slug: "silent-architect-pattern",
+            published_at: "2024-12-02T00:00:00Z"
+        },
+        {
+            title: "Efekt Komory Echa: Gdy Wszyscy Się Zgadzają (A Wszyscy Się Mylą)",
+            excerpt: "Zespół zatrudniony wyłącznie z tego samego bootcampu. Szybko dostarczali, ale przez trzy miesiące nie mogli rozwiązać żadnego złożonego wycieku pamięci.",
+            slug: "echo-chamber-effect",
+            published_at: "2024-12-03T00:00:00Z"
+        },
+        {
+            title: "Zablokowany Oddział: Wysokie Umiejętności, Zerowa Prędkość",
+            excerpt: "Pięciu seniorów, wszyscy perfekcjoniści. Tygodniami debatowali nad skrajnymi przypadkami zamiast dostarczyć MVP.",
+            slug: "gridlocked-squad-pattern",
+            published_at: "2024-12-04T00:00:00Z"
+        },
+        {
+            title: "Przytłoczony Delegat: Gdy Świetni IC Stają Się Mikromanagerami",
+            excerpt: "Zespół SaaS o wysokiej prędkości zbudował 12 funkcji w 4 miesiące. Tylko jedna była używana przez klientów. Potem przyszło wypalenie.",
+            slug: "overwhelmed-delegate-pattern",
+            published_at: "2024-12-05T00:00:00Z"
+        }
+    ];
+
+    // Combine custom posts with Supabase posts
+    const allPosts = [...customPosts, ...(posts || [])];
+
     return (
         <main className="min-h-screen bg-[#0A0A0A] text-white pt-24 pb-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +77,7 @@ export default async function BlogPagePL() {
                     </p>
                 </div>
 
-                {!posts || posts.length === 0 ? (
+                {!allPosts || allPosts.length === 0 ? (
                     <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
                         <h3 className="text-2xl font-semibold mb-2">Brak wpisów</h3>
                         <p className="text-gray-400">
@@ -49,7 +86,7 @@ export default async function BlogPagePL() {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {posts.map((post) => (
+                        {allPosts.map((post) => (
                             <PostPreview
                                 key={post.slug}
                                 title={post.title}
