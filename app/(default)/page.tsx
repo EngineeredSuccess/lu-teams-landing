@@ -23,7 +23,7 @@ export default function Home() {
             <Features content={content.features} />
             <ClientTransformations content={content.clientTransformations} />
             <NetworkPatterns content={content.networkPatterns} />
-            <CoachingOffer content={content.coachingOffer} />
+            <CoachingOffer content={content.coachingOffer} coachingFormContent={content.coachingApplication} />
             <ApplicationForm content={content.application} />
             <FAQ content={content.faq} />
             <Footer content={content.footer} />

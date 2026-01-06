@@ -2,20 +2,13 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 
-// Validation schema for beta applications
-const applicationSchema = z.object({
+// Validation schema - flexible to support both beta and coaching
+const betaApplicationSchema = z.object({
+    applicationType: z.enum(["beta", "coaching"]),
     email: z.string().email("Please enter a valid email address"),
     fullName: z.string().min(2, "Please enter your full name"),
     role: z.string().min(2, "Please enter your role"),
-    company: z.string().min(2, "Please enter your company"),
-    teamSize: z.enum(["1-5", "6-15", "16-50", "50+"], {
-        errorMap: () => ({ message: "Please select a team size" }),
-    }),
-    technicalBackground: z.enum(["eng-lead", "dev-mgr", "cto", "other"], {
-        errorMap: () => ({ message: "Please select your technical background" }),
-    }),
-    challenge: z.string().min(50, "Please describe your challenge (minimum 50 characters)"),
-});
+}).passthrough(); // Allow additional fields without validation
 
 // Check if Supabase is configured
 function isSupabaseConfigured(): boolean {
@@ -36,7 +29,7 @@ export async function POST(request: Request) {
         const body = await request.json();
 
         // Validate input
-        const validationResult = applicationSchema.safeParse(body);
+        const validationResult = betaApplicationSchema.safeParse(body);
 
         if (!validationResult.success) {
             return NextResponse.json(
@@ -48,7 +41,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const { email, fullName, role, company, teamSize, technicalBackground, challenge } = validationResult.data;
+        const { applicationType, email, fullName, role } = validationResult.data;
 
         // Check if Supabase is configured
         if (!isSupabaseConfigured()) {
@@ -58,53 +51,65 @@ export async function POST(request: Request) {
             return NextResponse.json(
                 {
                     success: true,
-                    message: "Application submitted! (Demo mode - configure Supabase for production)",
+                    message: `Application submitted! (Demo mode - ${applicationType})`,
                     count: 42 // Mock count
                 },
                 { status: 201 }
             );
         }
 
-        // Initialize Supabase client
+        // Initialize Supabase client with service_role key (has full permissions)
         const supabase = createClient(
             process.env.NEXT_PUBLIC_SUPABASE_URL!,
-            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+            process.env.SUPABASE_SERVICE_ROLE_KEY!
         );
 
-        // Prepare application entry
-        const applicationEntry = {
+        // Prepare application entry based on type
+        const applicationEntry: Record<string, unknown> = {
+            application_type: applicationType,
             email: email.toLowerCase().trim(),
             full_name: fullName.trim(),
             role: role.trim(),
-            company: company.trim(),
-            team_size: teamSize,
-            technical_background: technicalBackground,
-            challenge: challenge.trim(),
         };
 
-        // Insert into Supabase
-        const { error } = await supabase
+        // Add beta-specific fields
+        if (applicationType === "beta") {
+            applicationEntry.company = body.company?.trim();
+            applicationEntry.team_size = body.teamSize;
+            applicationEntry.technical_background = body.technicalBackground;
+            applicationEntry.challenge = body.challenge?.trim();
+        }
+
+        // Add coaching-specific fields
+        if (applicationType === "coaching") {
+            applicationEntry.company = body.companySize?.trim(); // Map companySize to company
+            applicationEntry.team_size = body.teamSize;
+            applicationEntry.years_in_leadership = body.yearsInLeadership;
+            applicationEntry.challenge = body.specificChallenge?.trim(); // Map specificChallenge to challenge
+            applicationEntry.why_coaching = body.whyCoaching?.trim();
+            applicationEntry.budget_range = body.budgetRange;
+        }
+
+        // Insert into Supabase (simple insert now that schema is fixed)
+        const { data, error } = await supabase
             .from("beta_applications")
-            .insert([applicationEntry]);
+            .insert([applicationEntry])
+            .select('id, email, created_at')
+            .single();
 
         if (error) {
-            // Check for duplicate email (unique constraint violation)
-            if (error.code === "23505") {
+            console.error("Supabase insert error:", error);
+
+            // Check for duplicate email
+            if (error.code === "23505" || error.message?.includes("duplicate")) {
                 return NextResponse.json(
-                    {
-                        success: false,
-                        error: "This email has already been submitted!"
-                    },
+                    { success: false, error: "This email has already been submitted!" },
                     { status: 409 }
                 );
             }
 
-            console.error("Supabase error:", error);
             return NextResponse.json(
-                {
-                    success: false,
-                    error: "Failed to submit application. Please try again."
-                },
+                { success: false, error: "Failed to submit application. Please try again." },
                 { status: 500 }
             );
         }

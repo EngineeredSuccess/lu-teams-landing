@@ -288,6 +288,39 @@ export const translations = {
                 reset: "Submit another application"
             }
         },
+        coachingApplication: {
+            header: {
+                title: "Intensive Coaching Application",
+                subtitle: "2 spots available Q2 2025 · Applications require 30-min discovery call"
+            },
+            form: {
+                email: "Email *",
+                emailPlaceholder: "your.email@company.com",
+                name: "Full Name *",
+                namePlaceholder: "John Doe",
+                role: "Current Role/Title *",
+                rolePlaceholder: "CTO / VP Engineering",
+                companySize: "Company Size & Industry *",
+                companySizePlaceholder: "e.g., 500-person SaaS scale-up in fintech",
+                teamSize: "Team Size You Currently Lead *",
+                yearsInLeadership: "Years in Technical Leadership *",
+                specificChallenge: "Specific Challenge You're Facing * (4-5 sentences)",
+                specificChallengePlaceholder: "Describe the specific leadership challenge you're facing. What have you tried? What's at stake if this doesn't improve?",
+                whyCoaching: "Why intensive coaching vs. the self-service tool? * (2-3 sentences)",
+                whyCoachingPlaceholder: "What makes you seek intensive 1-on-1 coaching over software?",
+                budgetRange: "Budget/Investment Range (Optional)",
+                submit: "Apply for Intensive Coaching",
+                submitting: "Submitting...",
+                footer: "Investment: Typical engagement $30-50K for 6 months, custom-priced based on scope. All engagements begin with complimentary discovery call.",
+                error: "Something went wrong. Please try again or email directly.",
+                networkError: "Network error. Please try again."
+            },
+            success: {
+                title: "Application Received",
+                message: "We'll review your application and respond within 5 business days to schedule a discovery call.",
+                reset: "Submit another application"
+            }
+        },
         footer: {
             copyright: "LU Teams utilizes an independent methodology based on the HEXACO-PI-R and open-source Team Role models. We provide data-driven insights, not just labels. © 2025 Leadership Unfiltered.",
             social: {
@@ -614,6 +647,39 @@ export const translations = {
             success: {
                 title: "Aplikacja Przyjęta",
                 message: "Dziękujemy za zgłoszenie. Skontaktujemy się wkrótce.",
+                reset: "Wyślij kolejne zgłoszenie"
+            }
+        },
+        coachingApplication: {
+            header: {
+                title: "Aplikacja na Intensywny Coaching",
+                subtitle: "2 miejsca dostępne w Q2 2025 · Aplikacje wymagają 30-min rozmowy odkrywczej"
+            },
+            form: {
+                email: "Email *",
+                emailPlaceholder: "twoj.email@firma.com",
+                name: "Pełne Imię i Nazwisko *",
+                namePlaceholder: "Jan Kowalski",
+                role: "Obecna Rola/Stanowisko *",
+                rolePlaceholder: "CTO / VP Engineering",
+                companySize: "Wielkość Firmy i Branża *",
+                companySizePlaceholder: "np. 500-osobowy scale-up SaaS w fintech",
+                teamSize: "Wielkość Zespołu, Którym Kierujesz *",
+                yearsInLeadership: "Lata w Przywództwie Technicznym *",
+                specificChallenge: "Konkretne Wyzwanie, z Którym się Borykasz * (4-5 zdań)",
+                specificChallengePlaceholder: "Opisz konkretne wyzwanie przywódcze, z którym się borykasz. Co próbowałeś? Co jest zagrożone, jeśli to się nie poprawi?",
+                whyCoaching: "Dlaczego intensywny coaching zamiast narzędzia samoobsługowego? * (2-3 zdania)",
+                whyCoachingPlaceholder: "Co sprawia, że szukasz intensywnego coachingu 1-na-1 zamiast oprogramowania?",
+                budgetRange: "Zakres Budżetu/Inwestycji (Opcjonalnie)",
+                submit: "Aplikuj na Intensywny Coaching",
+                submitting: "Wysyłanie...",
+                footer: "Inwestycja: Typowe zaangażowanie $30-50K przez 6 miesięcy, wyceniane indywidualnie na podstawie zakresu. Wszystkie zaangażowania rozpoczynają się od bezpłatnej rozmowy odkrywczej.",
+                error: "Coś poszło nie tak. Spróbuj ponownie lub wyślij email bezpośrednio.",
+                networkError: "Błąd sieci. Spróbuj ponownie."
+            },
+            success: {
+                title: "Aplikacja Przyjęta",
+                message: "Przejrzymy Twoją aplikację i odpowiemy w ciągu 5 dni roboczych, aby umówić rozmowę odkrywczą.",
                 reset: "Wyślij kolejne zgłoszenie"
             }
         },

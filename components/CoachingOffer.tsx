@@ -1,21 +1,19 @@
 import { Translations } from "@/lib/translations";
+import CoachingApplicationForm from "@/components/CoachingApplicationForm";
 
 interface CoachingOfferProps {
     content: Translations["coachingOffer"];
+    coachingFormContent: Translations["coachingApplication"];
 }
 
-export default function CoachingOffer({ content }: CoachingOfferProps) {
+export default function CoachingOffer({ content, coachingFormContent }: CoachingOfferProps) {
     return (
         <section id="coaching" className="py-20 bg-background-elevated relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container-custom relative z-10 max-w-4xl">
-                <div className="bg-background-surface/50 backdrop-blur-md border border-primary/20 rounded-3xl p-8 md:p-12 text-center shadow-2xl relative overflow-hidden">
-
-                    {/* Decorative Top Border */}
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
-
+                <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold font-display text-text-primary mb-4">
                         {content.title}
                     </h2>
@@ -37,15 +35,10 @@ export default function CoachingOffer({ content }: CoachingOfferProps) {
                             </li>
                         ))}
                     </ul>
-
-                    <a href="#application" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-light text-background font-bold rounded-lg transition-colors text-lg w-full md:w-auto">
-                        {content.cta}
-                    </a>
-
-                    <p className="text-sm text-text-muted mt-6">
-                        Limited spots available. Application required.
-                    </p>
                 </div>
+
+                {/* Embedded Coaching Application Form */}
+                <CoachingApplicationForm content={coachingFormContent} />
             </div>
         </section>
     );

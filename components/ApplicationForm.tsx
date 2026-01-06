@@ -37,13 +37,15 @@ export default function ApplicationForm({ content }: ApplicationFormProps) {
     setErrorMessage("");
 
     try {
-      // NOTE: Endpoint updated to /api/application (Backend update pending in Phase 3)
       const response = await fetch("/api/application", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          applicationType: "beta", // 🔴 CRITICAL TAG
+        }),
       });
 
       const data = await response.json();
@@ -61,7 +63,7 @@ export default function ApplicationForm({ content }: ApplicationFormProps) {
           challenge: "",
         });
         // Update URL for conversion tracking
-        window.history.pushState({}, "", "/?application=success");
+        window.history.pushState({}, "", "/?application=beta-success");
       } else {
         setStatus("error");
         setErrorMessage(data.error || content.form.error);
