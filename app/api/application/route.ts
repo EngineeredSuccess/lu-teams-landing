@@ -10,7 +10,18 @@ const betaApplicationSchema = z.object({
     role: z.string().min(2, "Please enter your role").optional(), // Optional for waitlist
 }).passthrough(); // Allow additional fields without validation
 
-// ... (isSupabaseConfigured function remains same)
+// Check if Supabase is configured
+function isSupabaseConfigured(): boolean {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    return !!(
+        url &&
+        key &&
+        !url.includes("placeholder") &&
+        !key.includes("placeholder")
+    );
+}
 
 export async function POST(request: Request) {
     try {
