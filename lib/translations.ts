@@ -376,7 +376,7 @@ export const translations = {
             badges: [],
             ctaBeta: "Poproś o Dostęp Beta",
             ctaCoach: "Praca Indywidualna",
-            betaNote: "Beta: 50 członków założycieli · Coaching: 2 miejsca dostępne w Q1"
+            betaNote: "Beta: 50 członków założycieli · Coaching: Wszystkie miejsca w Q1 zajęte (Lista oczekujących otwarta)"
         },
         founderAuthority: {
             title: "Tło Założyciela",
