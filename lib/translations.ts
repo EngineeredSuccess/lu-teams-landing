@@ -9,7 +9,7 @@ export const translations = {
             badges: [],
             ctaBeta: "Request Beta Consideration",
             ctaCoach: "Work With Me 1-on-1",
-            betaNote: "Beta: 50 founding users · Coaching: 2 spots available Q1"
+            betaNote: "Beta: 50 founding users · Coaching: Full for Q1 (Waitlist Open)"
         },
         founderAuthority: {
             title: "Founder Background",
@@ -313,7 +313,12 @@ export const translations = {
                 submitting: "Submitting...",
                 footer: "Investment: Typical engagement $30-50K for 6 months, custom-priced based on scope. All engagements begin with complimentary discovery call.",
                 error: "Something went wrong. Please try again or email directly.",
-                networkError: "Network error. Please try again."
+                networkError: "Network error. Please try again.",
+                waitlistTitle: "Join the Waiting List",
+                waitlistSubtitle: "We are fully booked for Q1 2026. Be the first to know when new coaching spots open up for Q2.",
+                waitlistEmailPlaceholder: "your.email@company.com",
+                waitlistCta: "Join Waiting List",
+                fullMessage: "We are fully booked for intensive coaching in Q1 2026."
             },
             success: {
                 title: "Application Received",
@@ -675,7 +680,12 @@ export const translations = {
                 submitting: "Wysyłanie...",
                 footer: "Inwestycja: Typowe zaangażowanie $30-50K przez 6 miesięcy, wyceniane indywidualnie na podstawie zakresu. Wszystkie zaangażowania rozpoczynają się od bezpłatnej rozmowy odkrywczej.",
                 error: "Coś poszło nie tak. Spróbuj ponownie lub wyślij email bezpośrednio.",
-                networkError: "Błąd sieci. Spróbuj ponownie."
+                networkError: "Błąd sieci. Spróbuj ponownie.",
+                waitlistTitle: "Zapisz się na listę oczekujących",
+                waitlistSubtitle: "Mamy komplet zgłoszeń na Q1 2026. Dowiedz się jako pierwszy o nowych miejscach na Q2.",
+                waitlistEmailPlaceholder: "twoj.email@firma.com",
+                waitlistCta: "Zapisz się na listę",
+                fullMessage: "Mamy komplet zgłoszeń na coaching indywidualny w Q1 2026."
             },
             success: {
                 title: "Aplikacja Przyjęta",

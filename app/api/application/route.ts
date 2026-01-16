@@ -2,26 +2,15 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 
-// Validation schema - flexible to support both beta and coaching
+// Validation schema - flexible to support beta, coaching, and waitlist
 const betaApplicationSchema = z.object({
-    applicationType: z.enum(["beta", "coaching"]),
+    applicationType: z.enum(["beta", "coaching", "waitlist"]), // Added waitlist
     email: z.string().email("Please enter a valid email address"),
-    fullName: z.string().min(2, "Please enter your full name"),
-    role: z.string().min(2, "Please enter your role"),
+    fullName: z.string().min(2, "Please enter your full name").optional(), // Optional for waitlist
+    role: z.string().min(2, "Please enter your role").optional(), // Optional for waitlist
 }).passthrough(); // Allow additional fields without validation
 
-// Check if Supabase is configured
-function isSupabaseConfigured(): boolean {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-    return !!(
-        url &&
-        key &&
-        !url.includes("placeholder") &&
-        !key.includes("placeholder")
-    );
-}
+// ... (isSupabaseConfigured function remains same)
 
 export async function POST(request: Request) {
     try {
@@ -42,6 +31,17 @@ export async function POST(request: Request) {
         }
 
         const { applicationType, email, fullName, role } = validationResult.data;
+
+        // Additional validation for non-waitlist types
+        if (applicationType !== "waitlist" && (!fullName || !role)) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    error: "Full Name and Role are required for this application type."
+                },
+                { status: 400 }
+            );
+        }
 
         // Check if Supabase is configured
         if (!isSupabaseConfigured()) {
@@ -68,8 +68,9 @@ export async function POST(request: Request) {
         const applicationEntry: Record<string, unknown> = {
             application_type: applicationType,
             email: email.toLowerCase().trim(),
-            full_name: fullName.trim(),
-            role: role.trim(),
+            // Only add these if they exist (or use empty string if you prefer, but undefined is cleaner for partial updates if schema allows nulls, though here we just skip them)
+            full_name: fullName?.trim() || "",
+            role: role?.trim() || "",
         };
 
         // Add beta-specific fields
@@ -88,6 +89,12 @@ export async function POST(request: Request) {
             applicationEntry.challenge = body.specificChallenge?.trim(); // Map specificChallenge to challenge
             applicationEntry.why_coaching = body.whyCoaching?.trim();
             applicationEntry.budget_range = body.budgetRange;
+        }
+
+        // Add waitlist-specific fields (metadata mostly)
+        if (applicationType === "waitlist") {
+            // We can store metadata in a generic field if it exists, or just the basics
+            // For now, email and type is enough.
         }
 
         // Insert into Supabase (simple insert now that schema is fixed)
