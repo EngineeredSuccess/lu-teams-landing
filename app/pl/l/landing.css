@@ -1,0 +1,274 @@
+/* Landing Page Styles */
+.landing-page {
+    @apply bg-slate-950 text-slate-200 min-h-screen font-sans;
+}
+
+.landing-page .container {
+    @apply max-w-5xl mx-auto px-6;
+}
+
+/* Sections */
+section {
+    @apply py-16 md:py-24 border-b border-slate-900;
+}
+
+/* Hero */
+.hero {
+    @apply relative overflow-hidden pt-32 pb-20 text-center;
+    background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero h1 {
+    @apply text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent;
+}
+
+.hero h2 {
+    @apply text-2xl md:text-3xl font-semibold text-sky-400 mb-8;
+}
+
+.hero-subtext {
+    @apply text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed;
+}
+
+.hero-image {
+    @apply mx-auto rounded-xl shadow-2xl border border-slate-800 mb-10 max-w-full;
+    box-shadow: 0 0 50px rgba(56, 189, 248, 0.1);
+}
+
+/* CTA Buttons */
+.cta-hero {
+    @apply flex flex-col items-center gap-4;
+}
+
+.btn-primary-large,
+.btn-primary-huge {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all bg-sky-600 rounded-lg hover:bg-sky-500 shadow-lg shadow-sky-900/20 hover:scale-105;
+}
+
+.btn-primary-huge {
+    @apply text-xl px-10 py-5 w-full md:w-auto;
+}
+
+.cta-guarantee {
+    @apply text-sm text-slate-500 mt-4 leading-relaxed;
+}
+
+/* Trust Signals */
+.trust-signals {
+    @apply flex flex-wrap justify-center gap-6 mt-12 text-slate-500 font-medium;
+}
+
+.trust-item {
+    @apply flex items-center gap-2;
+}
+
+.trust-icon,
+.trust-number {
+    @apply text-sky-500 font-bold;
+}
+
+/* Problem Section */
+.problem h3,
+.how-it-works h3,
+.testimonials h3,
+.faq h3,
+.final-cta h3,
+.value-props h3,
+.comparison-section h3 {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-slate-100;
+}
+
+.problem-grid {
+    @apply grid md:grid-cols-3 gap-8;
+}
+
+.problem-card {
+    @apply bg-slate-900/50 p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors;
+}
+
+.problem-icon {
+    @apply text-4xl mb-4;
+}
+
+.problem-card h4 {
+    @apply text-xl font-bold text-slate-200 mb-3;
+}
+
+.problem-card p {
+    @apply text-slate-400 leading-relaxed;
+}
+
+.problem-cost {
+    @apply mt-12 bg-red-950/20 border border-red-900/30 p-8 rounded-xl text-center max-w-3xl mx-auto;
+}
+
+.problem-cost h4 {
+    @apply text-xl font-bold text-red-400 mb-4;
+}
+
+.problem-cost ul {
+    @apply text-left max-w-md mx-auto space-y-2 mb-6 text-slate-300;
+}
+
+.problem-cost li {
+    @apply list-disc list-inside;
+}
+
+/* How It Works */
+.how-it-works .steps {
+    @apply space-y-12 max-w-4xl mx-auto;
+}
+
+.how-it-works .step {
+    @apply flex flex-col md:flex-row gap-6 items-start;
+}
+
+.how-it-works .step-number {
+    @apply flex-shrink-0 w-12 h-12 bg-sky-900/30 text-sky-400 border border-sky-800/50 rounded-full flex items-center justify-center font-bold text-xl;
+}
+
+.step h4 {
+    @apply text-2xl font-bold text-slate-200 mb-4;
+}
+
+.step p {
+    @apply text-slate-400 mb-4 leading-relaxed;
+}
+
+.step ul {
+    @apply space-y-2 mb-4 text-slate-300 pl-4 border-l-2 border-slate-800;
+}
+
+.step li {
+    @apply pl-2;
+}
+
+/* Pricing Card */
+.pricing-card {
+    @apply max-w-md mx-auto bg-gradient-to-b from-slate-900 to-slate-950 border border-sky-900/30 rounded-2xl overflow-hidden p-8 shadow-2xl relative;
+}
+
+.plan-badge {
+    @apply inline-block px-3 py-1 bg-sky-900/30 text-sky-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider;
+}
+
+.plan-header {
+    @apply text-center pb-8 border-b border-slate-800 mb-8;
+}
+
+.price {
+    @apply flex items-baseline justify-center gap-1 my-4;
+}
+
+.amount {
+    @apply text-5xl font-bold text-white;
+}
+
+.period {
+    @apply text-slate-500 font-medium;
+}
+
+.plan-features ul {
+    @apply space-y-4 mb-8;
+}
+
+.plan-features li {
+    @apply flex items-start gap-3 text-slate-300;
+}
+
+.feature-icon {
+    @apply text-sky-500 mt-1;
+}
+
+/* Testimonials */
+.testimonial {
+    @apply max-w-3xl mx-auto bg-slate-900/30 p-8 rounded-2xl border border-slate-800 mb-8;
+}
+
+.testimonial blockquote {
+    @apply text-xl text-slate-300 italic leading-relaxed mb-6;
+}
+
+.author-role {
+    @apply font-bold text-white;
+}
+
+.author-company {
+    @apply text-slate-500 text-sm;
+}
+
+.stats-row {
+    @apply flex flex-wrap justify-center gap-12 mt-16;
+}
+
+.stat {
+    @apply text-center;
+}
+
+.stat-number {
+    @apply block text-4xl font-bold text-sky-500 mb-2;
+}
+
+.stat-label {
+    @apply text-slate-400 text-sm font-medium uppercase tracking-wide;
+}
+
+/* FAQ */
+.faq-item {
+    @apply max-w-3xl mx-auto mb-8 border-b border-slate-900 pb-8;
+}
+
+.faq-item h4 {
+    @apply text-lg font-bold text-slate-200 mb-3;
+}
+
+.faq-item p {
+    @apply text-slate-400 leading-relaxed;
+}
+
+/* Final CTA */
+.final-cta {
+    @apply text-center bg-gradient-to-b from-slate-950 to-sky-950/20;
+}
+
+.final-cta-text {
+    @apply text-xl text-slate-300 mb-10 max-w-2xl mx-auto;
+}
+
+.final-guarantee {
+    @apply flex flex-wrap justify-center gap-6 mt-8 text-sm text-slate-500;
+}
+
+/* Comparison Table */
+.comparison-section {
+    @apply py-16 bg-slate-900/20;
+}
+
+.comparison {
+    @apply w-full max-w-4xl mx-auto border-collapse mt-8;
+}
+
+.comparison th {
+    @apply text-left p-4 border-b border-slate-800 text-slate-400 font-medium;
+}
+
+.comparison td {
+    @apply p-4 border-b border-slate-800/50 text-slate-300;
+}
+
+.comparison tr:last-child td {
+    @apply border-0;
+}
+
+/* Value Props Grid */
+.value-prop-grid {
+    @apply grid md:grid-cols-2 gap-8;
+}
+
+.value-prop h4 {
+    @apply text-xl font-bold text-sky-400 mb-3;
+}
+
+.value-prop p {
+    @apply text-slate-400 leading-relaxed;
+}
