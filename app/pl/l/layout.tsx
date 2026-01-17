@@ -1,5 +1,4 @@
 import LandingHeader from "@/components/LandingHeader";
-import Script from "next/script";
 import "./landing.css";
 import React from "react";
 
@@ -29,20 +28,6 @@ export default function AdsLayout({
                     </div>
                 </div>
             </footer>
-            {/* Google Ads Tag */}
-            <Script
-                src="https://www.googletagmanager.com/gtag/js?id=AW-17884010556"
-                strategy="afterInteractive"
-            />
-            <Script id="google-ads-tag" strategy="afterInteractive">
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'AW-17884010556');
-                `}
-            </Script>
         </div >
     );
 }
