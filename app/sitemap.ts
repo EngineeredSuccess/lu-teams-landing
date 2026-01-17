@@ -3,7 +3,6 @@ import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = "https://luteams.com";
-    const supabase = getSupabase();
 
     // Static routes
     const routes = [
@@ -18,18 +17,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route === "" || route === "/pl" ? 1.0 : 0.8,
     }));
 
-    // Dynamic blog posts
-    const { data: posts } = await supabase
-        .from("posts")
-        .select("slug, lang, updated_at")
-        .lte("published_at", new Date().toISOString());
+    try {
+        const supabase = getSupabase();
 
-    const blogRoutes = (posts || []).map((post) => ({
-        url: `${baseUrl}${post.lang === "pl" ? "/pl/blog" : "/blog"}/${post.slug}`,
-        lastModified: new Date(post.updated_at),
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-    }));
+        // Dynamic blog posts
+        const { data: posts } = await supabase
+            .from("posts")
+            .select("slug, lang, updated_at")
+            .lte("published_at", new Date().toISOString());
 
-    return [...routes, ...blogRoutes];
+        const blogRoutes = (posts || []).map((post) => ({
+            url: `${baseUrl}${post.lang === "pl" ? "/pl/blog" : "/blog"}/${post.slug}`,
+            lastModified: new Date(post.updated_at),
+            changeFrequency: "monthly" as const,
+            priority: 0.7,
+        }));
+
+        return [...routes, ...blogRoutes];
+    } catch (e) {
+        console.warn("Supabase not configured or unreachable, generating static sitemap only.");
+        return routes;
+    }
 }

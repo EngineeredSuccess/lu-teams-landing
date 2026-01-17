@@ -369,12 +369,12 @@ export const translations = {
     pl: {
         hero: {
             badge: "Limitowany Program Beta · Founding Circle",
-            headline: "Nie szkolę setek liderów.",
-            headlineGradient: "Transformuję niewielu.",
+            headline: "Budujemy przewagę",
+            headlineGradient: "zespołów inżynierskich dzięki danym.",
             headlineSuffix: "",
-            subheadline: "Nie zostałeś liderem technicznym, by zarządzać polityką biurową. Pomagam rozwiązać ludzkie tarcie, którego nie wykryje code review.",
+            subheadline: "Nie zostałeś liderem technicznym, by zarządzać dynamiką zespołu. Pomagam rozwiązać napięcia, których nie wykryje code review.",
             badges: [],
-            ctaBeta: "Poproś o Dostęp Beta",
+            ctaBeta: "Aplikuj do programu Beta",
             ctaCoach: "Praca Indywidualna",
             betaNote: "Beta: 50 członków założycieli · Coaching: Wszystkie miejsca w Q1 zajęte (Lista oczekujących otwarta)"
         },
@@ -390,7 +390,7 @@ export const translations = {
             cta: "Dowiedz się o Coachingu Indywidualnym",
             turningPoint: {
                 title: "Moment, w którym wszystko się zmieniło",
-                content: "Obserwowałem genialnego inżyniera lotnictwa – kogoś z IQ 150, kto potrafił rozwiązać niemożliwe problemy techniczne – jak całkowicie położył projekt o wartości 10 mln USD, ponieważ nie potrafił odczytać dynamiki swojego zespołu. Trzech starszych programistów odeszło w ciągu dwóch miesięcy. Wywiady końcowe wskazywały na „kulturę”. Ale to nie była kultura – to było niewidoczne tarcie, którego nie przewidział.\n\nWtedy zrozumiałem: liderzy techniczni potrzebują precyzyjnych narzędzi do obsługi „ludzkiego stosu” (human stack), a nie puszystych warsztatów. LU Teams jest tym narzędziem."
+                content: "Obserwowałem genialnego inżyniera lotnictwa – kogoś z IQ 150, kto potrafił rozwiązać niemożliwe problemy techniczne – jak całkowicie położył projekt o wartości 10 mln USD, ponieważ nie potrafił odczytać dynamiki swojego zespołu. Trzech starszych programistów odeszło w ciągu dwóch miesięcy. Wywiady końcowe wskazywały na „kulturę”. Ale to nie była kultura – to było niewidoczne tarcie, którego nie przewidział.\n\nWtedy zrozumiałem: liderzy techniczni potrzebują precyzyjnych narzędzi do obsługi warstwy ludzkiej w Twoim tech stacku, a nie puszystych warsztatów. LU Teams jest tym narzędziem."
             },
             currentWork: {
                 clients: "CTO w skalującym się SaaS (zespół 50 osób), Dyrektor Inżynierii u kontrahenta z branży lotniczej i obronnej, Senior Dev → Tech Lead w startupie fintech",
@@ -452,7 +452,7 @@ export const translations = {
                     solution: "Zidentyfikowanie roli 'Ewaluatora' zapewnia, że te sygnały zostaną wzmocnione przed napisaniem kodu."
                 },
                 {
-                    title: "Komora Echa",
+                    title: "Pułapka jednomyślności",
                     description: "Zespół, w którym wszyscy się zgadzają, bo myślą tak samo.",
                     story: "Zespół deweloperów mobilnych zatrudniony wyłącznie z tego samego bootcampu. Dostarczali szybko, ale przez trzy miesiące nie potrafili rozwiązać ani jednego złożonego wycieku pamięci.",
                     consequence: "Brak różnorodności poznawczej doprowadził do wspólnego martwego punktu, który zatrzymał produkcję.",
@@ -489,7 +489,7 @@ export const translations = {
         problemStatement: {
             title: "Dlaczego Liderzy Inżynierii",
             gradient: "Wybierają LU Teams",
-            description: "Nie zostałeś liderem technicznym, aby zarządzać \"polityką biurową\". Jesteś tu, ponieważ rozwiązujesz złożone problemy. Ale pojedynczy \"genialny, ale toksyczny\" inżynier lub zespół pięciu wizjonerów bez żadnego \"executora\" może pogrzebać projekt o budżecie 10 mln USD. LU Teams to warstwa danych o Twoim zespole wpleciona w Twój tech stack."
+            description: "Nie zostałeś liderem technicznym, aby zarządzać \"napięciami personalnymi\". Jesteś tu, ponieważ rozwiązujesz złożone problemy. Ale pojedynczy \"genialny, ale toksyczny\" inżynier lub zespół pięciu wizjonerów bez żadnego \"executora\" może pogrzebać projekt o budżecie 10 mln USD. LU Teams to warstwa danych o Twoim zespole wpleciona w Twój tech stack."
         },
         features: {
             header: {
@@ -505,6 +505,10 @@ export const translations = {
                 {
                     title: "Role Zespołów Inżynierskich",
                     description: "Nasze AI analizuje, jak jednostki funkcjonują wewnątrz technicznego ekosystemu. Czy masz wystarczająco dużo Architektów do projektowania, Optymalizatorów do ulepszania i Finalizatorów do dostarczania?"
+                },
+                {
+                    title: "Predykcja Konfliktów",
+                    description: "Przewiduj tarcia zanim zablokują sprint. Zobacz, gdzie style komunikacji zderzą się pod presją terminów."
                 },
                 {
                     title: "Radar Synergii",
@@ -556,7 +560,7 @@ export const translations = {
                 },
                 {
                     title: "Dynamiczny Tech i SaaS",
-                    description: "Zła chemia to błąd, który się skaluje. LU Teams pomaga zoptymalizować 'ludzkie API' Twojej firmy, zapewniając, że Twoi starsi architekci i młodsi programiści są dopasowani dla maksymalnego transferu wiedzy i minimalnego tarcia."
+                    description: "Niedopasowanie osobowości to dług techniczny. LU Teams pomaga zoptymalizować 'ludzkie API' Twojej firmy, zapewniając, że Twoi starsi architekci i młodsi programiści są dopasowani dla maksymalnego transferu wiedzy."
                 },
                 {
                     title: "Zaawansowana Produkcja",
@@ -705,7 +709,7 @@ export const translations = {
             patterns: "Wzorce",
             transformations: "Historie",
             insights: "Baza Wiedzy",
-            apply: "Rozpocznij"
+            apply: "Aplikuj do programu Beta"
         },
         faq: {
             title: "Często Zadawane Pytania",

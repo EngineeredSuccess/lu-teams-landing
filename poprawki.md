@@ -1,38 +1,42 @@
-Nagłówek i Podtytuł (Hero Section)
-Jest: „Precyzyjne Narzędzie dla Inżynierii Synergii”
+Dla Strony Głównej (Home Page):
+Ucieczka od dosłowności w metaforach:
 
-Propozycja: „Inżynieria Synergii: Precyzyjne Narzędzie dla Liderów Tech”
+Zamiast „wspieranie przez doskonałość”, użyj: „Budujemy przewagę zespołów inżynierskich dzięki danym”.
 
-Podtytuł (Poprawka): „Zrezygnuj z powierzchownych testów osobowości. LU Teams wykorzystuje zaawansowane metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i eliminować krytyczne tarcia w zespole.”
+Zamiast „ludzkie tarcie”, użyj: „Napięcia w zespole” lub „Tarcie na linii ludzie-procesy”.
 
-2. Sekcja „Dlaczego Liderzy...”
-Jest: „LU Teams dostarcza warstwę danych dla Twojego ludzkiego stacku.”
+Lokalizacja żargonu IT:
 
-Propozycja: „LU Teams to warstwa danych o Twoim zespole wpleciona w Twój tech stack.” (Brzmi bardziej profesjonalnie w żargonie IT).
+Termin „Human Stack” warto zostawić w oryginale lub opisać jako „Warstwa ludzka w Twoim tech stacku”.
 
-Poprawka stylistyczna: Zamiast „zatopić projekt za 10 mln USD”, lepiej brzmi „pogrzebać projekt o budżecie 10 mln USD”.
+Zamiast „weryfikacja kodu”, używaj konsekwentnie „code review” (to standard w polskich firmach).
 
-3. Metodologia (Kluczowe zmiany terminologii)
-Głębinowa analiza HEXACO: Zmień na „Analiza Rdzenia Osobowości HEXACO”.
+Dostosowanie Call to Action (CTA):
 
-Czynnik Uczciwości-Pokory: To poprawne tłumaczenie, ale warto dodać: „identyfikujemy liderów o wysokiej integralności, wykrywając 'toksyczny geniusz' na wczesnym etapie”.
+Zamiast „Rozpocznij” lub „Zacznij”, użyj bardziej konkretnych form: „Aplikuj do programu Beta” lub „Umów rozmowę diagnostyczną”.
 
-Role Zespołowe:
+Ton komunikacji:
 
-Zamiast „Zamykających (Finishers)”, użyj profesjonalnego terminu: „Finalizatorzy”.
+Utrzymaj formę bezpośrednią („Ty/Twoja firma”), ale unikaj zbyt kwiecistych zdań, które po polsku brzmią nienaturalnie (tzw. "marketingowy bełkot"). Polscy liderzy techniczni cenią konkret.
 
-Zamiast „technicznej machiny”, użyj „technicznego ekosystemu”.
+Dla Sekcji Blogowej (/blog):
+Naturalizacja tytułów:
 
-4. Rozwiązania Branżowe
-Aerospace & Defense: „W inżynierii o krytycznym znaczeniu, 'Integralność' to nie frazes – to wymóg bezpieczeństwa.” – Zostaw, to jest świetne.
+Efekt Komory Echa – brzmi dobrze, ale można rozważyć „Pułapka jednomyślności”.
 
-Tech & SaaS:
+Toksyczny Geniusz – to bardzo silne i dobre tłumaczenie, warto je zostawić.
 
-Jest: „Zła chemia to błąd, który się skaluje.” – Bardzo dobre, zostaw.
+Spójność terminologii HEXACO:
 
-Poprawka: „LU Teams pomaga zoptymalizować 'ludzkie API' Twojej firmy...” (Użycie cudzysłowu przy API nada temu techniczny sznyt).
+Upewnij się, że nazwy cech (np. Honesty-Humility) są tłumaczone zgodnie ze standardami psychologicznymi: „Uczciwość-Pokora”, a nie np. „Skromność”.
 
-5. Call to Action (CTA)
-Jest: „Bądź jednym z pierwszych, którzy doświadczą Silnika Przewidywania Synergii.”
+Dostosowanie kontekstu kulturowego:
 
-Propozycja: „Sprawdź w praktyce nasz Algorytm Przewidywania Synergii.”
+W artykułach o „Cichym Architekcie” warto podkreślić, że w polskiej kulturze pracy (często bardziej introwertycznej technicznie) ten problem jest szczególnie dotkliwy. To zbuduje silniejszą więź z lokalnym odbiorcą.
+
+Formatowanie pod czytelnika IT:
+
+Inżynierowie skanują teksty. Warto w polskiej wersji dodać więcej pogrubień kluczowych wniosków i list punktowych (tzw. bullet points), aby teksty były jeszcze bardziej przystępne („skanowalne”).
+
+Rekomendacja końcowa:
+Strona jest bardzo solidna merytorycznie. Największą wartością Pawła Rzepeckiego jest jego doświadczenie (Aerospace, Defense, Fintech). Aby to wybrzmiało w języku polskim, tłumaczenie musi „pachnieć” doświadczeniem inżynierskim, a nie biurem tłumaczeń. Usunięcie kalk językowych sprawi, że marka LU Teams będzie postrzegana jako lokalny autorytet, a nie tylko polska filia zagranicznego projektu.

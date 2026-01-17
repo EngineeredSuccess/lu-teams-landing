@@ -144,6 +144,12 @@ export default function SilentArchitectPatternPL() {
                         ale role przywódcze są zdominowane przez ekstrawertyków — nie dlatego, że są lepszymi
                         liderami, ale dlatego, że nasze systemy awansów promują ekstrawertyczne zachowania.
                     </p>
+                    <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                        W Polsce ten problem jest często jeszcze głębszy. Nasza kultura inżynierska jest historycznie bardziej
+                        introwertyczna i technokratyczna, a mimo to coraz częściej importujemy zachodnie wzorce
+                        zarządzania oparte na głośnej autopromocji. Tworzy to potężny dysonans poznawczy u
+                        najlepszych specjalistów.
+                    </p>
 
                     <div className="bg-gradient-to-r from-amber-950/30 to-slate-900/30 border border-amber-900/30 rounded-xl p-6">
                         <p className="text-amber-300 font-medium mb-2">Badania:</p>

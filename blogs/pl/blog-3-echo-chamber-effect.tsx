@@ -22,7 +22,7 @@ export default function EchoChamberEffectPL() {
                     </div>
 
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-emerald-100 to-teal-100 bg-clip-text text-transparent">
-                        Efekt Komory Echa: Dlaczego Twój zespół gwiazd nie dowozi wyników
+                        Pułapka jednomyślności: Dlaczego Twój zespół gwiazd nie dowozi wyników
                     </h1>
 
                     <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
