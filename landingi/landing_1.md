@@ -437,7 +437,7 @@
       </div>
       
       <div class="investment-cta">
-        <a href="https://app.luteams.com/signup?plan=precision-5" class="btn-investment-primary">
+        <a href="https://app.luteams.com/register" class="btn-investment-primary">
           Rozpocznij precyzyjną analizę zespołu
         </a>
         <p class="cta-details">
