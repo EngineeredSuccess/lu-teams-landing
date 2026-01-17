@@ -50,13 +50,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     // Otherwise use Supabase
-    const supabase = getSupabase();
-    const { data: post } = await supabase
-        .from("posts")
-        .select("title, excerpt, meta_title, meta_description, published_at")
-        .eq("slug", slug)
-        .eq("lang", "en")
-        .single();
+    let post = null;
+    try {
+        const supabase = getSupabase();
+        const { data } = await supabase
+            .from("posts")
+            .select("title, excerpt, meta_title, meta_description, published_at")
+            .eq("slug", slug)
+            .eq("lang", "en")
+            .single();
+        post = data;
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching post:", e);
+    }
 
     if (!post) {
         return {
@@ -93,13 +99,19 @@ export default async function BlogPostPage({ params }: Props) {
     }
 
     // Otherwise load from Supabase
-    const supabase = getSupabase();
-    const { data: post } = await supabase
-        .from("posts")
-        .select("*")
-        .eq("slug", slug)
-        .eq("lang", "en")
-        .single();
+    let post = null;
+    try {
+        const supabase = getSupabase();
+        const { data } = await supabase
+            .from("posts")
+            .select("*")
+            .eq("slug", slug)
+            .eq("lang", "en")
+            .single();
+        post = data;
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching post:", e);
+    }
 
     if (!post) {
         notFound();

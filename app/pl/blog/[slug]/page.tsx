@@ -13,13 +13,13 @@ interface Props {
     }>;
 }
 
-// Map of custom blog posts (using same components as English version)
+// Map of custom blog posts (using translated components)
 const customBlogs: Record<string, any> = {
-    "toxic-genius-pattern": dynamic(() => import("@/blogs/blog-1-toxic-genius-pattern")),
-    "silent-architect-pattern": dynamic(() => import("@/blogs/blog-2-silent-architect-pattern")),
-    "echo-chamber-effect": dynamic(() => import("@/blogs/blog-3-echo-chamber-effect")),
-    "gridlocked-squad-pattern": dynamic(() => import("@/blogs/blog-4-gridlocked-squad-pattern")),
-    "overwhelmed-delegate-pattern": dynamic(() => import("@/blogs/blog-5-overwhelmed-delegate-pattern")),
+    "toxic-genius-pattern": dynamic(() => import("@/blogs/pl/blog-1-toxic-genius-pattern")),
+    "silent-architect-pattern": dynamic(() => import("@/blogs/pl/blog-2-silent-architect-pattern")),
+    "echo-chamber-effect": dynamic(() => import("@/blogs/pl/blog-3-echo-chamber-effect")),
+    "gridlocked-squad-pattern": dynamic(() => import("@/blogs/pl/blog-4-gridlocked-squad-pattern")),
+    "overwhelmed-delegate-pattern": dynamic(() => import("@/blogs/pl/blog-5-overwhelmed-delegate-pattern")),
 };
 
 export const revalidate = 3600;
@@ -30,11 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // Check if it's a custom blog first
     if (customBlogs[slug]) {
         const titles: Record<string, string> = {
-            "toxic-genius-pattern": "Toksyczny Geniusz: Kiedy Wybitni Inżynierowie Niszczą Dynamikę Zespołu",
-            "silent-architect-pattern": "Cichy Architekt: Dlaczego Twoi Najlepsi Inżynierowie Nie Są Słyszani",
-            "echo-chamber-effect": "Efekt Komory Echa: Gdy Wszyscy Się Zgadzają (A Wszyscy Się Mylą)",
-            "gridlocked-squad-pattern": "Zablokowany Oddział: Wysokie Umiejętności, Zerowa Prędkość",
-            "overwhelmed-delegate-pattern": "Przytłoczony Delegat: Gdy Świetni IC Stają Się Mikromanagerami",
+            "toxic-genius-pattern": "Toksyczny Geniusz: Jak jeden wybitny inżynier kosztował nas 10 milionów dolarów",
+            "silent-architect-pattern": "Cichy Architekt: Twój najlepszy inżynier planuje odejść",
+            "echo-chamber-effect": "Efekt Komory Echa: Dlaczego Twój gwiazdorski zespół nie dowozi wyników",
+            "gridlocked-squad-pattern": "Zablokowany Oddział: Pięciu wybitnych inżynierów, zero wdrożonych funkcjonalności",
+            "overwhelmed-delegate-pattern": "Przytłoczony Delegat: Dlaczego Twój najlepszy inżynier stał się Twoim najgorszym menedżerem",
         };
 
         return {
@@ -94,7 +94,6 @@ export default async function BlogPostPagePL({ params }: Props) {
     // Check if it's a custom blog
     if (customBlogs[slug]) {
         const CustomBlogComponent = customBlogs[slug];
-        // Note: The content of these components is currently in English.
         return <CustomBlogComponent />;
     }
 

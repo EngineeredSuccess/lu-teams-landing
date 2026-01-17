@@ -16,17 +16,23 @@ export const metadata: Metadata = {
 export const revalidate = 3600; // Revalidate every hour
 
 export default async function BlogPage() {
-    const supabase = getSupabase();
-    const { data: posts, error } = await supabase
-        .from("posts")
-        .select("title, excerpt, slug, published_at")
-        .eq("lang", "en")
-        .lte("published_at", new Date().toISOString())
-        .order("published_at", { ascending: false });
+    let posts: any[] = [];
+    try {
+        const supabase = getSupabase();
+        const { data, error } = await supabase
+            .from("posts")
+            .select("title, excerpt, slug, published_at")
+            .eq("lang", "en")
+            .lte("published_at", new Date().toISOString())
+            .order("published_at", { ascending: false });
 
-    if (error) {
-        console.error("Error fetching posts:", error);
-        // In a real app, you might want to show an error state or fallback
+        if (error) {
+            console.error("Error fetching posts:", error);
+        } else {
+            posts = data || [];
+        }
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching posts:", e);
     }
 
     // Custom pattern posts (always shown first)
