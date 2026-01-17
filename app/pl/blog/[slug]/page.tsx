@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { JsonLd } from "@/components/blog/JsonLd";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 interface Props {
     params: Promise<{
@@ -12,17 +13,55 @@ interface Props {
     }>;
 }
 
+// Map of custom blog posts (using same components as English version)
+const customBlogs: Record<string, any> = {
+    "toxic-genius-pattern": dynamic(() => import("@/blogs/blog-1-toxic-genius-pattern")),
+    "silent-architect-pattern": dynamic(() => import("@/blogs/blog-2-silent-architect-pattern")),
+    "echo-chamber-effect": dynamic(() => import("@/blogs/blog-3-echo-chamber-effect")),
+    "gridlocked-squad-pattern": dynamic(() => import("@/blogs/blog-4-gridlocked-squad-pattern")),
+    "overwhelmed-delegate-pattern": dynamic(() => import("@/blogs/blog-5-overwhelmed-delegate-pattern")),
+};
+
 export const revalidate = 3600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const supabase = getSupabase();
-    const { data: post } = await supabase
-        .from("posts")
-        .select("title, excerpt, meta_title, meta_description, published_at")
-        .eq("slug", slug)
-        .eq("lang", "pl")
-        .single();
+
+    // Check if it's a custom blog first
+    if (customBlogs[slug]) {
+        const titles: Record<string, string> = {
+            "toxic-genius-pattern": "Toksyczny Geniusz: Kiedy Wybitni Inżynierowie Niszczą Dynamikę Zespołu",
+            "silent-architect-pattern": "Cichy Architekt: Dlaczego Twoi Najlepsi Inżynierowie Nie Są Słyszani",
+            "echo-chamber-effect": "Efekt Komory Echa: Gdy Wszyscy Się Zgadzają (A Wszyscy Się Mylą)",
+            "gridlocked-squad-pattern": "Zablokowany Oddział: Wysokie Umiejętności, Zerowa Prędkość",
+            "overwhelmed-delegate-pattern": "Przytłoczony Delegat: Gdy Świetni IC Stają Się Mikromanagerami",
+        };
+
+        return {
+            title: titles[slug] || "Blog o Przywództwie Technicznym | LU Teams",
+            description: "Wiedza o dynamice zespołów, osobowości HEXACO i zarządzaniu w inżynierii od Leadership Unfiltered.",
+            alternates: {
+                languages: {
+                    "pl-PL": `/pl/blog/${slug}`,
+                    "en-US": `/blog/${slug}`,
+                },
+            }
+        };
+    }
+
+    let post = null;
+    try {
+        const supabase = getSupabase();
+        const { data } = await supabase
+            .from("posts")
+            .select("title, excerpt, meta_title, meta_description, published_at")
+            .eq("slug", slug)
+            .eq("lang", "pl")
+            .single();
+        post = data;
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching post:", e);
+    }
 
     if (!post) {
         return {
@@ -51,13 +90,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPagePL({ params }: Props) {
     const { slug } = await params;
-    const supabase = getSupabase();
-    const { data: post } = await supabase
-        .from("posts")
-        .select("*")
-        .eq("slug", slug)
-        .eq("lang", "pl")
-        .single();
+
+    // Check if it's a custom blog
+    if (customBlogs[slug]) {
+        const CustomBlogComponent = customBlogs[slug];
+        // Note: The content of these components is currently in English.
+        return <CustomBlogComponent />;
+    }
+
+    let post = null;
+    try {
+        const supabase = getSupabase();
+        const { data } = await supabase
+            .from("posts")
+            .select("*")
+            .eq("slug", slug)
+            .eq("lang", "pl")
+            .single();
+        post = data;
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching post:", e);
+    }
 
     if (!post) {
         notFound();

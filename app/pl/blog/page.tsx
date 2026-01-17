@@ -16,16 +16,18 @@ export const metadata: Metadata = {
 export const revalidate = 3600;
 
 export default async function BlogPagePL() {
-    const supabase = getSupabase();
-    const { data: posts, error } = await supabase
-        .from("posts")
-        .select("title, excerpt, slug, published_at")
-        .eq("lang", "pl")
-        .lte("published_at", new Date().toISOString())
-        .order("published_at", { ascending: false });
-
-    if (error) {
-        console.error("Error fetching posts:", error);
+    let posts = null;
+    try {
+        const supabase = getSupabase();
+        const { data } = await supabase
+            .from("posts")
+            .select("title, excerpt, slug, published_at")
+            .eq("lang", "pl")
+            .lte("published_at", new Date().toISOString())
+            .order("published_at", { ascending: false });
+        posts = data;
+    } catch (e) {
+        console.warn("Supabase not configured or error fetching posts:", e);
     }
 
     // Custom pattern posts (always shown first) - Polish versions

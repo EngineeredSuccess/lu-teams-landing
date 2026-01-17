@@ -22,7 +22,7 @@ export function PostPreview({ title, excerpt, slug, date, lang }: PostPreviewPro
     const href = lang === "pl" ? `/pl/blog/${slug}` : `/blog/${slug}`;
 
     return (
-        <div className="group flex flex-col h-full bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300">
+        <div className="relative group flex flex-col h-full bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
                 <Calendar className="w-4 h-4" />
                 <time dateTime={date}>{formattedDate}</time>

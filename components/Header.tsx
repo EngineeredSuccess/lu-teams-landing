@@ -24,6 +24,15 @@ export default function Header({ content, lang }: HeaderProps) {
 
     const switchLangPath = lang === "en" ? "/pl" : "/";
 
+    // Check if we are on the homepage (either root or /pl)
+    const isHomePage = pathname === "/" || pathname === "/pl";
+
+    // Helper to get correct href
+    const getHref = (hash: string) => {
+        if (isHomePage) return hash;
+        return lang === "en" ? `/${hash}` : `/pl${hash}`;
+    };
+
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b border-white/10 py-3" : "bg-transparent py-5"
@@ -42,15 +51,15 @@ export default function Header({ content, lang }: HeaderProps) {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-8">
-                    <a href="#how-it-works" className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
+                    <Link href={getHref("#how-it-works")} className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
                         {content.howItWorks}
-                    </a>
-                    <a href="#patterns" className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
+                    </Link>
+                    <Link href={getHref("#patterns")} className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
                         {content.patterns}
-                    </a>
-                    <a href="#transformations" className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
+                    </Link>
+                    <Link href={getHref("#transformations")} className="text-sm font-medium text-slate-300 hover:text-primary transition-colors">
                         {content.transformations}
-                    </a>
+                    </Link>
                     <Link
                         href={lang === "en" ? "/blog" : "/pl/blog"}
                         className={`text-sm font-medium transition-colors ${pathname.includes("/blog") ? "text-primary border-b border-primary" : "text-slate-300 hover:text-primary"
@@ -70,12 +79,12 @@ export default function Header({ content, lang }: HeaderProps) {
                         {lang === "en" ? "PL" : "EN"}
                     </Link>
 
-                    <a
-                        href="#application"
+                    <Link
+                        href={getHref("#application")}
                         className="hidden sm:block btn-primary px-5 py-2 text-sm"
                     >
                         {content.apply}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </header>
