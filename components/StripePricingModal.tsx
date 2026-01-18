@@ -18,22 +18,25 @@ export default function StripePricingModal() {
         script.onload = () => setScriptLoaded(true);
         document.body.appendChild(script);
 
-        // Check hash on mount
-        if (window.location.hash === "#pricing") {
-            setIsOpen(true);
-        }
-
-        // Listen for hash changes
-        const handleHashChange = () => {
+        // Function to check hash and open modal
+        const checkAndOpenModal = () => {
             if (window.location.hash === "#pricing") {
                 setIsOpen(true);
             }
         };
 
-        window.addEventListener("hashchange", handleHashChange);
+        // Check immediately on mount
+        checkAndOpenModal();
+
+        // Check on hash changes
+        window.addEventListener("hashchange", checkAndOpenModal);
+
+        // Also check on popstate (browser back/forward)
+        window.addEventListener("popstate", checkAndOpenModal);
 
         return () => {
-            window.removeEventListener("hashchange", handleHashChange);
+            window.removeEventListener("hashchange", checkAndOpenModal);
+            window.removeEventListener("popstate", checkAndOpenModal);
             if (document.body.contains(script)) {
                 document.body.removeChild(script);
             }
