@@ -23,7 +23,7 @@ export default function LandingHeader() {
                     <CurrencySwitcher />
 
                     <Link
-                        href="#pricing"
+                        href="#pricing-section"
                         className="btn-primary-large text-sm px-6 py-2 !shadow-none hover:bg-sky-500"
                     >
                         Zacznij Teraz

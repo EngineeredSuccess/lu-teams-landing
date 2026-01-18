@@ -13,41 +13,38 @@ export const PRICING_CONFIG = {
         starter: {
             name: 'Starter',
             priceUSD: 49,
-            teamSize: '1-5',
+            teamSize: '1-10',
             features: [
-                'Do 5 członków zespołu',
-                'HEXACO Synergy Radar',
-                'Conflict Predictions (3-6 miesięcy)',
-                'Analiza ról w zespole',
-                'Raporty indywidualne',
-                'Eksport PDF',
-                'Wsparcie Email (48h)'
+                'Do 10 członków zespołu',
+                'Oceny HEXACO',
+                'Podstawowy Synergy Radar (5 skanów/mies)',
+                'Wsparcie Email'
             ]
         },
         professional: {
             name: 'Professional',
             priceUSD: 149,
-            teamSize: '6-15',
+            teamSize: 'Do 30',
             features: [
-                'Wszystko z planu Starter',
-                'Do 15 członków zespołu',
-                'Priority Support (24h)',
-                'Advanced Analytics',
-                'Custom Reports',
-                'Team Synergy Dashboard'
+                'Do 30 członków zespołu',
+                'Nielimitowane oceny HEXACO',
+                'Pełny Synergy Radar (20 skanów/mies)',
+                'Analiza Dynamiki Ról',
+                'Alerty Przewidywania Konfliktów',
+                'Priorytetowe Wsparcie'
             ]
         },
         scale: {
             name: 'Scale',
             priceUSD: 349,
-            teamSize: '16-50',
+            teamSize: 'Do 75',
             features: [
+                'Do 75 członków zespołu',
                 'Wszystko z planu Professional',
-                'Do 50 członków zespołu',
-                'Dedicated Account Manager',
-                'API Access',
-                'Custom Integrations',
-                'White-label Options'
+                'Porównanie wielu zespołów',
+                'Moduł kalibracji rekrutacji',
+                'Kwartalna rozmowa strategiczna (1h)',
+                'Dedykowany Opiekun Klienta'
             ]
         }
     }

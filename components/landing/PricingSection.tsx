@@ -47,8 +47,8 @@ export default function PricingSection({ title, subtitle }: PricingSectionProps)
                             <div
                                 key={key}
                                 className={`relative rounded-2xl p-8 flex flex-col ${isPopular
-                                        ? "bg-slate-800 border-2 border-sky-500 shadow-xl shadow-sky-900/20 transform md:-translate-y-4"
-                                        : "bg-slate-800/50 border border-slate-700"
+                                    ? "bg-slate-800 border-2 border-sky-500 shadow-xl shadow-sky-900/20 transform md:-translate-y-4"
+                                    : "bg-slate-800/50 border border-slate-700"
                                     }`}
                             >
                                 {isPopular && (
@@ -78,15 +78,15 @@ export default function PricingSection({ title, subtitle }: PricingSectionProps)
                                     ))}
                                 </ul>
 
-                                <button
-                                    onClick={openStripeModal}
-                                    className={`w-full py-4 rounded-lg font-bold text-lg transition-all ${isPopular
-                                            ? "bg-sky-500 hover:bg-sky-400 text-white shadow-lg hover:shadow-sky-500/25"
-                                            : "bg-slate-700 hover:bg-slate-600 text-white"
+                                <a
+                                    href="https://app.luteams.com/register"
+                                    className={`w-full py-4 rounded-lg font-bold text-lg transition-all text-center block ${isPopular
+                                        ? "bg-sky-500 hover:bg-sky-400 text-white shadow-lg hover:shadow-sky-500/25"
+                                        : "bg-slate-700 hover:bg-slate-600 text-white"
                                         }`}
                                 >
                                     Wybierz {plan.name}
-                                </button>
+                                </a>
                             </div>
                         );
                     })}

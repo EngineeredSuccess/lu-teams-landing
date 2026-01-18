@@ -54,7 +54,7 @@ export default async function LandingPage({ params }: Props) {
     }
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-slate-950 landing-page">
             <HeroSection {...config.hero} />
             <ProblemSection {...config.problem} />
             <SolutionSection {...config.solution} />
