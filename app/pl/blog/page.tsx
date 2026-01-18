@@ -71,10 +71,10 @@ export default async function BlogPagePL() {
         <main className="min-h-screen bg-[#0A0A0A] text-white pt-24 pb-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Inżynieria i Przywództwo
                     </h1>
-                    <p className="text-xl text-gray-400">
+                    <p className="text-xl text-slate-200">
                         Artykuły o psychologii zespołów, zarządzaniu opartym na danych i budowaniu wydajnych organizacji inżynierskich.
                     </p>
                 </div>

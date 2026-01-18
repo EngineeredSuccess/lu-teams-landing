@@ -21,11 +21,11 @@ export default function ToxicGeniusPatternPL() {
                         <span className="text-slate-500 text-sm">12 min czytania</span>
                     </div>
 
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-red-100 to-orange-100 bg-clip-text text-transparent">
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
                         Toksyczny Geniusz: Jak jeden wybitny inżynier kosztował nas 10 milionów dolarów
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
+                    <p className="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
                         Wzorzec, który niszczy więcej zespołów inżynierskich niż jakikolwiek dług techniczny.
                         Naucz się go wykrywać, zanim wyrządzi nieodwracalne szkody.
                     </p>

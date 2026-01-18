@@ -28,14 +28,14 @@ export function PostPreview({ title, excerpt, slug, date, lang }: PostPreviewPro
                 <time dateTime={date}>{formattedDate}</time>
             </div>
 
-            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-3 group-hover:from-blue-400 group-hover:to-blue-200 transition-all">
+            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-all">
                 <Link href={href} className="focus:outline-none">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {title}
                 </Link>
             </h3>
 
-            <p className="text-gray-400 flex-grow mb-6 line-clamp-3">
+            <p className="text-slate-300 flex-grow mb-6 line-clamp-3">
                 {excerpt}
             </p>
 

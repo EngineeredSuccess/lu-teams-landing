@@ -21,11 +21,11 @@ export default function GridlockedSquadPatternPL() {
                         <span className="text-slate-500 text-sm">10 min czytania</span>
                     </div>
 
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-amber-100 to-orange-100 bg-clip-text text-transparent">
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
                         Zablokowany Oddział: Pięciu wybitnych inżynierów, zero wdrożonych funkcjonalności
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
+                    <p className="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
                         Każdy jest gwiazdą. Debaty są merytoryczne i rygorystyczne.
                         A backlog wciąż rośnie. Dlaczego zagęszczenie talentów może prowadzić do paraliżu.
                     </p>

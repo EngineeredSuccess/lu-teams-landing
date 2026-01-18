@@ -21,11 +21,11 @@ export default function EchoChamberEffectPL() {
                         <span className="text-slate-500 text-sm">11 min czytania</span>
                     </div>
 
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-emerald-100 to-teal-100 bg-clip-text text-transparent">
-                        Pułapka jednomyślności: Dlaczego Twój zespół gwiazd nie dowozi wyników
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+                        Efekt Komory Echa: Dlaczego Twój gwiazdorski zespół nagle przestał dowozić
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
+                    <p className="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
                         Zatrudniłeś wybitnych architektów. Zgadzają się we wszystkim. A jednak
                         nic nie posuwa się do przodu. Poznaj ukryte koszty jednolitości poznawczej.
                     </p>

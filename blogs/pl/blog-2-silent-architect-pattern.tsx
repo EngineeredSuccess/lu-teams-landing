@@ -21,11 +21,11 @@ export default function SilentArchitectPatternPL() {
                         <span className="text-slate-500 text-sm">10 min czytania</span>
                     </div>
 
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-indigo-100 to-violet-100 bg-clip-text text-transparent">
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
                         Cichy Architekt: Twój najlepszy inżynier właśnie planuje odejście
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
+                    <p className="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
                         Introwertyczny talent, który na standupach wygląda na "zadowolonego", właśnie aktualizuje profil na LinkedIn.
                         Oto jak rozpoznać niedoceniany potencjał, zanim zniknie z Twojej firmy.
                     </p>

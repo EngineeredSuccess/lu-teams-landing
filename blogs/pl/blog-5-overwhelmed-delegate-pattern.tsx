@@ -21,11 +21,11 @@ export default function OverwhelmedDelegatePatternPL() {
                         <span className="text-slate-500 text-sm">11 min czytania</span>
                     </div>
 
-                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-slate-100 via-rose-100 to-pink-100 bg-clip-text text-transparent">
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
                         Przytłoczony Delegat: Dlaczego Twój najlepszy inżynier stał się Twoim najgorszym menedżerem
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl">
+                    <p className="text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl">
                         Byli genialni w pisaniu kodu. Teraz toną w spotkaniach 1-on-1, pracują po nocach,
                         a zespół jest sparaliżowany. Poznaj ukryty kryzys technicznych liderów, którzy nie potrafią odpuścić.
                     </p>
