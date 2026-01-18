@@ -1,41 +1,26 @@
-import fs from "fs/promises";
-import path from "path";
-import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import toxicGeniusConfig from "@/config/landing-toxic-genius";
+import retencjaConfig from "@/config/landing-retencja";
+import zespolZdalnyConfig from "@/config/landing-zespol-zdalny";
+import techLeadConfig from "@/config/landing-tech-lead";
+import { LandingPageConfig } from "@/types/landing-page";
 
-const SLUG_MAP: Record<string, string> = {
-    "toxic-genius": "landing_1.md",
-    "retencja": "landing_2.md",
-    "zespol-zdalny": "landing_3.md",
-    "tech-lead": "landing_4.md"
+// Components
+import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
+import SolutionSection from "@/components/landing/SolutionSection";
+import SocialProofSection from "@/components/landing/SocialProofSection";
+import PricingSection from "@/components/landing/PricingSection";
+import FAQSection from "@/components/landing/FAQSection";
+import CTASection from "@/components/landing/CTASection";
+
+const CONFIG_MAP: Record<string, LandingPageConfig> = {
+    "toxic-genius": toxicGeniusConfig,
+    "retencja": retencjaConfig,
+    "zespol-zdalny": zespolZdalnyConfig,
+    "tech-lead": techLeadConfig,
 };
-
-async function getLandingContent(slug: string) {
-    const filename = SLUG_MAP[slug];
-    if (!filename) return null;
-
-    const filePath = path.join(process.cwd(), "landingi", filename);
-    try {
-        const fileContent = await fs.readFile(filePath, "utf-8");
-
-        // Split content and metadata
-        // Metadata starts with <title> or <meta
-        const metadataStartIndex = fileContent.search(/<(title|meta)/);
-
-        let htmlContent = fileContent;
-        let metadataBlock = "";
-
-        if (metadataStartIndex !== -1) {
-            htmlContent = fileContent.substring(0, metadataStartIndex);
-            metadataBlock = fileContent.substring(metadataStartIndex);
-        }
-
-        return { htmlContent, metadataBlock };
-    } catch (e) {
-        console.error(`Error reading landing file: ${filename}`, e);
-        return null;
-    }
-}
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -43,48 +28,44 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const content = await getLandingContent(slug);
-    if (!content) return {};
+    const config = CONFIG_MAP[slug];
 
-    const { metadataBlock } = content;
-
-    // Extract title
-    const titleMatch = metadataBlock.match(/<title>(.*?)<\/title>/);
-    const title = titleMatch ? titleMatch[1] : "LU Teams";
-
-    // Extract description
-    const descMatch = metadataBlock.match(/<meta name="description" content="(.*?)"/);
-    const description = descMatch ? descMatch[1] : "";
-
-    // Extract keywords
-    const keywordsMatch = metadataBlock.match(/<meta name="keywords" content="(.*?)"/);
-    const keywords = keywordsMatch ? keywordsMatch[1].split(", ") : [];
+    if (!config) {
+        return {};
+    }
 
     return {
-        title,
-        description,
-        keywords,
+        title: config.meta.title,
+        description: config.meta.description,
+        keywords: config.meta.keywords,
         robots: {
             index: false,
-            follow: true
-        }
+            follow: true,
+        },
     };
 }
 
-
 export default async function LandingPage({ params }: Props) {
     const { slug } = await params;
-    const content = await getLandingContent(slug);
+    const config = CONFIG_MAP[slug];
 
-    if (!content) {
+    if (!config) {
         return notFound();
     }
 
     return (
-        <div dangerouslySetInnerHTML={{ __html: content.htmlContent }} />
+        <main className="min-h-screen bg-white">
+            <HeroSection {...config.hero} />
+            <ProblemSection {...config.problem} />
+            <SolutionSection {...config.solution} />
+            <SocialProofSection {...config.socialProof} />
+            <PricingSection {...config.pricing} />
+            <FAQSection {...config.faq} />
+            <CTASection {...config.cta} />
+        </main>
     );
 }
 
 export function generateStaticParams() {
-    return Object.keys(SLUG_MAP).map((slug) => ({ slug }));
+    return Object.keys(CONFIG_MAP).map((slug) => ({ slug }));
 }
