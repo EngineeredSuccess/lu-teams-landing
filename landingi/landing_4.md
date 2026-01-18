@@ -26,7 +26,7 @@
       </p>
     </div>
     
-    <img src="/images/synergy-radar-full-interface.png" 
+    <img src="/synergy-radar-actual.png" 
          alt="Pełny interfejs HEXACO Synergy Radar pokazujący topologię osobowości zespołu"
          class="product-screenshot-large">
     

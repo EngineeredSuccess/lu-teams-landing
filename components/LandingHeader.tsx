@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CurrencySwitcher from "./CurrencySwitcher";
 
 export default function LandingHeader() {
     return (
@@ -17,6 +18,10 @@ export default function LandingHeader() {
                 {/* Simplified Actions */}
                 <div className="flex items-center gap-4">
                     {/* No language switcher to keep focus on the ad language */}
+
+                    {/* Currency Switcher */}
+                    <CurrencySwitcher />
+
                     <Link
                         href="#pricing"
                         className="btn-primary-large text-sm px-6 py-2 !shadow-none hover:bg-sky-500"

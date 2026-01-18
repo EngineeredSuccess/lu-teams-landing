@@ -1,4 +1,5 @@
 import LandingHeader from "@/components/LandingHeader";
+import StripePricingModal from "@/components/StripePricingModal";
 import "./landing.css";
 import React from "react";
 
@@ -17,6 +18,7 @@ export default function AdsLayout({
     return (
         <div className="landing-page bg-slate-950 min-h-screen text-slate-200 font-sans selection:bg-sky-500/30">
             <LandingHeader />
+            <StripePricingModal />
             <main>{children}</main>
             <footer className="py-12 text-center text-slate-600 text-sm border-t border-slate-900/50 mt-20 bg-slate-950">
                 <div className="container mx-auto px-6">

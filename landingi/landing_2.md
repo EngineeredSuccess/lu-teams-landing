@@ -28,7 +28,7 @@
       </p>
     </div>
     
-    <img src="/images/turnover-prediction-timeline.png" 
+    <img src="/synergy-radar-mockup.png" 
          alt="Prognoza ryzyka rotacji HEXACO pokazująca wczesne sygnały ostrzegawcze na 3-6 miesięcy przed odejściem"
          class="product-screenshot">
     <p class="screenshot-caption">

@@ -31,7 +31,7 @@
       </p>
     </div>
     
-    <img src="/images/synergy-radar-conflict-heatmap.png" 
+    <img src="/synergy-radar-mockup.png" 
          alt="HEXACO Synergy Radar pokazujący przewidywanie konfliktów osobowości między członkami zespołu"
          class="product-screenshot">
     <p class="screenshot-caption">
@@ -185,7 +185,7 @@
       <div class="method-step">
         <div class="step-visual">
           <div class="step-number">1</div>
-          <img src="/images/hexaco-assessment-preview.png" alt="Interfejs oceny HEXACO">
+          <img src="/synergy-radar-actual.png" alt="Interfejs oceny HEXACO">
         </div>
         <div class="step-content">
           <h4>Ocena osobowości HEXACO (15 minut)</h4>
@@ -225,7 +225,7 @@
       <div class="method-step">
         <div class="step-visual">
           <div class="step-number">2</div>
-          <img src="/images/synergy-analysis-engine.png" alt="Silnik analizy synergii AI">
+          <img src="/synergy-radar-actual.png" alt="Silnik analizy synergii AI">
         </div>
         <div class="step-content">
           <h4>Analiza synergii napędzana przez AI</h4>
@@ -268,7 +268,7 @@
       <div class="method-step">
         <div class="step-visual">
           <div class="step-number">3</div>
-          <img src="/images/actionable-recommendations.png" alt="Konkretne rekomendacje dla zespołu">
+          <img src="/synergy-radar-mockup.png" alt="Konkretne rekomendacje dla zespołu">
         </div>
         <div class="step-content">
           <h4>Precyzyjne rekomendacje (nie ogólne porady)</h4>

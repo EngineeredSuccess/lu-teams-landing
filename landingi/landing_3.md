@@ -29,7 +29,7 @@
       </p>
     </div>
     
-    <img src="/images/remote-team-friction-map.png" 
+    <img src="/synergy-radar-actual.png" 
          alt="Analiza wzorców komunikacji HEXACO dla zespołów rozproszonych"
          class="product-screenshot">
     <p class="screenshot-caption">

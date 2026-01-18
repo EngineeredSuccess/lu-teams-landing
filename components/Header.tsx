@@ -4,6 +4,7 @@ import { Translations, Language } from "@/lib/translations";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import CurrencySwitcher from "./CurrencySwitcher";
 
 interface HeaderProps {
     content: Translations["nav"];
@@ -78,6 +79,9 @@ export default function Header({ content, lang }: HeaderProps) {
                     >
                         {lang === "en" ? "PL" : "EN"}
                     </Link>
+
+                    {/* Currency Switcher */}
+                    <CurrencySwitcher />
 
                     <Link
                         href={getHref("#application")}
