@@ -43,7 +43,8 @@
     <div class="trust-bar-extended">
       <div class="trust-item">
         <span class="trust-stat">27+</span>
-        <span class="trust-label">Liderów Tech w lotnictwie, IT, SaaS</span>
+        <span class="trust-label">Liderów Tech</span>
+        <span class="stat-detail">(18 Founding Partners + 9 Standard Access)</span>
       </div>
       <div class="trust-item">
         <span class="trust-stat">HEXACO</span>
@@ -62,6 +63,16 @@
   </div>
 </section>
 
+<div class="standard-access-clarification">
+  <p>
+    <strong>Standard Access:</strong> Stabilne, sprawdzone funkcje. Zacznij dzisiaj za $49/miesiąc.
+    <br/>
+    <span class="secondary-text">
+      Wolisz testować eksperymentalne funkcje? 
+      <a href="/pl#application" class="link-underline">Poznaj Founding Partner Program →</a>
+    </span>
+  </p>
+</div>
 <section class="value-props">
   <div class="container">
     
@@ -355,11 +366,54 @@
   </div>
 </section>
 
+<section class="founding-partner-callout">
+  <div class="fp-callout-container">
+    <div class="fp-badge">
+      <span>🧪 Limited: 32 z 50 miejsc pozostało</span>
+    </div>
+    <h3 class="fp-headline">Wolisz Kształtować Przyszłość?</h3>
+    <p class="fp-description">
+      <strong>Founding Partner Program</strong> pozwala testować funkcje 3-6 miesięcy wcześniej, 
+      mieć bezpośredni kontakt z założycielem i otrzymać dożywotną zniżkę 50%. 
+      Ograniczone do 50 miejsc.
+    </p>
+    <a href="/pl#application" class="fp-cta-button">
+      Dowiedz Się o Founding Partner Program →
+    </a>
+    <p class="fp-pricing-note">
+      FREE podczas Beta • Później $25/mies (50% zniżki na zawsze)
+    </p>
+  </div>
+</section>
+
 <section class="faq-premium">
   <div class="container-narrow">
     
     <h3>Często zadawane pytania</h3>
     
+    <div class="faq-item-expanded">
+      <h4>❓ Jaka jest różnica między Standard Access a Founding Partner Program?</h4>
+      <p><strong>Standard Access (ten plan):</strong></p>
+      <ul class="faq-comparison-list">
+        <li>Stabilne, sprawdzone funkcje</li>
+        <li>Natychmiastowy dostęp, bez aplikacji</li>
+        <li>$49/miesiąc, anuluj kiedy chcesz</li>
+        <li>Samodzielna nauka</li>
+        <li>Wsparcie email (48h odpowiedź)</li>
+      </ul>
+      <p style="margin-top: 20px;"><strong>Founding Partner Program:</strong></p>
+      <ul class="faq-comparison-list">
+        <li>Eksperymentalne funkcje (mogą mieć bugi)</li>
+        <li>Wymagana aplikacja (selektywny proces)</li>
+        <li>FREE podczas Beta, później $25/mies dożywotnio</li>
+        <li>Miesięczne calle z założycielem</li>
+        <li>Bezpośrednia pętla feedbacku</li>
+      </ul>
+      <p style="margin-top: 20px;">
+        <a href="/pl#application" class="link-underline">Dowiedz się więcej o Founding Partner Program →</a>
+      </p>
+    </div>
+
     <div class="faq-item-expanded">
       <h4>Czym to się różni od Culture Amp / Lattice / innych narzędzi do zaangażowania?</h4>
       <p>

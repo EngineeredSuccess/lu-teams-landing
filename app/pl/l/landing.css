@@ -797,3 +797,108 @@ blockquote {
 .cost-items .cost-reason {
     @apply text-sm text-slate-500;
 }
+
+/* Standard Access Clarification Box */
+.standard-access-clarification {
+    @apply bg-slate-900/50 border-l-4 border-sky-500 rounded-lg p-6 my-8 mx-auto max-w-3xl;
+}
+
+.standard-access-clarification p {
+    @apply text-slate-300 leading-relaxed m-0;
+}
+
+.standard-access-clarification strong {
+    @apply text-white;
+}
+
+.standard-access-clarification .secondary-text {
+    @apply text-sm text-slate-400 block mt-3;
+}
+
+.standard-access-clarification .link-underline {
+    @apply text-sky-400 underline font-medium hover:text-sky-300 transition-colors;
+}
+
+/* Founding Partner Callout */
+.founding-partner-callout {
+    @apply text-white py-12 px-6 my-16 rounded-2xl text-center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.fp-callout-container {
+    @apply max-w-2xl mx-auto;
+}
+
+.fp-badge {
+    @apply inline-block px-4 py-2 rounded-full mb-4;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.fp-badge span {
+    @apply text-sm font-semibold tracking-wide;
+}
+
+.fp-headline {
+    @apply text-2xl md:text-3xl font-bold mb-4;
+}
+
+.fp-description {
+    @apply text-lg leading-relaxed mb-6 opacity-95;
+}
+
+.fp-cta-button {
+    @apply inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-base transition-all;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fp-cta-button:hover {
+    @apply transform -translate-y-0.5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fp-pricing-note {
+    @apply text-sm mt-4 opacity-85;
+}
+
+/* Social Proof Stat Detail */
+.stat-detail {
+    @apply block text-xs font-normal text-slate-500 mt-1;
+}
+
+/* FAQ Comparison Styles */
+.faq-comparison-list {
+    @apply list-none p-0 m-0 space-y-2 mt-3;
+}
+
+.faq-comparison-list li {
+    @apply text-slate-300 pl-6 relative;
+}
+
+.faq-comparison-list li::before {
+    content: '✓';
+    @apply absolute left-0 text-emerald-400;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .standard-access-clarification {
+        @apply px-4 py-4 mx-4;
+    }
+    
+    .founding-partner-callout {
+        @apply py-10 px-4 my-12 mx-4;
+    }
+    
+    .fp-headline {
+        @apply text-xl;
+    }
+    
+    .fp-description {
+        @apply text-base;
+    }
+    
+    .fp-cta-button {
+        @apply px-6 py-3;
+    }
+}
