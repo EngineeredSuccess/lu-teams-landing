@@ -360,8 +360,8 @@
         <p class="for-teams">Dla zespołów inżynieryjnych (5-8 osób)</p>
         <h4>Pakiet Analizy Precyzyjnej</h4>
         <div class="investment-amount">
-          <span class="currency">PLN</span>
-          <span class="amount">200</span>
+          <span class="currency">$</span>
+          <span class="amount">49</span>
           <span class="period">/miesiąc</span>
         </div>
         <p class="investment-context">
@@ -449,8 +449,8 @@
       <div class="investment-upgrade">
         <p><strong>Większy zespół?</strong></p>
         <p>
-          <a href="/pl/pricing">Analiza Professional (6-15 osób)</a> — 600 PLN/miesiąc<br>
-          <a href="/pl/pricing">Analiza Scale (16-50 osób)</a> — 1 400 PLN/miesiąc<br>
+          <a href="/pl/pricing">Analiza Professional (6-15 osób)</a> — $99/miesiąc<br>
+          <a href="/pl/pricing">Analiza Scale (16-50 osób)</a> — $199/miesiąc<br>
           <a href="mailto:pawel@luteams.com">Enterprise (50+ osób)</a> — Kontakt indywidualny
         </p>
       </div>

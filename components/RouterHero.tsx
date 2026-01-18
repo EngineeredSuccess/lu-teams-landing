@@ -75,7 +75,7 @@ export default function RouterHero({ hero, dualTrack, lang }: RouterHeroProps) {
                 <div className="flex justify-center mb-8">
                     <div className="flex items-center gap-4 px-5 py-3 bg-slate-900/50 border border-slate-800 rounded-full">
                         <Image
-                            src="/images/pawel-avatar.png"
+                            src="/founder-photo.png"
                             alt="Paweł Rzepecki"
                             width={40}
                             height={40}
