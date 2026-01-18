@@ -44,7 +44,7 @@
         Rozpocznij precyzyjną analizę zespołu
       </a>
       <p class="cta-subtext">
-        Inwestycja: 200 PLN/miesiąc · Mniej niż koszt 1 dnia rotacji seniora<br>
+        Inwestycja: /miesiąc · Mniej niż koszt 1 dnia rotacji seniora<br>
         Pełny zwrot w ciągu 14 dni, jeśli analiza nie ujawni konkretnych wniosków
       </p>
     </div>
@@ -151,7 +151,7 @@
     
     <p class="solution-preview">
       <strong>HEXACO Synergy Radar ujawnia te wzorce 3-6 miesięcy przed wybuchem.</strong><br>
-      Inwestycja: 200 PLN/miesiąc. Mniej niż koszt jednego dnia rotacji senior developera.
+      Inwestycja: /miesiąc. Mniej niż koszt jednego dnia rotacji senior developera.
     </p>
     
   </div>
@@ -349,7 +349,7 @@
     <h3>Precyzyjna Analiza Zespołu — Inwestycja</h3>
     
     <p class="investment-intro">
-      Liderzy inżynierii inwestują 200 PLN/miesiąc w przewidywanie konfliktów i wczesne 
+      Liderzy inżynierii inwestują /miesiąc w przewidywanie konfliktów i wczesne 
       wykrywanie rotacji. To mniej niż koszt jednego dnia odejścia senior developera. 
       Znacznie mniej niż koszt pozwolenia, by toksyczny geniusz zniszczył Twój zespół.
     </p>
@@ -738,7 +738,7 @@
     </p>
     
     <div class="final-investment">
-      <p class="investment-amount-large">Inwestycja: 200 PLN/miesiąc</p>
+      <p class="investment-amount-large">Inwestycja: /miesiąc</p>
       <p class="investment-context">Mniej niż koszt 1 dnia rotacji senior developera</p>
     </div>
     

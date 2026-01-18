@@ -35,7 +35,7 @@
         Rozpocznij precyzyjną analizę zespołu
       </a>
       <p class="cta-subtext">
-        Inwestycja: 200 PLN/miesiąc · Analiza 5-osobowego zespołu inżynierskiego<br>
+        Inwestycja: /miesiąc · Analiza 5-osobowego zespołu inżynierskiego<br>
         Pełny zwrot w ciągu 14 dni, jeśli analiza nie ujawni konkretnych wniosków
       </p>
     </div>
@@ -295,7 +295,7 @@
     <h3>Precyzyjna Analiza Zespołu — Inwestycja</h3>
     
     <p class="investment-intro">
-      Liderzy inżynierii inwestują 200 PLN/miesiąc w przewidywanie konfliktów oparte na HEXACO. 
+      Liderzy inżynierii inwestują /miesiąc w przewidywanie konfliktów oparte na HEXACO. 
       To mniej niż koszt 1 dnia rotacji senior developera. Znacznie mniej niż koszt 
       pozwolenia, by możliwe do uniknięcia tarcia zniszczyły produktywność.
     </p>
@@ -463,7 +463,7 @@
     </p>
     
     <div class="final-investment">
-      <p class="investment-amount-large">Inwestycja: 200 PLN/miesiąc</p>
+      <p class="investment-amount-large">Inwestycja: /miesiąc</p>
       <p class="investment-context">Mniej niż 1 dzień kosztu rotacji senior developera</p>
     </div>
     

@@ -41,7 +41,7 @@
         Rozpocznij analizę ryzyka rotacji
       </a>
       <p class="cta-subtext">
-        Inwestycja: 200 PLN/miesiąc · Mniej niż 1 dzień kosztu rekrutacji na zastępstwo<br>
+        Inwestycja: /miesiąc · Mniej niż 1 dzień kosztu rekrutacji na zastępstwo<br>
         Pełny zwrot w ciągu 14 dni, jeśli nie zidentyfikujesz zagrożonych członków zespołu
       </p>
     </div>
@@ -259,7 +259,7 @@
     <h3>Analiza Ryzyka Rotacji — Inwestycja</h3>
     
     <p class="investment-intro">
-      Liderzy inżynierii inwestują 200 PLN/miesiąc, aby zidentyfikować zagrożonych członków zespołu 
+      Liderzy inżynierii inwestują /miesiąc, aby zidentyfikować zagrożonych członków zespołu 
       na 3-6 miesięcy przed odejściem. To mniej niż koszt 1 dnia rekrutacji na zastępstwo. 
       I znacznie mniej niż 50 000 zł straty przy odejściu seniora.
     </p>
@@ -402,7 +402,7 @@
     <p class="final-solution">
       <strong>HEXACO Synergy Radar identyfikuje tarcia osobowościowe prowadzące do rotacji — 
       zanim nastąpi mentalne odejście.</strong><br>
-      Okno na interwencję: 3-6 miesięcy. Koszt: 200 PLN/miesiąc. Alternatywa: 50 000 zł za każde odejście.
+      Okno na interwencję: 3-6 miesięcy. Koszt: /miesiąc. Alternatywa: 50 000 zł za każde odejście.
     </p>
     
     <a href="https://app.luteams.com/register" class="btn-final-cta">

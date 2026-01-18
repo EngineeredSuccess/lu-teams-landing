@@ -42,7 +42,7 @@
         Rozpocznij analizę zespołu zdalnego
       </a>
       <p class="cta-subtext">
-        Inwestycja: 200 PLN/miesiąc · Zapobiegaj dysfunkcjom typowym dla pracy zdalnej<br>
+        Inwestycja: /miesiąc · Zapobiegaj dysfunkcjom typowym dla pracy zdalnej<br>
         Pełny zwrot w ciągu 14 dni, jeśli analiza nie ujawni luk w komunikacji
       </p>
     </div>
@@ -186,7 +186,7 @@
       <p class="cost-solution">
         <strong>HEXACO Synergy Radar pokazuje, które osobowości załamują się zdalnie — 
         zanim wydajność legnie w gruzach.</strong><br>
-        Inwestycja: 200 PLN/miesiąc
+        Inwestycja: /miesiąc
       </p>
     </div>
     
@@ -311,7 +311,7 @@
     <h3>Analiza komunikacji zespołu zdalnego — Inwestycja</h3>
     
     <p class="investment-intro">
-      Liderzy inżynierii inwestują 200 PLN/miesiąc, aby zoptymalizować komunikację w zespole rozproszonym. 
+      Liderzy inżynierii inwestują /miesiąc, aby zoptymalizować komunikację w zespole rozproszonym. 
       Zapobiegaj dysfunkcjom typowym dla pracy zdalnej, zanim wydajność spadnie o 30%. 
       Projektuj współpracę zgodnie z osobowością, a nie przeciwko niej.
     </p>

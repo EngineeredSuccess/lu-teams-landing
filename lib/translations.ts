@@ -364,6 +364,70 @@ export const translations = {
         metadata: {
             title: "LU Teams - The Precision Instrument for Engineering Synergy",
             description: "Stop guessing with surface-level personality tests. LU Teams uses deep HEXACO metrics and Team Role Dynamics to predict synergy and prevent mission-critical friction."
+        },
+        dualTrack: {
+            centralQuestion: {
+                title: "Which path fits you?",
+                subtitle: "Two ways to work with me. Different commitment. Different results."
+            },
+            foundingPartner: {
+                badge: "Limit: 50 spots",
+                title: "Founding Partner Program",
+                tagline: "Shape the future of the product. Get lifetime access.",
+                pitch: "You're not looking for another online course. You want to be part of building something that actually works — and you're ready to share your challenges and test new approaches.",
+                benefits: [
+                    { icon: "🧪", title: "Early Access", description: "Test new features 3-6 months before official release" },
+                    { icon: "🤝", title: "Direct Founder Access", description: "Monthly group calls. Your challenges become case studies." },
+                    { icon: "💎", title: "Lifetime 50% Discount", description: "When Standard Access launches, you pay $25/month forever (instead of $49)" },
+                    { icon: "🎯", title: "Product Influence", description: "Your feedback becomes real features" },
+                    { icon: "📊", title: "Free Team Analysis", description: "Full HEXACO Synergy Radar report for your entire team (value ~$400)" }
+                ],
+                commitmentTitle: "What I need from you:",
+                commitments: [
+                    "You manage a team of 3+ people (remote or hybrid)",
+                    "You're facing a dysfunction (turnover, toxic genius, low morale)",
+                    "You want to test tools and give detailed feedback",
+                    "You'll dedicate 30-60 min/month for feedback sessions"
+                ],
+                pricing: {
+                    current: "FREE",
+                    currentNote: "during Beta",
+                    future: "$25/month forever after launch",
+                    futureNote: "(50% discount vs Standard Access for life)"
+                },
+                cta: "Apply to Founding Partner Program",
+                ctaNote: "Application required • Selective process • Only 50 spots",
+                bestFor: "CTOs, VPs of Engineering, Tech Leads with 10+ years experience who want to co-create modern leader tools."
+            },
+            standardAccess: {
+                badge: "Most Popular",
+                title: "Standard Access",
+                tagline: "Proven. Reliable. Start today.",
+                pitch: "You need a solution now, not in six months. You're facing a specific team dysfunction and want proven tools to fix it.",
+                benefits: [
+                    { icon: "✅", title: "Stable Features", description: "Only proven solutions tested by Founding Partners" },
+                    { icon: "⚡", title: "Instant Start", description: "No application or waiting. Sign up and start in 5 minutes." },
+                    { icon: "📚", title: "Framework Library", description: "Access to case studies, playbooks, and HEXACO guides" },
+                    { icon: "💬", title: "Email Support", description: "Response time up to 48h for technical questions" },
+                    { icon: "🎓", title: "Self-Paced Learning", description: "No mandatory calls or feedback sessions" }
+                ],
+                useCasesTitle: "Ideal for solving:",
+                useCases: [
+                    "🔥 A toxic but brilliant developer ruining the atmosphere",
+                    "🚪 High turnover destroying velocity",
+                    "🌍 Communication problems in remote teams",
+                    "⚡ Tech Lead overload and burnout"
+                ],
+                pricing: {
+                    amount: "$49",
+                    period: "monthly",
+                    note: "Up to 5 team members",
+                    guarantee: "14-day money-back guarantee • Cancel anytime"
+                },
+                cta: "Start Standard Access — $49/mo",
+                ctaNote: "Instant access • No application • Stable features only",
+                bestFor: "Tech Leads, Engineering Managers who need a reliable 'out-of-the-box' solution."
+            }
         }
     },
     pl: {
@@ -735,6 +799,70 @@ export const translations = {
         metadata: {
             title: "LU Teams - Precyzyjne Narzędzie do Synergii Inżynierskiej",
             description: "Przestań zgadywać za pomocą powierzchownych testów osobowości. LU Teams wykorzystuje głębokie metryki HEXACO i Dynamikę Ról Zespołowych, aby przewidywać synergię i zapobiegać krytycznym tarciom."
+        },
+        dualTrack: {
+            centralQuestion: {
+                title: "Która ścieżka do Ciebie pasuje?",
+                subtitle: "Dwa sposoby współpracy. Inne zaangażowanie. Inne efekty."
+            },
+            foundingPartner: {
+                badge: "Limit: 50 miejsc",
+                title: "Founding Partner Program",
+                tagline: "Kształtuj przyszłość produktu. Zyskaj dożywotni dostęp.",
+                pitch: "Nie szukasz kolejnego kursu online. Chcesz brać udział w budowaniu czegoś, co naprawdę działa — i jesteś gotów dzielić się wyzwaniami oraz testować nowe podejścia.",
+                benefits: [
+                    { icon: "🧪", title: "Wczesny Dostęp", description: "Testuj najnowsze funkcje 3-6 miesięcy przed oficjalną premierą" },
+                    { icon: "🤝", title: "Bezpośredni Kontakt z Założycielem", description: "Comiesięczne rozmowy grupowe. Twoje wyzwania stają się studiami przypadków." },
+                    { icon: "💎", title: "Dożywotni Rabat 50%", description: "Gdy uruchomimy Standard Access, będziesz płacić $25/miesiąc na zawsze (zamiast $49)" },
+                    { icon: "🎯", title: "Wpływ na Produkt", description: "Twój feedback zamienia się w konkretne funkcje" },
+                    { icon: "📊", title: "Darmowa Analiza Zespołu", description: "Pełny raport HEXACO Synergy Radar dla całego Twojego zespołu (wartość ~$400)" }
+                ],
+                commitmentTitle: "Czego potrzebuję od Ciebie:",
+                commitments: [
+                    "Zarządzasz zespołem 3+ osób (remote lub hybryda)",
+                    "Mierzysz się z dysfunkcją (rotacja, toksyczny geniusz, niskie morale)",
+                    "Chcesz testować narzędzia i dawać szczegółowy feedback",
+                    "Poświęcisz 30-60 min miesięcznie na sesje zwrotne"
+                ],
+                pricing: {
+                    current: "FREE",
+                    currentNote: "podczas fazy Beta",
+                    future: "$25/miesiąc na zawsze po premierze",
+                    futureNote: "(50% zniżki względem Standard Access na zawsze)"
+                },
+                cta: "Aplikuj do Founding Partner Program",
+                ctaNote: "Wymagana aplikacja • Proces selektywny • Tylko 50 miejsc",
+                bestFor: "CTO, VP of Engineering, Tech Leadów z 10+ letnim doświadczeniem, którzy chcą współtworzyć nowoczesne narzędzia lidera."
+            },
+            standardAccess: {
+                badge: "Najpopularniejszy",
+                title: "Standard Access",
+                tagline: "Sprawdzone. Niezawodne. Zacznij dziś.",
+                pitch: "Potrzebujesz rozwiązania teraz, a nie za pół roku. Mierzysz się z konkretną dysfunkcją zespołu i chcesz sprawdzonych narzędzi, aby ją naprawić.",
+                benefits: [
+                    { icon: "✅", title: "Stabilne Funkcje", description: "Tylko sprawdzone rozwiązania przetestowane przez Partnerów Fundatorów" },
+                    { icon: "⚡", title: "Natychmiastowy Start", description: "Bez aplikacji i czekania. Rejestracja i start w 5 minut." },
+                    { icon: "📚", title: "Biblioteka Frameworków", description: "Dostęp do case studies, playbooków i przewodników HEXACO" },
+                    { icon: "💬", title: "Wsparcie E-mail", description: "Czas odpowiedzi do 48h dla pytań technicznych" },
+                    { icon: "🎓", title: "Nauka we własnym tempie", description: "Bez obowiązkowych rozmów czy sesji feedbackowych" }
+                ],
+                useCasesTitle: "Idealne do rozwiązania:",
+                useCases: [
+                    "🔥 Toksyczny, choć genialny deweloper psujący atmosferę",
+                    "🚪 Wysoka rotacja niszcząca tempo prac",
+                    "🌍 Problemy z komunikacją w zespole zdalnym",
+                    "⚡ Przeciążenie i wypalenie Tech Leada"
+                ],
+                pricing: {
+                    amount: "$49",
+                    period: "miesięcznie",
+                    note: "Do 5 członków zespołu",
+                    guarantee: "14-dniowa gwarancja zwrotu pieniędzy • Anuluj kiedy chcesz"
+                },
+                cta: "Rozpocznij Standard Access — $49/mies",
+                ctaNote: "Dostęp natychmiastowy • Bez aplikacji • Tylko stabilne funkcje",
+                bestFor: "Tech Leadów, Engineering Managerów, którzy potrzebują pewnego rozwiązania 'od ręki'."
+            }
         }
     }
 };

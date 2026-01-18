@@ -1,4 +1,5 @@
-import Hero from "@/components/Hero";
+import RouterHero from "@/components/RouterHero";
+import DetailedComparison from "@/components/DetailedComparison";
 import FounderAuthority from "@/components/FounderAuthority";
 import HowItWorks from "@/components/HowItWorks";
 import ProblemStatement from "@/components/ProblemStatement";
@@ -16,7 +17,8 @@ export default function HomePL() {
 
     return (
         <main className="min-h-screen bg-background">
-            <Hero content={content.hero} />
+            <RouterHero hero={content.hero} dualTrack={content.dualTrack} lang="pl" />
+            <DetailedComparison lang="pl" />
             <FounderAuthority content={content.founderAuthority} />
             <HowItWorks content={content.howItWorks} />
             <ProblemStatement content={content.problemStatement} />
